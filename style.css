@@ -235,6 +235,9 @@ ul { list-style: none; }
 }
 .nav-toggle:hover { background: var(--color-muted); }
 
+/* Ensure [hidden] always wins over any display value set by CSS */
+[hidden] { display: none !important; }
+
 .mobile-menu {
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
