@@ -25,7 +25,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages and enable site
+        if: ${{ secrets.PAGES_PAT != '' }}
+        uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.PAGES_PAT }}
+          enablement: true
+
       - name: Configure Pages
+        if: ${{ secrets.PAGES_PAT == '' }}
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
