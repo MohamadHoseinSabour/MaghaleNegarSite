@@ -509,10 +509,21 @@ ul { list-style: none; }
   margin-inline: auto;
 }
 
-.stat-item { text-align: center; }
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+}
 
 .stat-number {
-  display: block;
+  display: inline;
   font-size: 32px;
   font-weight: 900;
   color: var(--color-primary);
@@ -529,7 +540,6 @@ ul { list-style: none; }
   display: block;
   font-size: 12px;
   color: var(--color-fg-muted);
-  margin-top: 4px;
   font-weight: 500;
 }
 
