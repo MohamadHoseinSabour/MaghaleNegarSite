@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقاله‌نگار | انفوگرافیک محصول</title>
+  <meta name="description" content="انفوگرافیک مقاله‌نگار — تحریریه هوش مصنوعی ۶ عاملی برای وردپرس" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      background: #06030F;
+      color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== INFOGRAPHIC WRAPPER ===== */
+    .infographic {
+      width: 1200px;
+      margin: 0 auto;
+      background: #06030F;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ===== BACKGROUND DECORATIONS ===== */
+    .bg-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-glow-1 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(124,58,237,0.35) 0%, transparent 70%);
+      top: -100px;
+      left: -100px;
+    }
+    .bg-glow-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(236,72,153,0.25) 0%, transparent 70%);
+      top: 600px;
+      right: -80px;
+    }
+    .bg-glow-3 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
+      bottom: 200px;
+      left: 100px;
+    }
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px);
+      background-size: 60px 60px;
+      z-index: 0;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+      padding: 60px 64px 48px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      border-bottom: 1px solid rgba(124,58,237,0.2);
+    }
+    .hero-left {
+      flex: 1;
+    }
+    .product-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #A78BFA;
+      margin-bottom: 20px;
+    }
+    .badge-dot-live {
+      width: 8px;
+      height: 8px;
+      background: #7C3AED;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #7C3AED;
+    }
+    .hero-title {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .grad-text {
+      background: linear-gradient(135deg, #A78BFA 0%, #EC4899 50%, #F59E0B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: #C4B5FD;
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .hero-stats-row {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      width: fit-content;
+      background: rgba(124,58,237,0.06);
+    }
+    .stat-box {
+      padding: 18px 28px;
+      text-align: center;
+      border-left: 1px solid rgba(124,58,237,0.2);
+    }
+    .stat-box:last-child {
+      border-left: none;
+    }
+    .stat-num {
+      font-size: 34px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .stat-lbl {
+      font-size: 12px;
+      color: #9CA3AF;
+      margin-top: 4px;
+      white-space: nowrap;
+    }
+    /* Hero right: logo card */
+    .hero-right {
+      width: 340px;
+      flex-shrink: 0;
+    }
+    .logo-card {
+      background: linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(99,102,241,0.1) 100%);
+      border: 1px solid rgba(124,58,237,0.4);
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(124,58,237,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .logo-card-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #7C3AED, #6366F1);
+      border-radius: 22px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.5);
+    }
+    .logo-card-name {
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .logo-card-sub {
+      font-size: 13px;
+      color: #A78BFA;
+      font-weight: 500;
+    }
+    .logo-card-pills {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .pill {
+      background: rgba(124,58,237,0.2);
+      border: 1px solid rgba(124,58,237,0.35);
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #C4B5FD;
+      font-weight: 500;
+    }
+
+    /* ===== PIPELINE SECTION ===== */
+    .pipeline-section {
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(124,58,237,0.15);
+    }
+    .section-label-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 8px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: #A78BFA;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+    .section-title span {
+      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .pipeline-track {
+      display: flex;
+      gap: 0;
+      position: relative;
+    }
+    .pipeline-connector-line {
+      position: absolute;
+      top: 36px;
+      right: 56px;
+      left: 56px;
+      height: 2px;
+      background: linear-gradient(90deg, #7C3AED, #EC4899, #F59E0B);
+      z-index: 0;
+    }
+    .agent-node {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .agent-node-num {
+      position: absolute;
+      top: -8px;
+      right: 50%;
+      transform: translateX(50%);
+      background: linear-gradient(135deg, #7C3AED, #6366F1);
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+      z-index: 2;
+    }
+    .agent-icon-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 12px;
+      position: relative;
+      border: 2px solid transparent;
+    }
+    .agent-icon-circle.c1 { background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(124,58,237,0.1)); border-color: rgba(124,58,237,0.5); }
+    .agent-icon-circle.c2 { background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(59,130,246,0.1)); border-color: rgba(59,130,246,0.5); }
+    .agent-icon-circle.c3 { background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(16,185,129,0.1)); border-color: rgba(16,185,129,0.5); }
+    .agent-icon-circle.c4 { background: linear-gradient(135deg, rgba(245,158,11,0.3), rgba(245,158,11,0.1)); border-color: rgba(245,158,11,0.5); }
+    .agent-icon-circle.c5 { background: linear-gradient(135deg, rgba(236,72,153,0.3), rgba(236,72,153,0.1)); border-color: rgba(236,72,153,0.5); }
+    .agent-icon-circle.c6 { background: linear-gradient(135deg, rgba(239,68,68,0.3), rgba(239,68,68,0.1)); border-color: rgba(239,68,68,0.5); }
+    .agent-node-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .agent-node-desc {
+      font-size: 12px;
+      color: #6B7280;
+      line-height: 1.4;
+      max-width: 130px;
+    }
+
+    /* ===== FEATURES GRID SECTION ===== */
+    .features-section {
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(124,58,237,0.15);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature-block {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 18px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 0 18px 0 60px;
+      opacity: 0.3;
+    }
+    .feature-block.f1::before { background: #7C3AED; }
+    .feature-block.f2::before { background: #EC4899; }
+    .feature-block.f3::before { background: #F59E0B; }
+    .feature-block.f4::before { background: #10B981; }
+    .feature-block.f5::before { background: #3B82F6; }
+    .feature-block.f6::before { background: #EF4444; }
+    .feature-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .f1 .feature-icon-wrap { background: rgba(124,58,237,0.2); }
+    .f2 .feature-icon-wrap { background: rgba(236,72,153,0.2); }
+    .f3 .feature-icon-wrap { background: rgba(245,158,11,0.2); }
+    .f4 .feature-icon-wrap { background: rgba(16,185,129,0.2); }
+    .f5 .feature-icon-wrap { background: rgba(59,130,246,0.2); }
+    .f6 .feature-icon-wrap { background: rgba(239,68,68,0.2); }
+    .feature-block h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .feature-block p {
+      font-size: 13px;
+      color: #9CA3AF;
+      line-height: 1.6;
+    }
+
+    /* ===== COMPARISON / PROBLEM-SOLUTION ===== */
+    .compare-section {
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(124,58,237,0.15);
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .compare-card {
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .compare-card.bad {
+      background: rgba(239,68,68,0.06);
+      border: 1px solid rgba(239,68,68,0.25);
+    }
+    .compare-card.good {
+      background: rgba(124,58,237,0.08);
+      border: 1px solid rgba(124,58,237,0.35);
+    }
+    .compare-card-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compare-card.bad .compare-card-title { color: #F87171; }
+    .compare-card.good .compare-card-title { color: #A78BFA; }
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .compare-card.bad .compare-list li { color: #FCA5A5; }
+    .compare-card.good .compare-list li { color: #C4B5FD; }
+    .icon-x, .icon-check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .icon-x { background: rgba(239,68,68,0.2); color: #F87171; border: 1px solid rgba(239,68,68,0.4); }
+    .icon-check { background: rgba(124,58,237,0.2); color: #A78BFA; border: 1px solid rgba(124,58,237,0.4); }
+
+    /* ===== ROI SECTION ===== */
+    .roi-section {
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(124,58,237,0.15);
+    }
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .roi-block {
+      background: linear-gradient(135deg, rgba(124,58,237,0.12) 0%, rgba(99,102,241,0.06) 100%);
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .roi-emoji {
+      font-size: 32px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .roi-val {
+      font-size: 36px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .roi-label {
+      font-size: 13px;
+      color: #9CA3AF;
+      line-height: 1.4;
+    }
+
+    /* ===== USE CASES SECTION ===== */
+    .usecases-section {
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(124,58,237,0.15);
+    }
+    .usecase-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .usecase-tile {
+      border-radius: 18px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .usecase-tile.uc1 {
+      background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(124,58,237,0.04));
+      border: 1px solid rgba(124,58,237,0.3);
+    }
+    .usecase-tile.uc2 {
+      background: linear-gradient(135deg, rgba(236,72,153,0.12), rgba(236,72,153,0.03));
+      border: 1px solid rgba(236,72,153,0.25);
+    }
+    .usecase-tile.uc3 {
+      background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.03));
+      border: 1px solid rgba(245,158,11,0.25);
+    }
+    .usecase-emoji {
+      font-size: 36px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .usecase-tile h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .usecase-tile ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .usecase-tile ul li {
+      font-size: 13px;
+      color: #9CA3AF;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .usecase-tile ul li::before {
+      content: '›';
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .uc1 ul li::before { color: #7C3AED; }
+    .uc2 ul li::before { color: #EC4899; }
+    .uc3 ul li::before { color: #F59E0B; }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      padding: 56px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(99,102,241,0.08) 50%, rgba(236,72,153,0.1) 100%);
+      border-top: 1px solid rgba(124,58,237,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(124,58,237,0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-left {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-tagline {
+      font-size: 12px;
+      font-weight: 600;
+      color: #A78BFA;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .cta-title {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .cta-title span {
+      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-sub {
+      font-size: 15px;
+      color: #9CA3AF;
+      margin-top: 10px;
+    }
+    .cta-right {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #7C3AED 0%, #6366F1 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 40px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.5);
+      letter-spacing: -0.3px;
+    }
+    .cta-url {
+      font-size: 13px;
+      color: #6B7280;
+      margin-top: 10px;
+    }
+    .cta-url span {
+      color: #A78BFA;
+    }
+
+    /* ===== FOOTER TAG ===== */
+    .footer-tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      border-top: 1px solid rgba(124,58,237,0.15);
+    }
+    .footer-tag .logo-mini {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-tag .logo-mini-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #7C3AED, #6366F1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-tag .logo-mini-text {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-tag .separator {
+      width: 4px;
+      height: 4px;
+      background: #4B5563;
+      border-radius: 50%;
+    }
+    .footer-tag .footer-desc {
+      font-size: 13px;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+<div class="infographic">
+
+  <!-- Background decorations -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section section">
+    <div class="hero-left">
+      <div class="product-badge">
+        <span class="badge-dot-live"></span>
+        افزونه وردپرس | نسخه ۱.۰
+      </div>
+      <h1 class="hero-title">
+        تحریریه<br/>
+        <span class="grad-text">۶ نفره هوش مصنوعی</span><br/>
+        در وردپرس شما
+      </h1>
+      <p class="hero-desc">
+        تولید خودکار مقالات، توضیحات ووکامرس و صفحات دسته‌بندی با لحن کاملاً انسانی، سئوی بی‌نقص و هماهنگ با Yoast و Rank Math.
+      </p>
+      <div class="hero-stats-row">
+        <div class="stat-box">
+          <div class="stat-num">۶</div>
+          <div class="stat-lbl">عامل هوش مصنوعی</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">۹۰٪</div>
+          <div class="stat-lbl">صرفه‌جویی در زمان</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">۱۰۰٪</div>
+          <div class="stat-lbl">سازگاری با وردپرس</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="logo-card">
+        <div class="logo-card-icon">
+          <svg width="44" height="44" viewBox="0 0 32 32" fill="none">
+            <path d="M8 10h10M8 15h8M8 20h6" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="22" cy="20" r="5" fill="#EC4899" opacity="0.9"/>
+            <path d="M20.5 20l1 1 2-2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="logo-card-name">مقاله‌نگار</div>
+        <div class="logo-card-sub">تحریریه هوش مصنوعی وردپرس</div>
+        <div class="logo-card-pills">
+          <span class="pill">وردپرس</span>
+          <span class="pill">ووکامرس</span>
+          <span class="pill">سئو</span>
+          <span class="pill">هوش مصنوعی</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PIPELINE SECTION ===== -->
+  <section class="pipeline-section section">
+    <div class="section-label-tag">خط تولید</div>
+    <h2 class="section-title">۶ عامل تخصصی روی هر مقاله کار می‌کنند</h2>
+    <div class="pipeline-track">
+      <div class="pipeline-connector-line"></div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۱</div>
+        <div class="agent-icon-circle c1">🧠</div>
+        <div class="agent-node-name">استراتژیست</div>
+        <div class="agent-node-desc">ساختار محتوا و طراحی سرفصل‌ها</div>
+      </div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۲</div>
+        <div class="agent-icon-circle c2">🔍</div>
+        <div class="agent-node-name">پژوهشگر</div>
+        <div class="agent-node-desc">استخراج فکت و اطلاعات کاربردی</div>
+      </div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۳</div>
+        <div class="agent-icon-circle c3">✍️</div>
+        <div class="agent-node-name">نویسنده</div>
+        <div class="agent-node-desc">نگارش متن جامع و جذاب</div>
+      </div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۴</div>
+        <div class="agent-icon-circle c4">🧐</div>
+        <div class="agent-node-name">منتقد</div>
+        <div class="agent-node-desc">بررسی انسجام و رفع ایرادات</div>
+      </div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۵</div>
+        <div class="agent-icon-circle c5">🌿</div>
+        <div class="agent-node-name">انسانی‌ساز</div>
+        <div class="agent-node-desc">حذف کامل لحن رباتیک</div>
+      </div>
+
+      <div class="agent-node">
+        <div class="agent-node-num">۶</div>
+        <div class="agent-icon-circle c6">🚀</div>
+        <div class="agent-node-name">سئو و انتشار</div>
+        <div class="agent-node-desc">بهینه‌سازی و انتشار در وردپرس</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features-section section">
+    <div class="section-label-tag">ویژگی‌های کلیدی</div>
+    <h2 class="section-title">همه چیزی که نیاز دارید — در یک افزونه</h2>
+    <div class="features-grid">
+
+      <div class="feature-block f1">
+        <div class="feature-icon-wrap">📦</div>
+        <h3>تولید انبوه محتوا</h3>
+        <p>با وارد کردن فایل اکسل از صدها کلمه کلیدی، افزونه به‌صورت زمان‌بندی‌شده محتوا می‌سازد.</p>
+      </div>
+
+      <div class="feature-block f2">
+        <div class="feature-icon-wrap">🎯</div>
+        <h3>هماهنگی با Yoast و Rank Math</h3>
+        <p>عنوان سئو، توضیحات متا و کلمه کلیدی کانونی خودکار پر می‌شود.</p>
+      </div>
+
+      <div class="feature-block f3">
+        <div class="feature-icon-wrap">👁️</div>
+        <h3>پنل گردش‌کار زنده</h3>
+        <p>مرحله به مرحله فکر کردن هر عامل را ببینید و قبل از انتشار بازبینی کنید.</p>
+      </div>
+
+      <div class="feature-block f4">
+        <div class="feature-icon-wrap">🎭</div>
+        <h3>شخصی‌سازی لحن</h3>
+        <p>لحن‌های رسمی، صمیمی، تخصصی و متقاعدکننده متناسب با برند شما.</p>
+      </div>
+
+      <div class="feature-block f5">
+        <div class="feature-icon-wrap">🖥️</div>
+        <h3>مستقیم روی هاست شما</h3>
+        <p>بدون پلتفرم واسط؛ همه چیز در پنل مدیریت وردپرس شما مدیریت می‌شود.</p>
+      </div>
+
+      <div class="feature-block f6">
+        <div class="feature-icon-wrap">🤖</div>
+        <h3>محتوای انسانی‌شده</h3>
+        <p>عامل انسانی‌ساز متن را بازنویسی می‌کند تا از هر ابزار تشخیص AI رد شود.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== COMPARE SECTION ===== -->
+  <section class="compare-section section">
+    <div class="section-label-tag">مقایسه</div>
+    <h2 class="section-title">مقاله‌نگار در برابر <span>ابزارهای معمولی</span></h2>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <div class="compare-card-title">
+          <span>✗</span> ابزارهای معمولی هوش مصنوعی
+        </div>
+        <ul class="compare-list">
+          <li><span class="icon-x">✗</span> متن‌های خشک و رباتیک که نیاز به ساعت‌ها ویرایش دارند</li>
+          <li><span class="icon-x">✗</span> شناسایی توسط گوگل و افت رتبه سئو</li>
+          <li><span class="icon-x">✗</span> عدم هماهنگی با افزونه‌های سئو و تنظیم دستی</li>
+          <li><span class="icon-x">✗</span> ناتوانی در تولید انبوه محتوا برای فروشگاه‌ها</li>
+          <li><span class="icon-x">✗</span> نیاز به کپی‌پیست دستی به داخل وردپرس</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <div class="compare-card-title">
+          <span>✓</span> مقاله‌نگار
+        </div>
+        <ul class="compare-list">
+          <li><span class="icon-check">✓</span> ۶ عامل تخصصی روی هر مقاله کار می‌کنند</li>
+          <li><span class="icon-check">✓</span> عامل انسانی‌ساز لحن رباتیک را کاملاً حذف می‌کند</li>
+          <li><span class="icon-check">✓</span> هماهنگی خودکار با Yoast SEO و Rank Math</li>
+          <li><span class="icon-check">✓</span> تولید انبوه با وارد کردن صدها کلمه کلیدی</li>
+          <li><span class="icon-check">✓</span> انتشار مستقیم در پیشخوان وردپرس شما</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROI SECTION ===== -->
+  <section class="roi-section section">
+    <div class="section-label-tag">ارزش اقتصادی</div>
+    <h2 class="section-title">چرا مقاله‌نگار <span>ارزش خریدن</span> دارد؟</h2>
+    <div class="roi-grid">
+      <div class="roi-block">
+        <span class="roi-emoji">💰</span>
+        <div class="roi-val">۲×</div>
+        <div class="roi-label">با هزینه ۲ مقاله از فریلنسر، بازگشت سرمایه کامل دارید</div>
+      </div>
+      <div class="roi-block">
+        <span class="roi-emoji">⚡</span>
+        <div class="roi-val">۹۰٪</div>
+        <div class="roi-label">صرفه‌جویی در زمان تولید محتوا نسبت به روش‌های سنتی</div>
+      </div>
+      <div class="roi-block">
+        <span class="roi-emoji">📈</span>
+        <div class="roi-val">∞</div>
+        <div class="roi-label">محتوای نامحدود با یک بار خرید افزونه</div>
+      </div>
+      <div class="roi-block">
+        <span class="roi-emoji">🏆</span>
+        <div class="roi-val">۱۰۰٪</div>
+        <div class="roi-label">سازگاری با تمام نسخه‌های وردپرس و ووکامرس</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== USE CASES SECTION ===== -->
+  <section class="usecases-section section">
+    <div class="section-label-tag">کاربردها</div>
+    <h2 class="section-title">یک افزونه برای <span>همه نیازهای</span> محتوایی</h2>
+    <div class="usecase-row">
+      <div class="usecase-tile uc1">
+        <span class="usecase-emoji">📰</span>
+        <h3>مقالات وبلاگ</h3>
+        <ul>
+          <li>مقالات ۱۵۰۰ تا ۵۰۰۰+ کلمه</li>
+          <li>ساختار H1، H2، H3 استاندارد</li>
+          <li>لینک‌سازی داخلی هوشمند</li>
+          <li>تولید انبوه با لیست موضوعات</li>
+        </ul>
+      </div>
+      <div class="usecase-tile uc2">
+        <span class="usecase-emoji">🛍️</span>
+        <h3>محصولات ووکامرس</h3>
+        <ul>
+          <li>توضیح کوتاه و بلند محصول</li>
+          <li>متن متقاعدکننده برای فروش</li>
+          <li>جدول مقایسه ویژگی‌ها</li>
+          <li>بهینه‌سازی صفحات محصول</li>
+        </ul>
+      </div>
+      <div class="usecase-tile uc3">
+        <span class="usecase-emoji">📂</span>
+        <h3>صفحات دسته‌بندی</h3>
+        <ul>
+          <li>محتوای منحصربه‌فرد هر دسته</li>
+          <li>بهینه‌سازی کلمات کلیدی دسته</li>
+          <li>تولید خودکار صدها دسته‌بندی</li>
+          <li>انسجام محتوایی در کل سایت</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section section">
+    <div class="cta-left">
+      <div class="cta-tagline">همین الان شروع کن</div>
+      <h2 class="cta-title">
+        تحریریه <span>هوش مصنوعی</span><br/>
+        را به وردپرس خود اضافه کن
+      </h2>
+      <p class="cta-sub">بدون اشتراک ماهانه · یک‌بار خرید · پشتیبانی رایگان</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M13 6l6 6-6 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        همین الان خرید کن
+      </div>
+      <div class="cta-url">mohamadhoseinsabour.github.io/<span>MaghaleNegarSite</span></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER TAG ===== -->
+  <div class="footer-tag section">
+    <div class="logo-mini">
+      <div class="logo-mini-icon">
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
+          <path d="M8 10h10M8 15h8M8 20h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="22" cy="20" r="4" fill="#EC4899"/>
+        </svg>
+      </div>
+      <span class="logo-mini-text">مقاله‌نگار</span>
+    </div>
+    <span class="separator"></span>
+    <span class="footer-desc">تحریریه هوش مصنوعی ۶ عاملی برای وردپرس</span>
+    <span class="separator"></span>
+    <span class="footer-desc">افزونه وردپرس | هوش مصنوعی | سئو | ووکامرس</span>
+  </div>
+
+</div>
+</body>
+</html>
