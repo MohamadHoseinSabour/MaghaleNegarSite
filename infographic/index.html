@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مقاله‌نگار | انفوگرافیک محصول</title>
-  <meta name="description" content="انفوگرافیک مقاله‌نگار — تحریریه هوش مصنوعی ۶ عاملی برای وردپرس" />
+  <title>اینفوگرافیک مقاله‌نگار | تحریریه ۶ عاملی هوش مصنوعی وردپرس</title>
+  <meta name="description" content="اینفوگرافیک معرفی افزونه مقاله‌نگار — اولین تحریریه ۶ عاملی هوش مصنوعی بومی وردپرس" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET & BASE ===== */
+    /* ===== RESET & BASE STYLES ===== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -17,947 +17,1131 @@
     }
 
     html, body {
-      font-family: 'Vazirmatn', sans-serif;
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       direction: rtl;
-      background: #06030F;
-      color: #fff;
+      background-color: #070714;
+      color: #F3F4F6;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ===== INFOGRAPHIC WRAPPER ===== */
-    .infographic {
-      width: 1200px;
+    /* ===== CONTAINER & INFOGRAPHIC WRAPPER ===== */
+    .infographic-wrapper {
+      max-width: 1200px;
       margin: 0 auto;
-      background: #06030F;
+      background: #070714;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+      border-left: 1px solid rgba(255, 255, 255, 0.05);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* ===== BACKGROUND DECORATIONS ===== */
-    .bg-glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .bg-glow-1 {
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(124,58,237,0.35) 0%, transparent 70%);
-      top: -100px;
-      left: -100px;
-    }
-    .bg-glow-2 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(236,72,153,0.25) 0%, transparent 70%);
-      top: 600px;
-      right: -80px;
-    }
-    .bg-glow-3 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
-      bottom: 200px;
-      left: 100px;
-    }
+    /* ===== BACKGROUND GLOWS & GRID ===== */
     .bg-grid {
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px);
-      background-size: 60px 60px;
+      background-image: 
+        linear-gradient(rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
       z-index: 0;
     }
 
-    /* ===== SECTIONS ===== */
+    .bg-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+    .glow-1 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.25) 0%, rgba(121, 40, 202, 0.15) 70%, transparent 100%);
+      top: -150px;
+      right: -100px;
+    }
+    .glow-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 0, 128, 0.2) 0%, rgba(121, 40, 202, 0.15) 70%, transparent 100%);
+      top: 1100px;
+      left: -100px;
+    }
+    .glow-3 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.18) 0%, rgba(0, 198, 255, 0.1) 70%, transparent 100%);
+      top: 2200px;
+      right: -100px;
+    }
+    .glow-4 {
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(121, 40, 202, 0.25) 0%, rgba(255, 0, 128, 0.15) 70%, transparent 100%);
+      bottom: -100px;
+      left: 20%;
+    }
+
     .section {
       position: relative;
       z-index: 1;
+      padding: 60px 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
-    /* ===== HERO SECTION ===== */
-    .hero-section {
-      padding: 60px 64px 48px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      border-bottom: 1px solid rgba(124,58,237,0.2);
-    }
-    .hero-left {
-      flex: 1;
-    }
-    .product-badge {
+    /* ===== NUMBERED SECTION BADGE (نمونه مرجع) ===== */
+    .section-pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(124,58,237,0.15);
-      border: 1px solid rgba(124,58,237,0.4);
+      gap: 10px;
+      background: rgba(12, 17, 34, 0.85);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
       border-radius: 100px;
-      padding: 6px 16px;
+      padding: 6px 18px;
       font-size: 13px;
-      font-weight: 600;
-      color: #A78BFA;
+      font-weight: 700;
+      color: #00F2FE;
       margin-bottom: 20px;
+      backdrop-filter: blur(10px);
     }
-    .badge-dot-live {
-      width: 8px;
-      height: 8px;
-      background: #7C3AED;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #7C3AED;
-    }
-    .hero-title {
-      font-size: 56px;
+    .section-pill-badge .pill-num {
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+      color: #070714;
       font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 12px;
     }
-    .grad-text {
-      background: linear-gradient(135deg, #A78BFA 0%, #EC4899 50%, #F59E0B 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-desc {
-      font-size: 17px;
-      color: #C4B5FD;
-      line-height: 1.7;
-      max-width: 480px;
-      margin-bottom: 32px;
-    }
-    .hero-stats-row {
-      display: flex;
-      gap: 0;
-      border: 1px solid rgba(124,58,237,0.3);
-      border-radius: 16px;
-      overflow: hidden;
-      width: fit-content;
-      background: rgba(124,58,237,0.06);
-    }
-    .stat-box {
-      padding: 18px 28px;
-      text-align: center;
-      border-left: 1px solid rgba(124,58,237,0.2);
-    }
-    .stat-box:last-child {
-      border-left: none;
-    }
-    .stat-num {
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
       font-size: 34px;
       font-weight: 900;
-      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: #9CA3AF;
+      max-width: 680px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .grad-cyan {
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      line-height: 1;
     }
-    .stat-lbl {
-      font-size: 12px;
-      color: #9CA3AF;
-      margin-top: 4px;
-      white-space: nowrap;
-    }
-    /* Hero right: logo card */
-    .hero-right {
-      width: 340px;
-      flex-shrink: 0;
-    }
-    .logo-card {
-      background: linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(99,102,241,0.1) 100%);
-      border: 1px solid rgba(124,58,237,0.4);
-      border-radius: 24px;
-      padding: 40px 32px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .logo-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(124,58,237,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .logo-card-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #7C3AED, #6366F1);
-      border-radius: 22px;
-      margin: 0 auto 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 32px rgba(124,58,237,0.5);
-    }
-    .logo-card-name {
-      font-size: 28px;
-      font-weight: 900;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .logo-card-sub {
-      font-size: 13px;
-      color: #A78BFA;
-      font-weight: 500;
-    }
-    .logo-card-pills {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .pill {
-      background: rgba(124,58,237,0.2);
-      border: 1px solid rgba(124,58,237,0.35);
-      border-radius: 100px;
-      padding: 4px 12px;
-      font-size: 12px;
-      color: #C4B5FD;
-      font-weight: 500;
+    .grad-purple {
+      background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    /* ===== PIPELINE SECTION ===== */
-    .pipeline-section {
-      padding: 48px 64px;
-      border-bottom: 1px solid rgba(124,58,237,0.15);
-    }
-    .section-label-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.3);
-      border-radius: 8px;
-      padding: 4px 14px;
-      font-size: 12px;
-      color: #A78BFA;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    .section-title {
-      font-size: 30px;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 32px;
-    }
-    .section-title span {
-      background: linear-gradient(135deg, #A78BFA, #EC4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .pipeline-track {
-      display: flex;
-      gap: 0;
-      position: relative;
-    }
-    .pipeline-connector-line {
-      position: absolute;
-      top: 36px;
-      right: 56px;
-      left: 56px;
-      height: 2px;
-      background: linear-gradient(90deg, #7C3AED, #EC4899, #F59E0B);
-      z-index: 0;
-    }
-    .agent-node {
-      flex: 1;
+    /* ===== HERO SECTION (`۰۱ مقدمه`) ===== */
+    .hero-section {
+      padding: 70px 48px 60px;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
       position: relative;
-      z-index: 1;
     }
-    .agent-node-num {
-      position: absolute;
-      top: -8px;
-      right: 50%;
-      transform: translateX(50%);
-      background: linear-gradient(135deg, #7C3AED, #6366F1);
-      color: #fff;
-      width: 22px;
-      height: 22px;
+    .hero-top-logo {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(121, 40, 202, 0.3) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.5);
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 0 35px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2);
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hero-main-title {
+      font-size: 58px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .hero-sub-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #E0E7FF;
+      max-width: 760px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .hero-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .hero-tag-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(5px);
+    }
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .hero-stat-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(7, 7, 20, 0.9) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      border-radius: 20px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .hero-stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 242, 254, 0.6);
+    }
+    .hero-stat-num {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #A855F7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-stat-desc {
+      font-size: 14px;
+      color: #9CA3AF;
+      font-weight: 500;
+    }
+
+    /* ===== SECTION 2: PROBLEM VS SOLUTION (`۰۲ چالش`) ===== */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .compare-card {
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .compare-card.bad {
+      background: linear-gradient(180deg, rgba(239, 68, 68, 0.08) 0%, rgba(15, 23, 42, 0.7) 100%);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.05);
+    }
+    .compare-card.good {
+      background: linear-gradient(180deg, rgba(0, 242, 254, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      box-shadow: 0 10px 35px rgba(0, 242, 254, 0.12);
+    }
+    .compare-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .compare-card.bad .compare-header { color: #F87171; }
+    .compare-card.good .compare-header { color: #00F2FE; }
+    
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .compare-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .compare-card.bad .compare-item { color: #FCA5A5; }
+    .compare-card.good .compare-item { color: #E2E8F0; }
+    
+    .status-icon {
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      font-weight: 800;
-      z-index: 2;
-    }
-    .agent-icon-circle {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      margin-bottom: 12px;
-      position: relative;
-      border: 2px solid transparent;
-    }
-    .agent-icon-circle.c1 { background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(124,58,237,0.1)); border-color: rgba(124,58,237,0.5); }
-    .agent-icon-circle.c2 { background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(59,130,246,0.1)); border-color: rgba(59,130,246,0.5); }
-    .agent-icon-circle.c3 { background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(16,185,129,0.1)); border-color: rgba(16,185,129,0.5); }
-    .agent-icon-circle.c4 { background: linear-gradient(135deg, rgba(245,158,11,0.3), rgba(245,158,11,0.1)); border-color: rgba(245,158,11,0.5); }
-    .agent-icon-circle.c5 { background: linear-gradient(135deg, rgba(236,72,153,0.3), rgba(236,72,153,0.1)); border-color: rgba(236,72,153,0.5); }
-    .agent-icon-circle.c6 { background: linear-gradient(135deg, rgba(239,68,68,0.3), rgba(239,68,68,0.1)); border-color: rgba(239,68,68,0.5); }
-    .agent-node-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-    .agent-node-desc {
       font-size: 12px;
-      color: #6B7280;
-      line-height: 1.4;
-      max-width: 130px;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .status-icon.bad {
+      background: rgba(239, 68, 68, 0.25);
+      color: #EF4444;
+      border: 1px solid rgba(239, 68, 68, 0.5);
+    }
+    .status-icon.good {
+      background: rgba(0, 242, 254, 0.25);
+      color: #00F2FE;
+      border: 1px solid rgba(0, 242, 254, 0.5);
     }
 
-    /* ===== FEATURES GRID SECTION ===== */
-    .features-section {
-      padding: 48px 64px;
-      border-bottom: 1px solid rgba(124,58,237,0.15);
-    }
-    .features-grid {
+    /* ===== SECTION 3: 6-AGENT PIPELINE (`۰۳ مکانیزم`) ===== */
+    .pipeline-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .feature-block {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(124,58,237,0.2);
-      border-radius: 18px;
-      padding: 24px;
+      gap: 24px;
       position: relative;
-      overflow: hidden;
     }
-    .feature-block::before {
-      content: '';
+    .agent-card {
+      background: linear-gradient(160deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 28px 24px;
+      position: relative;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .agent-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 242, 254, 0.5);
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.15);
+    }
+    .agent-badge-num {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 60px;
-      height: 60px;
-      border-radius: 0 18px 0 60px;
-      opacity: 0.3;
+      top: -12px;
+      right: 24px;
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+      color: #070714;
+      font-weight: 900;
+      font-size: 13px;
+      padding: 3px 12px;
+      border-radius: 100px;
+      box-shadow: 0 4px 12px rgba(0, 242, 254, 0.4);
     }
-    .feature-block.f1::before { background: #7C3AED; }
-    .feature-block.f2::before { background: #EC4899; }
-    .feature-block.f3::before { background: #F59E0B; }
-    .feature-block.f4::before { background: #10B981; }
-    .feature-block.f5::before { background: #3B82F6; }
-    .feature-block.f6::before { background: #EF4444; }
-    .feature-icon-wrap {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+    .agent-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      margin-bottom: 14px;
+      font-size: 26px;
+      margin-bottom: 16px;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
     }
-    .f1 .feature-icon-wrap { background: rgba(124,58,237,0.2); }
-    .f2 .feature-icon-wrap { background: rgba(236,72,153,0.2); }
-    .f3 .feature-icon-wrap { background: rgba(245,158,11,0.2); }
-    .f4 .feature-icon-wrap { background: rgba(16,185,129,0.2); }
-    .f5 .feature-icon-wrap { background: rgba(59,130,246,0.2); }
-    .f6 .feature-icon-wrap { background: rgba(239,68,68,0.2); }
-    .feature-block h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
+    .agent-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
       margin-bottom: 8px;
     }
-    .feature-block p {
+    .agent-desc {
       font-size: 13px;
       color: #9CA3AF;
       line-height: 1.6;
     }
 
-    /* ===== COMPARISON / PROBLEM-SOLUTION ===== */
-    .compare-section {
-      padding: 48px 64px;
-      border-bottom: 1px solid rgba(124,58,237,0.15);
-    }
-    .compare-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-    .compare-card {
-      border-radius: 20px;
-      padding: 28px;
-    }
-    .compare-card.bad {
-      background: rgba(239,68,68,0.06);
-      border: 1px solid rgba(239,68,68,0.25);
-    }
-    .compare-card.good {
-      background: rgba(124,58,237,0.08);
-      border: 1px solid rgba(124,58,237,0.35);
-    }
-    .compare-card-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .compare-card.bad .compare-card-title { color: #F87171; }
-    .compare-card.good .compare-card-title { color: #A78BFA; }
-    .compare-list {
-      list-style: none;
+    /* ===== SECTION 4: REAL PRODUCT SCREENSHOT SHOWCASE (`۰۴ پیشخوان`) - CRITICAL ===== */
+    .showcase-container {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 40px;
     }
-    .compare-list li {
+    .product-window-frame {
+      background: #0F172A;
+      border: 1px solid rgba(0, 242, 254, 0.35);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 242, 254, 0.1);
+      position: relative;
+    }
+    .window-header-bar {
+      background: #1E293B;
+      padding: 12px 20px;
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      line-height: 1.5;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .compare-card.bad .compare-list li { color: #FCA5A5; }
-    .compare-card.good .compare-list li { color: #C4B5FD; }
-    .icon-x, .icon-check {
-      width: 18px;
-      height: 18px;
+    .window-dots {
+      display: flex;
+      gap: 8px;
+    }
+    .window-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
+    }
+    .dot-red { background: #EF4444; }
+    .dot-yellow { background: #F59E0B; }
+    .dot-green { background: #10B981; }
+    
+    .window-title-tag {
+      font-size: 13px;
+      font-weight: 600;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .window-title-tag span {
+      color: #00F2FE;
+    }
+
+    /* Placeholder Canvas Area for Product Image */
+    .screenshot-placeholder-canvas {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      background: radial-gradient(circle at center, rgba(15, 23, 42, 0.95) 0%, rgba(7, 7, 20, 0.98) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      border: 2px dashed rgba(0, 242, 254, 0.3);
+      margin: 16px;
+      width: calc(100% - 32px);
+      border-radius: 14px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .screenshot-placeholder-canvas:hover {
+      border-color: rgba(0, 242, 254, 0.6);
+      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.9) 0%, rgba(7, 7, 20, 0.98) 100%);
+    }
+
+    /* Actual Product Image (when replaced) */
+    .screenshot-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    /* Hidden state if image is broken or using placeholder mode */
+    .screenshot-img[src=""], .screenshot-img:not([src]) {
+      display: none;
+    }
+
+    .upload-icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: rgba(0, 242, 254, 0.12);
+      border: 1px solid rgba(0, 242, 254, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      flex-shrink: 0;
-      margin-top: 2px;
+      font-size: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+    .placeholder-req-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .placeholder-req-desc {
+      font-size: 14px;
+      color: #94A3B8;
+      max-width: 500px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .placeholder-size-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 242, 254, 0.15);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      color: #00F2FE;
+      font-size: 12px;
       font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 100px;
     }
-    .icon-x { background: rgba(239,68,68,0.2); color: #F87171; border: 1px solid rgba(239,68,68,0.4); }
-    .icon-check { background: rgba(124,58,237,0.2); color: #A78BFA; border: 1px solid rgba(124,58,237,0.4); }
 
-    /* ===== ROI SECTION ===== */
-    .roi-section {
-      padding: 48px 64px;
-      border-bottom: 1px solid rgba(124,58,237,0.15);
+    /* Floating Callout Badges over mockups */
+    .callout-overlay-tags {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 14px 20px;
+      background: rgba(15, 23, 42, 0.85);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
+    .callout-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+    .callout-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #00F2FE;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #00F2FE;
+    }
+
+    /* ===== SECTION 5: FEATURES GRID (`۰۵ ویژگی‌ها`) ===== */
+    .features-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .bento-card {
+      background: linear-gradient(160deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .bento-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 242, 254, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+    }
+    .bento-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .bento-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    .bento-desc {
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION 6: ROI & ECONOMICS (`۰۶ بازگشت سرمایه`) ===== */
     .roi-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 20px;
     }
-    .roi-block {
-      background: linear-gradient(135deg, rgba(124,58,237,0.12) 0%, rgba(99,102,241,0.06) 100%);
-      border: 1px solid rgba(124,58,237,0.25);
-      border-radius: 18px;
-      padding: 24px 20px;
+    .roi-card {
+      background: linear-gradient(180deg, rgba(0, 242, 254, 0.08) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      border-radius: 20px;
+      padding: 28px 20px;
       text-align: center;
     }
-    .roi-emoji {
-      font-size: 32px;
+    .roi-icon {
+      font-size: 30px;
       margin-bottom: 10px;
       display: block;
     }
     .roi-val {
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 900;
-      background: linear-gradient(135deg, #A78BFA, #EC4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
       line-height: 1;
-      margin-bottom: 6px;
-    }
-    .roi-label {
-      font-size: 13px;
-      color: #9CA3AF;
-      line-height: 1.4;
-    }
-
-    /* ===== USE CASES SECTION ===== */
-    .usecases-section {
-      padding: 48px 64px;
-      border-bottom: 1px solid rgba(124,58,237,0.15);
-    }
-    .usecase-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .usecase-tile {
-      border-radius: 18px;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .usecase-tile.uc1 {
-      background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(124,58,237,0.04));
-      border: 1px solid rgba(124,58,237,0.3);
-    }
-    .usecase-tile.uc2 {
-      background: linear-gradient(135deg, rgba(236,72,153,0.12), rgba(236,72,153,0.03));
-      border: 1px solid rgba(236,72,153,0.25);
-    }
-    .usecase-tile.uc3 {
-      background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.03));
-      border: 1px solid rgba(245,158,11,0.25);
-    }
-    .usecase-emoji {
-      font-size: 36px;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .usecase-tile h3 {
-      font-size: 17px;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .usecase-tile ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .usecase-tile ul li {
-      font-size: 13px;
-      color: #9CA3AF;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .usecase-tile ul li::before {
-      content: '›';
-      font-size: 16px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .uc1 ul li::before { color: #7C3AED; }
-    .uc2 ul li::before { color: #EC4899; }
-    .uc3 ul li::before { color: #F59E0B; }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      padding: 56px 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(99,102,241,0.08) 50%, rgba(236,72,153,0.1) 100%);
-      border-top: 1px solid rgba(124,58,237,0.2);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(124,58,237,0.2) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .cta-left {
-      position: relative;
-      z-index: 1;
-    }
-    .cta-tagline {
-      font-size: 12px;
-      font-weight: 600;
-      color: #A78BFA;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-    .cta-title {
-      font-size: 36px;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.15;
-    }
-    .cta-title span {
-      background: linear-gradient(135deg, #A78BFA, #EC4899);
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #00F2FE, #EC4899);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .cta-sub {
+    .roi-lbl {
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+
+    /* ===== SECTION 7: COMPATIBILITY (`۰۷ سازگاری`) ===== */
+    .compat-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .compat-badge {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 100px;
+      padding: 12px 28px;
       font-size: 15px;
-      color: #9CA3AF;
-      margin-top: 10px;
-    }
-    .cta-right {
-      position: relative;
-      z-index: 1;
-      flex-shrink: 0;
-      text-align: center;
-    }
-    .cta-btn {
-      display: inline-flex;
+      font-weight: 700;
+      color: #E2E8F0;
+      display: flex;
       align-items: center;
       gap: 10px;
-      background: linear-gradient(135deg, #7C3AED 0%, #6366F1 100%);
-      color: #fff;
-      text-decoration: none;
-      padding: 18px 40px;
-      border-radius: 14px;
-      font-size: 18px;
-      font-weight: 800;
-      box-shadow: 0 8px 32px rgba(124,58,237,0.5);
-      letter-spacing: -0.3px;
+      backdrop-filter: blur(5px);
+      transition: all 0.2s ease;
     }
-    .cta-url {
-      font-size: 13px;
-      color: #6B7280;
-      margin-top: 10px;
-    }
-    .cta-url span {
-      color: #A78BFA;
+    .compat-badge:hover {
+      border-color: rgba(0, 242, 254, 0.5);
+      background: rgba(0, 242, 254, 0.1);
+      color: #00F2FE;
     }
 
-    /* ===== FOOTER TAG ===== */
-    .footer-tag {
-      display: flex;
+    /* ===== SECTION 8: CTA (`۰۸ دریافت افزونه`) ===== */
+    .cta-banner-box {
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(121, 40, 202, 0.25) 50%, rgba(255, 0, 128, 0.15) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.5);
+      border-radius: 28px;
+      padding: 60px 48px;
+      text-align: center;
+      box-shadow: 0 0 50px rgba(0, 242, 254, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-title {
+      font-size: 38px;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .cta-desc {
+      font-size: 17px;
+      color: #CBD5E1;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .cta-btn-main {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
-      padding: 20px;
-      border-top: 1px solid rgba(124,58,237,0.15);
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+      color: #070714;
+      text-decoration: none;
+      padding: 18px 48px;
+      border-radius: 16px;
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
     }
-    .footer-tag .logo-mini {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .cta-btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 242, 254, 0.6);
     }
-    .footer-tag .logo-mini-icon {
-      width: 28px;
-      height: 28px;
-      background: linear-gradient(135deg, #7C3AED, #6366F1);
-      border-radius: 8px;
+    .cta-foot-note {
+      font-size: 13px;
+      color: #94A3B8;
+      margin-top: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-bar {
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #64748B;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 16px;
     }
-    .footer-tag .logo-mini-text {
-      font-size: 16px;
-      font-weight: 800;
-      color: #fff;
+
+    /* ===== RESPONSIVE BREAKPOINTS ===== */
+    @media (max-width: 992px) {
+      .hero-main-title { font-size: 42px; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .pipeline-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-bento-grid { grid-template-columns: repeat(2, 1fr); }
+      .roi-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    .footer-tag .separator {
-      width: 4px;
-      height: 4px;
-      background: #4B5563;
-      border-radius: 50%;
-    }
-    .footer-tag .footer-desc {
-      font-size: 13px;
-      color: #6B7280;
+    @media (max-width: 640px) {
+      .section { padding: 40px 20px; }
+      .hero-main-title { font-size: 32px; }
+      .hero-stats-grid { grid-template-columns: 1fr; }
+      .pipeline-grid { grid-template-columns: 1fr; }
+      .features-bento-grid { grid-template-columns: 1fr; }
+      .roi-grid { grid-template-columns: 1fr; }
+      .cta-banner-box { padding: 40px 20px; }
+      .cta-title { font-size: 28px; }
     }
   </style>
 </head>
 <body>
-<div class="infographic">
 
-  <!-- Background decorations -->
+<div class="infographic-wrapper">
+  <!-- Background Layer -->
   <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
-  <div class="bg-glow bg-glow-3"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+  <div class="bg-glow glow-4"></div>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero-section section">
-    <div class="hero-left">
-      <div class="product-badge">
-        <span class="badge-dot-live"></span>
-        افزونه وردپرس | نسخه ۱.۰
+  <!-- ===== HERO SECTION (`۰۱ مقدمه`) ===== -->
+  <header class="hero-section section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۱</span>
+      <span>مقدمه و معرفی محصول</span>
+    </div>
+
+    <div class="hero-top-logo">
+      <svg width="52" height="52" viewBox="0 0 32 32" fill="none">
+        <path d="M6 8h12M6 14h10M6 20h8" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="22" cy="20" r="5" fill="#EC4899" opacity="0.9"/>
+        <path d="M20.5 20l1 1 2-2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1 class="hero-main-title">
+      مقاله‌نگار | <span class="grad-cyan">تحریریه ۶ عاملی</span> هوش مصنوعی
+    </h1>
+    <p class="hero-sub-title">
+      نخستین افزونه بومی وردپرس که یک تیم کاملاً هوشمند از استراتژیست تا منتقد و انسانی‌ساز را مستقیم در پیشخوان وردپرس شما پیاده‌سازی می‌کند.
+    </p>
+
+    <div class="hero-pills-row">
+      <div class="hero-tag-pill">⚡ انتشار مستقیم در وردپرس</div>
+      <div class="hero-tag-pill">🌿 لحن ۱۰۰٪ انسانی و طبیعی</div>
+      <div class="hero-tag-pill">🎯 هماهنگ با Yoast & Rank Math</div>
+      <div class="hero-tag-pill">📦 تولید انبوه مقاله و محصول</div>
+    </div>
+
+    <div class="hero-stats-grid">
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">۶ عامل</div>
+        <div class="hero-stat-desc">همکاری همزمان روی هر مقاله</div>
       </div>
-      <h1 class="hero-title">
-        تحریریه<br/>
-        <span class="grad-text">۶ نفره هوش مصنوعی</span><br/>
-        در وردپرس شما
-      </h1>
-      <p class="hero-desc">
-        تولید خودکار مقالات، توضیحات ووکامرس و صفحات دسته‌بندی با لحن کاملاً انسانی، سئوی بی‌نقص و هماهنگ با Yoast و Rank Math.
-      </p>
-      <div class="hero-stats-row">
-        <div class="stat-box">
-          <div class="stat-num">۶</div>
-          <div class="stat-lbl">عامل هوش مصنوعی</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">۹۰٪</div>
-          <div class="stat-lbl">صرفه‌جویی در زمان</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">۱۰۰٪</div>
-          <div class="stat-lbl">سازگاری با وردپرس</div>
-        </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">۹۰٪</div>
+        <div class="hero-stat-desc">صرفه‌جویی واقعی در زمان و هزینه</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">۱۰۰٪</div>
+        <div class="hero-stat-desc">سازگاری با نسخه‌های جدید وردپرس</div>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="logo-card">
-        <div class="logo-card-icon">
-          <svg width="44" height="44" viewBox="0 0 32 32" fill="none">
-            <path d="M8 10h10M8 15h8M8 20h6" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="22" cy="20" r="5" fill="#EC4899" opacity="0.9"/>
-            <path d="M20.5 20l1 1 2-2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="logo-card-name">مقاله‌نگار</div>
-        <div class="logo-card-sub">تحریریه هوش مصنوعی وردپرس</div>
-        <div class="logo-card-pills">
-          <span class="pill">وردپرس</span>
-          <span class="pill">ووکامرس</span>
-          <span class="pill">سئو</span>
-          <span class="pill">هوش مصنوعی</span>
-        </div>
-      </div>
+  </header>
+
+  <!-- ===== SECTION 2: PROBLEM VS SOLUTION (`۰۲ چالش`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۲</span>
+      <span>بررسی چالش و راهکار</span>
     </div>
-  </section>
+    <h2 class="section-title">چرا ابزارهای عمومی هوش مصنوعی <span class="grad-purple">شکست می‌خورند؟</span></h2>
+    <p class="section-subtitle">مقایسه تفاوت نگارش ساده با هوش مصنوعی و تحریریه هوشمند مقاله‌نگار</p>
 
-  <!-- ===== PIPELINE SECTION ===== -->
-  <section class="pipeline-section section">
-    <div class="section-label-tag">خط تولید</div>
-    <h2 class="section-title">۶ عامل تخصصی روی هر مقاله کار می‌کنند</h2>
-    <div class="pipeline-track">
-      <div class="pipeline-connector-line"></div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۱</div>
-        <div class="agent-icon-circle c1">🧠</div>
-        <div class="agent-node-name">استراتژیست</div>
-        <div class="agent-node-desc">ساختار محتوا و طراحی سرفصل‌ها</div>
-      </div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۲</div>
-        <div class="agent-icon-circle c2">🔍</div>
-        <div class="agent-node-name">پژوهشگر</div>
-        <div class="agent-node-desc">استخراج فکت و اطلاعات کاربردی</div>
-      </div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۳</div>
-        <div class="agent-icon-circle c3">✍️</div>
-        <div class="agent-node-name">نویسنده</div>
-        <div class="agent-node-desc">نگارش متن جامع و جذاب</div>
-      </div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۴</div>
-        <div class="agent-icon-circle c4">🧐</div>
-        <div class="agent-node-name">منتقد</div>
-        <div class="agent-node-desc">بررسی انسجام و رفع ایرادات</div>
-      </div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۵</div>
-        <div class="agent-icon-circle c5">🌿</div>
-        <div class="agent-node-name">انسانی‌ساز</div>
-        <div class="agent-node-desc">حذف کامل لحن رباتیک</div>
-      </div>
-
-      <div class="agent-node">
-        <div class="agent-node-num">۶</div>
-        <div class="agent-icon-circle c6">🚀</div>
-        <div class="agent-node-name">سئو و انتشار</div>
-        <div class="agent-node-desc">بهینه‌سازی و انتشار در وردپرس</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES SECTION ===== -->
-  <section class="features-section section">
-    <div class="section-label-tag">ویژگی‌های کلیدی</div>
-    <h2 class="section-title">همه چیزی که نیاز دارید — در یک افزونه</h2>
-    <div class="features-grid">
-
-      <div class="feature-block f1">
-        <div class="feature-icon-wrap">📦</div>
-        <h3>تولید انبوه محتوا</h3>
-        <p>با وارد کردن فایل اکسل از صدها کلمه کلیدی، افزونه به‌صورت زمان‌بندی‌شده محتوا می‌سازد.</p>
-      </div>
-
-      <div class="feature-block f2">
-        <div class="feature-icon-wrap">🎯</div>
-        <h3>هماهنگی با Yoast و Rank Math</h3>
-        <p>عنوان سئو، توضیحات متا و کلمه کلیدی کانونی خودکار پر می‌شود.</p>
-      </div>
-
-      <div class="feature-block f3">
-        <div class="feature-icon-wrap">👁️</div>
-        <h3>پنل گردش‌کار زنده</h3>
-        <p>مرحله به مرحله فکر کردن هر عامل را ببینید و قبل از انتشار بازبینی کنید.</p>
-      </div>
-
-      <div class="feature-block f4">
-        <div class="feature-icon-wrap">🎭</div>
-        <h3>شخصی‌سازی لحن</h3>
-        <p>لحن‌های رسمی، صمیمی، تخصصی و متقاعدکننده متناسب با برند شما.</p>
-      </div>
-
-      <div class="feature-block f5">
-        <div class="feature-icon-wrap">🖥️</div>
-        <h3>مستقیم روی هاست شما</h3>
-        <p>بدون پلتفرم واسط؛ همه چیز در پنل مدیریت وردپرس شما مدیریت می‌شود.</p>
-      </div>
-
-      <div class="feature-block f6">
-        <div class="feature-icon-wrap">🤖</div>
-        <h3>محتوای انسانی‌شده</h3>
-        <p>عامل انسانی‌ساز متن را بازنویسی می‌کند تا از هر ابزار تشخیص AI رد شود.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== COMPARE SECTION ===== -->
-  <section class="compare-section section">
-    <div class="section-label-tag">مقایسه</div>
-    <h2 class="section-title">مقاله‌نگار در برابر <span>ابزارهای معمولی</span></h2>
     <div class="compare-grid">
+      <!-- BAD CARD -->
       <div class="compare-card bad">
-        <div class="compare-card-title">
-          <span>✗</span> ابزارهای معمولی هوش مصنوعی
+        <div class="compare-header">
+          <span>❌</span> چالش‌های ابزارهای معمولی AI
         </div>
         <ul class="compare-list">
-          <li><span class="icon-x">✗</span> متن‌های خشک و رباتیک که نیاز به ساعت‌ها ویرایش دارند</li>
-          <li><span class="icon-x">✗</span> شناسایی توسط گوگل و افت رتبه سئو</li>
-          <li><span class="icon-x">✗</span> عدم هماهنگی با افزونه‌های سئو و تنظیم دستی</li>
-          <li><span class="icon-x">✗</span> ناتوانی در تولید انبوه محتوا برای فروشگاه‌ها</li>
-          <li><span class="icon-x">✗</span> نیاز به کپی‌پیست دستی به داخل وردپرس</li>
+          <li class="compare-item">
+            <span class="status-icon bad">✕</span>
+            <span>متن‌های خشک و تک‌بُعدی که فوراً رباتیک بودن آن‌ها مشخص می‌شود.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon bad">✕</span>
+            <span>افت رتبه سئو به دلیل شناسایی توسط الگوریتم‌های هوش مصنوعی گوگل.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon bad">✕</span>
+            <span>عدم اتصال به وردپرس و اتلاف وقت زیاد در کپی‌پیست دستی.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon bad">✕</span>
+            <span>پر نشدن متاداده‌های سئو (عنوان، دسکریپشن و کلمه کلیدی) به صورت خودکار.</span>
+          </li>
         </ul>
       </div>
+
+      <!-- GOOD CARD -->
       <div class="compare-card good">
-        <div class="compare-card-title">
-          <span>✓</span> مقاله‌نگار
+        <div class="compare-header">
+          <span>✅</span> راهکار هوشمند مقاله‌نگار
         </div>
         <ul class="compare-list">
-          <li><span class="icon-check">✓</span> ۶ عامل تخصصی روی هر مقاله کار می‌کنند</li>
-          <li><span class="icon-check">✓</span> عامل انسانی‌ساز لحن رباتیک را کاملاً حذف می‌کند</li>
-          <li><span class="icon-check">✓</span> هماهنگی خودکار با Yoast SEO و Rank Math</li>
-          <li><span class="icon-check">✓</span> تولید انبوه با وارد کردن صدها کلمه کلیدی</li>
-          <li><span class="icon-check">✓</span> انتشار مستقیم در پیشخوان وردپرس شما</li>
+          <li class="compare-item">
+            <span class="status-icon good">✓</span>
+            <span>همکاری ۶ عامل تخصصی برای سنجش فکت‌ها، سئو و ساختار مقاله.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon good">✓</span>
+            <span>عامل اختصاصی انسانی‌ساز که متن را کاملاً طبیعی و جذاب بازنویسی می‌کند.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon good">✓</span>
+            <span>مدیریت کامل داخل پیشخوان وردپرس بدون نیاز به هیچ ابزار خارجی.</span>
+          </li>
+          <li class="compare-item">
+            <span class="status-icon good">✓</span>
+            <span>تنظیم و پر کردن خودکار کامل متاباکس‌های Yoast SEO و Rank Math.</span>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== ROI SECTION ===== -->
-  <section class="roi-section section">
-    <div class="section-label-tag">ارزش اقتصادی</div>
-    <h2 class="section-title">چرا مقاله‌نگار <span>ارزش خریدن</span> دارد؟</h2>
+  <!-- ===== SECTION 3: 6-AGENT PIPELINE (`۰۳ مکانیزم`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۳</span>
+      <span>مکانیزم و خط تولید</span>
+    </div>
+    <h2 class="section-title">خط تولید <span class="grad-cyan">۶ عاملی</span> چگونه کار می‌کند؟</h2>
+    <p class="section-subtitle">هر مقاله از زیر نظر ۶ عامل هوش مصنوعی تخصص‌یافته عبور می‌کند تا خروجی بی‌نقص حاصل شود.</p>
+
+    <div class="pipeline-grid">
+      <!-- Agent 1 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام اول</span>
+        <div class="agent-icon-box">🧠</div>
+        <h3 class="agent-title">۱. استراتژیست</h3>
+        <p class="agent-desc">تحلیل کلمه کلیدی، ترسیم درخت محتوا و طراحی دقیق سرفصل‌های اصلی و فرعی (H2 & H3).</p>
+      </div>
+
+      <!-- Agent 2 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام دوم</span>
+        <div class="agent-icon-box">🔍</div>
+        <h3 class="agent-title">۲. پژوهشگر</h3>
+        <p class="agent-desc">استخراج آمار، فکت‌های معتبر و اطلاعات کاربردی مرتبط با کلمه کلیدی هدف.</p>
+      </div>
+
+      <!-- Agent 3 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام سوم</span>
+        <div class="agent-icon-box">✍️</div>
+        <h3 class="agent-title">۳. نویسنده اصلی</h3>
+        <p class="agent-desc">نگارش بخش به بخش مقاله با رعایت اصول نگارشی، روانی متن و ترغیب مخاطب.</p>
+      </div>
+
+      <!-- Agent 4 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام چهارم</span>
+        <div class="agent-icon-box">🧐</div>
+        <h3 class="agent-title">۴. منتقد و ادیتور</h3>
+        <p class="agent-desc">بررسی ساختاری، سنجش انسجام مطالب، برطرف کردن تناقضات و اصلاح غلط‌های املایی.</p>
+      </div>
+
+      <!-- Agent 5 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام پنجم</span>
+        <div class="agent-icon-box">🌿</div>
+        <h3 class="agent-title">۵. انسانی‌ساز (Humanizer)</h3>
+        <p class="agent-desc">حذف کامل جملات کلیشه‌ای رباتیک و تبدیل متن به لحن طبیعی قابل قبول برای الگوریتم‌های گوگل.</p>
+      </div>
+
+      <!-- Agent 6 -->
+      <div class="agent-card">
+        <span class="agent-badge-num">گام ششم</span>
+        <div class="agent-icon-box">🚀</div>
+        <h3 class="agent-title">۶. مسئول سئو و انتشار</h3>
+        <p class="agent-desc">تنظیم Meta Title، Meta Description، کلمه کلیدی کانونی و قرار دادن مقاله در پیشخوان وردپرس.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: REAL PRODUCT SCREENSHOT SHOWCASE (`۰۴ پیشخوان`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۴</span>
+      <span>نمای واقعی محصول</span>
+    </div>
+    <h2 class="section-title">پیشخوان واقعی <span class="grad-cyan">افزونه مقاله‌نگار</span> در وردپرس</h2>
+    <p class="section-subtitle">محیط کاربری افزونه جهت جایگذاری عکس‌های واقعی محصول آماده شده است.</p>
+
+    <div class="showcase-container">
+      
+      <!-- FRAME 1: Main Dashboard -->
+      <div class="product-window-frame">
+        <div class="window-header-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title-tag">
+            <span>🖥️ پیشخوان اصلی افزونه</span> | لیست مقالات و جریان کاری ۶ عامل
+          </div>
+        </div>
+
+        <div class="screenshot-placeholder-canvas">
+          <!-- Real image tag (Replace src when ready) -->
+          <img src="" alt="پیشخوان اصلی مقاله‌نگار" class="screenshot-img" id="img-dashboard-main" />
+
+          <!-- Placeholder visual guidance -->
+          <div class="upload-icon-box">🖼️</div>
+          <h3 class="placeholder-req-title">[محل قرارگیری عکس ۱: پیشخوان اصلی افزونه]</h3>
+          <p class="placeholder-req-desc">
+            اسکرین‌شات از نمای اصلی پنل افزونه مقاله‌نگار شامل لیست مقالات، دکمه‌های شروع تولید انبوه و نمایش زنده وضعیت ۶ عامل.
+          </p>
+          <div class="placeholder-size-badge">
+            <span>ابعاد پیشنهادی: 1280 × 720 پیکسل</span>
+          </div>
+        </div>
+
+        <div class="callout-overlay-tags">
+          <span class="callout-badge"><span class="dot"></span> پنل اختصاصی کنترل ۶ عامل</span>
+          <span class="callout-badge"><span class="dot"></span> گزارش زنده پیشرفت نگارش</span>
+          <span class="callout-badge"><span class="dot"></span> مدیریت انبوه کلمات کلیدی</span>
+        </div>
+      </div>
+
+      <!-- FRAME 2: Agent Settings & Humanizer -->
+      <div class="product-window-frame">
+        <div class="window-header-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title-tag">
+            <span>⚙️ تنظیمات لحن و انسانی‌ساز</span> | پیکربندی هوش مصنوعی
+          </div>
+        </div>
+
+        <div class="screenshot-placeholder-canvas">
+          <!-- Real image tag (Replace src when ready) -->
+          <img src="" alt="تنظیمات لحن و عامل انسانی‌ساز" class="screenshot-img" id="img-dashboard-settings" />
+
+          <!-- Placeholder visual guidance -->
+          <div class="upload-icon-box">⚙️</div>
+          <h3 class="placeholder-req-title">[محل قرارگیری عکس ۲: تنظیمات لحن و انسانی‌ساز]</h3>
+          <p class="placeholder-req-desc">
+            اسکرین‌شات از بخش تنظیمات لحن محتوا، انتخاب عامل انسانی‌ساز، درجه خلاقیت و کلیدهای API.
+          </p>
+          <div class="placeholder-size-badge">
+            <span>ابعاد پیشنهادی: 1280 × 720 پیکسل</span>
+          </div>
+        </div>
+
+        <div class="callout-overlay-tags">
+          <span class="callout-badge"><span class="dot"></span> تنظیم شدت انسانی‌سازی</span>
+          <span class="callout-badge"><span class="dot"></span> ۵+ لحن اختصاصی برند</span>
+          <span class="callout-badge"><span class="dot"></span> پشتیبانی از پرومپت تخصصی</span>
+        </div>
+      </div>
+
+      <!-- FRAME 3: Editor & SEO Integration -->
+      <div class="product-window-frame">
+        <div class="window-header-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title-tag">
+            <span>📝 ویرایشگر مقاله و متاباکس سئو</span> | هماهنگی با Yoast / Rank Math
+          </div>
+        </div>
+
+        <div class="screenshot-placeholder-canvas">
+          <!-- Real image tag (Replace src when ready) -->
+          <img src="" alt="ویرایشگر مقاله و هماهنگی سئو" class="screenshot-img" id="img-dashboard-editor" />
+
+          <!-- Placeholder visual guidance -->
+          <div class="upload-icon-box">📝</div>
+          <h3 class="placeholder-req-title">[محل قرارگیری عکس ۳: خروجی مقاله و هماهنگی سئو]</h3>
+          <p class="placeholder-req-desc">
+            اسکرین‌شات از پست نهایی تولید شده در ویرایشگر وردپرس و پر شدن خودکار کلمه کلیدی، عنوان و توضیحات متا در Yoast یا Rank Math.
+          </p>
+          <div class="placeholder-size-badge">
+            <span>ابعاد پیشنهادی: 1280 × 720 پیکسل</span>
+          </div>
+        </div>
+
+        <div class="callout-overlay-tags">
+          <span class="callout-badge"><span class="dot"></span> پر شدن اتوماتیک متاباکس Yoast / Rank Math</span>
+          <span class="callout-badge"><span class="dot"></span> ساختار استاندارد H1 تا H4</span>
+          <span class="callout-badge"><span class="dot"></span> آماده انتشار یک‌کلیکی</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: FEATURES GRID (`۰۵ ویژگی‌ها`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۵</span>
+      <span>امکانات و ویژگی‌ها</span>
+    </div>
+    <h2 class="section-title">همه چیز برای <span class="grad-purple">تولید محتوای حرفه‌ای</span></h2>
+    <p class="section-subtitle">قابلیت‌های قدرتمند افزونه مقاله‌نگار در یک نگاه</p>
+
+    <div class="features-bento-grid">
+      <div class="bento-card">
+        <span class="bento-icon">📦</span>
+        <h3 class="bento-title">تولید انبوه با اکسل</h3>
+        <p class="bento-desc">وارد کردن صدها کلمه کلیدی به صورت یکجا و زمان‌بندی خودکار انتشار مقالات در فواصل دلخواه.</p>
+      </div>
+
+      <div class="bento-card">
+        <span class="bento-icon">🎯</span>
+        <h3 class="bento-title">سازگاری با افزونه‌های سئو</h3>
+        <p class="bento-desc">اتصال مستقیم به Yoast SEO و Rank Math جهت تکمیل کامل کلمه کلیدی، عنوان سئو و متا دسکریپشن.</p>
+      </div>
+
+      <div class="bento-card">
+        <span class="bento-icon">👁️</span>
+        <h3 class="bento-title">مشاهده زنده روند فکر</h3>
+        <p class="bento-desc">امکان مشاهده گام به گام فرایند تفکر و نگارش هر کدام از ۶ عامل قبل از انتشار نهایی.</p>
+      </div>
+
+      <div class="bento-card">
+        <span class="bento-icon">🎭</span>
+        <h3 class="bento-title">شخصی‌سازی لحن</h3>
+        <p class="bento-desc">تنظیم لحن‌های متنوع شامل رسمی، تخصصی، صمیمی و متقاعدکننده بر اساس نوع مخاطبان سایت شما.</p>
+      </div>
+
+      <div class="bento-card">
+        <span class="bento-icon">⚡</span>
+        <h3 class="bento-title">بدون سرویس واسط</h3>
+        <p class="bento-desc">اجرای تمام فرایندها مستقیماً روی سرور و هاست وردپرس شما بدون وابستگی به سامانه‌های جانبی.</p>
+      </div>
+
+      <div class="bento-card">
+        <span class="bento-icon">🛡️</span>
+        <h3 class="bento-title">عبور از ابزارهای AI Detector</h3>
+        <p class="bento-desc">بازنویسی هوشمند متن به گونه‌ای که هیچ ابزار تشخیص هوش مصنوعی نتواند مقاله را غیرانسانی بداند.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: ROI & ECONOMICS (`۰۶ بازگشت سرمایه`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۶</span>
+      <span>ارزش اقتصادی</span>
+    </div>
+    <h2 class="section-title">چرا مقاله‌نگار <span class="grad-cyan">سرمایه‌گذاری هوشمندانه</span> است؟</h2>
+    <p class="section-subtitle">محاسبه میزان صرفه‌جویی زمان و هزینه پس از تهیه افزونه</p>
+
     <div class="roi-grid">
-      <div class="roi-block">
-        <span class="roi-emoji">💰</span>
+      <div class="roi-card">
+        <span class="roi-icon">💰</span>
         <div class="roi-val">۲×</div>
-        <div class="roi-label">با هزینه ۲ مقاله از فریلنسر، بازگشت سرمایه کامل دارید</div>
+        <div class="roi-lbl">بازگشت کامل سرمایه تنها با تولید ۲ مقاله استاندارد</div>
       </div>
-      <div class="roi-block">
-        <span class="roi-emoji">⚡</span>
+
+      <div class="roi-card">
+        <span class="roi-icon">⚡</span>
         <div class="roi-val">۹۰٪</div>
-        <div class="roi-label">صرفه‌جویی در زمان تولید محتوا نسبت به روش‌های سنتی</div>
+        <div class="roi-lbl">کاهش زمان نگارش و ادیت مقالات برای تیم تحریریه</div>
       </div>
-      <div class="roi-block">
-        <span class="roi-emoji">📈</span>
+
+      <div class="roi-card">
+        <span class="roi-icon">📈</span>
         <div class="roi-val">∞</div>
-        <div class="roi-label">محتوای نامحدود با یک بار خرید افزونه</div>
+        <div class="roi-lbl">تولید نامحدود مقاله بدون پرداخت هزینه ماهیانه اضافه‌تر</div>
       </div>
-      <div class="roi-block">
-        <span class="roi-emoji">🏆</span>
+
+      <div class="roi-card">
+        <span class="roi-icon">🏆</span>
         <div class="roi-val">۱۰۰٪</div>
-        <div class="roi-label">سازگاری با تمام نسخه‌های وردپرس و ووکامرس</div>
+        <div class="roi-lbl">تضمین کیفیت و سازگاری کامل با وردپرس و ووکامرس</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== USE CASES SECTION ===== -->
-  <section class="usecases-section section">
-    <div class="section-label-tag">کاربردها</div>
-    <h2 class="section-title">یک افزونه برای <span>همه نیازهای</span> محتوایی</h2>
-    <div class="usecase-row">
-      <div class="usecase-tile uc1">
-        <span class="usecase-emoji">📰</span>
-        <h3>مقالات وبلاگ</h3>
-        <ul>
-          <li>مقالات ۱۵۰۰ تا ۵۰۰۰+ کلمه</li>
-          <li>ساختار H1، H2، H3 استاندارد</li>
-          <li>لینک‌سازی داخلی هوشمند</li>
-          <li>تولید انبوه با لیست موضوعات</li>
-        </ul>
-      </div>
-      <div class="usecase-tile uc2">
-        <span class="usecase-emoji">🛍️</span>
-        <h3>محصولات ووکامرس</h3>
-        <ul>
-          <li>توضیح کوتاه و بلند محصول</li>
-          <li>متن متقاعدکننده برای فروش</li>
-          <li>جدول مقایسه ویژگی‌ها</li>
-          <li>بهینه‌سازی صفحات محصول</li>
-        </ul>
-      </div>
-      <div class="usecase-tile uc3">
-        <span class="usecase-emoji">📂</span>
-        <h3>صفحات دسته‌بندی</h3>
-        <ul>
-          <li>محتوای منحصربه‌فرد هر دسته</li>
-          <li>بهینه‌سازی کلمات کلیدی دسته</li>
-          <li>تولید خودکار صدها دسته‌بندی</li>
-          <li>انسجام محتوایی در کل سایت</li>
-        </ul>
-      </div>
+  <!-- ===== SECTION 7: COMPATIBILITY (`۰۷ سازگاری`) ===== -->
+  <section class="section">
+    <div class="section-pill-badge">
+      <span class="pill-num">۰۷</span>
+      <span>سازگاری کامل</span>
+    </div>
+    <h2 class="section-title" style="text-align: center;">سازگار با <span class="grad-purple">تمام اکوسیستم وردپرس</span></h2>
+    <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
+      مقاله‌نگار با تمام ابزارهای رایج وردپرس و فروشگاه‌ساز ووکامرس هماهنگی کامل دارد.
+    </p>
+
+    <div class="compat-badges-row">
+      <div class="compat-badge">🟦 WordPress 6.0+</div>
+      <div class="compat-badge">🛒 WooCommerce</div>
+      <div class="compat-badge">🟢 Yoast SEO</div>
+      <div class="compat-badge">🔴 Rank Math</div>
+      <div class="compat-badge">🎨 Elementor</div>
+      <div class="compat-badge">🧩 Gutenberg</div>
     </div>
   </section>
 
-  <!-- ===== CTA SECTION ===== -->
-  <section class="cta-section section">
-    <div class="cta-left">
-      <div class="cta-tagline">همین الان شروع کن</div>
+  <!-- ===== SECTION 8: CTA (`۰۸ دریافت افزونه`) ===== -->
+  <section class="section" style="border-bottom: none;">
+    <div class="cta-banner-box">
+      <div class="section-pill-badge" style="margin-bottom: 16px;">
+        <span class="pill-num">۰۸</span>
+        <span>دریافت فوری</span>
+      </div>
       <h2 class="cta-title">
-        تحریریه <span>هوش مصنوعی</span><br/>
-        را به وردپرس خود اضافه کن
+        تحریریه ۶ عاملی هوش مصنوعی را<br/>
+        به <span class="grad-cyan">وردپرس خود اضافه کنید</span>
       </h2>
-      <p class="cta-sub">بدون اشتراک ماهانه · یک‌بار خرید · پشتیبانی رایگان</p>
-    </div>
-    <div class="cta-right">
-      <div class="cta-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M21 12H3M11 18l-6-6 6-6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        همین الان خرید کن
+      <p class="cta-desc">
+        همین امروز روند تولید محتوای سایت خود را هوشمند و خودکار کنید. یک‌بار خرید با آپدیت‌های دائمی و پشتیبانی.
+      </p>
+
+      <a href="#" class="cta-btn-main">
+        <span>🚀 همین الان افزونه مقاله‌نگار را تهیه کنید</span>
+      </a>
+
+      <div class="cta-foot-note">
+        پشتیبانی رایگان · لایسنس دائمی · تحویل فوری پس از خرید
       </div>
-      <div class="cta-url">mohamadhoseinsabour.github.io/<span>MaghaleNegarSite</span></div>
     </div>
   </section>
 
-  <!-- ===== FOOTER TAG ===== -->
-  <div class="footer-tag section">
-    <div class="logo-mini">
-      <div class="logo-mini-icon">
-        <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
-          <path d="M8 10h10M8 15h8M8 20h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="22" cy="20" r="4" fill="#EC4899"/>
-        </svg>
-      </div>
-      <span class="logo-mini-text">مقاله‌نگار</span>
-    </div>
-    <span class="separator"></span>
-    <span class="footer-desc">تحریریه هوش مصنوعی ۶ عاملی برای وردپرس</span>
-    <span class="separator"></span>
-    <span class="footer-desc">افزونه وردپرس | هوش مصنوعی | سئو | ووکامرس</span>
-  </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-bar">
+    <span>مقاله‌نگار — تحریریه ۶ عاملی هوش مصنوعی بومی وردپرس</span>
+    <span>|</span>
+    <span>طراحی شده بر اساس استانداردهای مدرن اینفوگرافیک</span>
+  </footer>
 
 </div>
+
 </body>
 </html>
