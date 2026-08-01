@@ -182,23 +182,33 @@
     <!-- ===== SECTION: COMPREHENSIVE PANEL TOUR & DEEP DIVE ===== -->
     <section class="panel-tour-section" id="panel-tour" aria-labelledby="tour-heading">
       <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-label">معرفی نامه جامع و تور پنل</div>
-          <h2 id="tour-heading">پیش‌نمایش کامل و ریزبه‌ریز پنل افزونه مقاله‌نگار</h2>
+        
+        <div class="tour-header-center reveal-up">
+          <div class="section-label">معرفی‌نامه تعاملی پنل</div>
+          <h2 id="tour-heading">پیش‌نمایش زنده و تور کامل پنل افزونه مقاله‌نگار</h2>
           <p>
-            با مشاهده بخش‌های مختلف پنل مدیریت، به طور کامل با ابزارها و نحوه کارکرد افزونه در پیشخوان وردپرس آشنا شوید.
+            با کلیک روی هر بخش، عملکرد واقعی، امکانات فنی و اسکرین‌شات اختصاصی آن تب از پنل را به صورت تعاملی مشاهده کنید.
           </p>
         </div>
 
-        <div class="tour-nav-bar reveal-up delay-1">
-          <a href="#tour-dashboard" class="tour-nav-btn active">📊 ۱. پیشخوان و آمار</a>
-          <a href="#tour-new-content" class="tour-nav-btn">📝 ۲. نگارش هوشمند و سئو</a>
-          <a href="#tour-bulk" class="tour-nav-btn">📦 ۳. افزودن گروهی و اکسل</a>
-          <a href="#tour-brand" class="tour-nav-btn">🧠 ۴. هویت برند و بازاریابی</a>
+        <!-- Interactive Tab Switcher Buttons -->
+        <div class="tour-tab-nav reveal-up delay-1">
+          <button class="tour-tab-btn active" data-target="tour-dashboard">
+            <span>📊</span> ۱. پیشخوان و مانیتورینگ
+          </button>
+          <button class="tour-tab-btn" data-target="tour-new-content">
+            <span>📝</span> ۲. نگارش جدید & سئو
+          </button>
+          <button class="tour-tab-btn" data-target="tour-bulk">
+            <span>📦</span> ۳. تولید انبوه (اکسل)
+          </button>
+          <button class="tour-tab-btn" data-target="tour-brand">
+            <span>🧠</span> ۴. هویت برند & بازاریابی
+          </button>
         </div>
 
-        <!-- BLOCK 1: DASHBOARD -->
-        <div class="tour-panel-block reveal-up" id="tour-dashboard">
+        <!-- TAB 1: DASHBOARD -->
+        <div class="tour-panel-block active-panel" id="tour-dashboard">
           <div class="tour-window-frame">
             <div class="tour-window-header">
               <div class="tour-window-dots">
@@ -207,46 +217,81 @@
                 <span class="tour-window-dot dot-green"></span>
               </div>
               <div class="tour-window-title">
-                <span>🖥️ بخش اول:</span> پیشخوان مدیریت و مانیتورینگ آنلاین ۶ عامل
+                wp-admin/admin.php?page=maghalenegar-dashboard — <span>پیشخوان کنترل زنده</span>
               </div>
             </div>
             <div class="tour-window-img-box">
               <img src="images/dashboard.png" alt="پیشخوان اصلی افزونه مقاله‌نگار" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> گزارش لحظه‌ای آمار محتوا، محصولات و دسته‌بندی‌ها</span>
+              <span class="tour-callout-pill"><span class="dot"></span> تحلیل زنده آمار مقالات، ووکامرس و دسته‌بندی‌ها</span>
               <span class="tour-callout-pill"><span class="dot"></span> هدایت آنلاین ۶ عامل هوشمند</span>
-              <span class="tour-callout-pill"><span class="dot"></span> جدول مطالب آماده انتشار</span>
+              <span class="tour-callout-pill"><span class="dot"></span> لیست مطالب آماده انتشار</span>
             </div>
           </div>
 
-          <div class="explain-grid-3">
-            <div class="explain-card">
-              <div class="explain-card-icon">📊</div>
-              <h4>آمار و گزارش‌گیری هوشمند</h4>
-              <p>
-                در بالای پیشخوان، وضعیت کامل محتواها شامل کل محتواها (۲۲)، در حال پردازش، تکمیل‌شده، منتشرشده، تعداد محصولات ووکامرس و دسته‌بندی‌ها به صورت تفکیک‌شده نمایش داده می‌شود.
-              </p>
+          <div class="pro-explain-grid">
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">📊</div>
+                <div class="pro-card-title">
+                  <h4>تحلیل و آمار هوشمند</h4>
+                  <span>گزارش‌گیری لحظه‌ای</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> نمایش آمار کل محتواها، مقالات و محصولات</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تفکیک مقالات در حال پردازش، تکمیل‌شده و لغو شده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> سنجش تعداد دسته‌بندی‌های ساخته‌شده</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">گزارش لحظه‌ای</span>
+                <span class="pro-chip">نمودار پیشرفت</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">🤖</div>
-              <h4>مانیتورینگ ۶ عامل فعال</h4>
-              <p>
-                بخش عامالان هوشمند، روند کار برنامه‌ریز، پژوهشگر، نویسنده، منتقد، انسانی‌ساز و ناشر سئو را به صورت زنده نشان می‌دهد تا از سلامت خط تولید محتوا مطمئن شوید.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">🤖</div>
+                <div class="pro-card-title">
+                  <h4>مانیتورینگ ۶ عامل</h4>
+                  <span>هدایت خط تولید</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> مشاهده وضعیت زنده برنامه‌ریز و پژوهشگر</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> نظارت بر قلم نویسنده، منتقد و انسانی‌ساز</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> کنترل خودکار ناشر سئو قبل از انتشار</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">۶ عامل هوشمند</span>
+                <span class="pro-chip">تولید همزمان</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">📋</div>
-              <h4>مدیریت مطالب آماده انتشار</h4>
-              <p>
-                جدول مطالب نوشته‌شده، عنوان مقاله، نوع (مقاله/محصول)، وضعیت انتشار، حجم متن (کلمات) و تاریخ نگارش را قرار داده و امکان بررسی و انتشار فوری با یک کلیک را فراهم می‌سازد.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">📋</div>
+                <div class="pro-card-title">
+                  <h4>مدیریت مطالب آماده</h4>
+                  <span>بازبینی و انتشار</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> نمایش دقیق حجم متن (تعداد کلمات) و تاریخ نگارش</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> امکان بازبینی متن قبل از قرارگیری روی وبسایت</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> انتشار یک‌کلیکی مستقیم در پیشخوان وردپرس</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">بازبینی سریع</span>
+                <span class="pro-chip">انتشار خودکار</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- BLOCK 2: NEW CONTENT -->
-        <div class="tour-panel-block reveal-up" id="tour-new-content">
+        <!-- TAB 2: NEW CONTENT -->
+        <div class="tour-panel-block" id="tour-new-content">
           <div class="tour-window-frame">
             <div class="tour-window-header">
               <div class="tour-window-dots">
@@ -255,7 +300,7 @@
                 <span class="tour-window-dot dot-green"></span>
               </div>
               <div class="tour-window-title">
-                <span>📝 بخش دوم:</span> ساخت محتوای جدید، لینک‌دهی اتوماتیک و مولد تصویر AI
+                wp-admin/admin.php?page=maghalenegar-new-content — <span>ساخت محتوا و سئو</span>
               </div>
             </div>
             <div class="tour-window-img-box">
@@ -264,37 +309,73 @@
             <div class="tour-callouts-bar">
               <span class="tour-callout-pill"><span class="dot"></span> لینک‌دهی اتوماتیک داخلی به مقالات و محصولات</span>
               <span class="tour-callout-pill"><span class="dot"></span> تنظیم لحن، زبان و طول مقاله (تا ۵۰۰۰ کلمه)</span>
-              <span class="tour-callout-pill"><span class="dot"></span> تولید تصویر AI با پرومپت اختصاصی و سبک‌های رئالیستی</span>
+              <span class="tour-callout-pill"><span class="dot"></span> مولد تصویر AI با سبک‌های رئالیستی</span>
             </div>
           </div>
 
-          <div class="explain-grid-3">
-            <div class="explain-card">
-              <div class="explain-card-icon">🔗</div>
-              <h4>کلمات کلیدی و لینک‌دهی داخلی</h4>
-              <p>
-                امکان تعیین موضوع/کلمه کلیدی اصلی (Focus Keyword) و کلمات کلیدی ثانویه به همراه سیستم هوشمند لینک‌دهی اتوماتیک داخلی به مقالات، محصولات ووکامرس یا دسته‌بندی‌های سایت جهت تقویت سئو.
-              </p>
+          <div class="pro-explain-grid">
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">🔗</div>
+                <div class="pro-card-title">
+                  <h4>سئو و لینک‌دهی داخلی</h4>
+                  <span>تقویت بن‌سازه سایت</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> تعیین کلمه کلیدی اصلی (Focus Keyword) و ثانویه</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> اتصال خودکار متن جدید به مقالات و محصولات مرتبط</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پر شدن اتوماتیک فیلدهای Yoast SEO و Rank Math</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">Yoast SEO</span>
+                <span class="pro-chip">Rank Math</span>
+                <span class="pro-chip">لینک داخلی</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">🎭</div>
-              <h4>تنظیمات لحن، زبان و مقاله مرجع</h4>
-              <p>
-                انتخاب زبان نگارش، لحن محتوا (نیمه‌رسمی، تخصصی، صمیمی)، طول مقاله (کوتاه، متوسط، بلند ۳۰۰۰ تا ۵۰۰۰ کلمه) و تعیین مقالات مرجع برای الهام‌گیری از ساختار محتوایی برتر.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">🎭</div>
+                <div class="pro-card-title">
+                  <h4>تنظیمات نگارش و لحن</h4>
+                  <span>شخصی‌سازی کامل</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> انتخاب زبان فارسی و لحن‌های ۴ گانه برند</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تعیین طول محتوا (کوتاه، متوسط، بلند تا ۵۰۰۰ کلمه)</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> معرفی مقاله مرجع برای الهام از ساختار محتوایی</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">لحن اختصاصی</span>
+                <span class="pro-chip">تا ۵۰۰۰ کلمه</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">🖼️</div>
-              <h4>مولد اختصاصی تصویر با AI</h4>
-              <p>
-                تولید خودکار تصویر شاخص و تصاویر محتوا در سبک‌های رئالیستی (Realism)، ادیتوریال، سه بعدی، مینیمال و سینمایی بر اساس پرومپت‌های بهینه‌شده به همراه کادر توضیح متنی.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">🖼️</div>
+                <div class="pro-card-title">
+                  <h4>مولد اختصاصی تصویر AI</h4>
+                  <span>تصویرسازی بدون طراح</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> ساخت خودکار تصویر شاخص و تصاویر درون‌متنی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> انتخاب سبک‌های رئالیستی، ادیتوریال و ۳بعدی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تولید پرومپت‌های انگلیسی هوشمند بر اساس موضوع</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">تصویر AI</span>
+                <span class="pro-chip">سبک رئالیستی</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- BLOCK 3: BULK CONTENT -->
-        <div class="tour-panel-block reveal-up" id="tour-bulk">
+        <!-- TAB 3: BULK CONTENT -->
+        <div class="tour-panel-block" id="tour-bulk">
           <div class="tour-window-frame">
             <div class="tour-window-header">
               <div class="tour-window-dots">
@@ -303,46 +384,81 @@
                 <span class="tour-window-dot dot-green"></span>
               </div>
               <div class="tour-window-title">
-                <span>📦 بخش سوم:</span> افزودن گروهی، ورود دستی و آپلود فایل اکسل
+                wp-admin/admin.php?page=maghalenegar-bulk — <span>تولید انبوه و اکسل</span>
               </div>
             </div>
             <div class="tour-window-img-box">
               <img src="images/bulk-content.png" alt="تولید انبوه محتوا در مقاله‌نگار" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> ورود دستی ردیف‌ها با تنظیمات اختصاصی</span>
+              <span class="tour-callout-pill"><span class="dot"></span> ورود دستی ردیف‌ها با تنظیمات مجزا</span>
               <span class="tour-callout-pill"><span class="dot"></span> آپلود فایل اکسل XLSX و CSV</span>
               <span class="tour-callout-pill"><span class="dot"></span> صف انتشار زمان‌بندی‌شده و خودکار</span>
             </div>
           </div>
 
-          <div class="explain-grid-3">
-            <div class="explain-card">
-              <div class="explain-card-icon">✍️</div>
-              <h4>ورود دستی ردیف‌ها</h4>
-              <p>
-                می‌توانید کلمات کلیدی مختلف را ردیف به ردیف وارد کرده و برای هر ردیف، نوع محتوا (مقاله/محصول)، زبان، لحن، طول متن، حالت تصویر و تاریخ انتشار شمس را به صورت مجزا تنظیم کنید.
-              </p>
+          <div class="pro-explain-grid">
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">✍️</div>
+                <div class="pro-card-title">
+                  <h4>ورود دستی ردیف‌ها</h4>
+                  <span>مدیریت ردیفی کلمات</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> اضافه کردن ردیف‌های کلمات کلیدی با یک کلیک</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تنظیم لحن، طول متن و حالت تصویر برای هر ردیف</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تعیین تاریخ انتشار شمسی دلخواه برای هر ردیف</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">ورود سریع</span>
+                <span class="pro-chip">تاریخ شمسی</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">📁</div>
-              <h4>آپلود فایل اکسل (XLSX / CSV)</h4>
-              <p>
-                امکان دانلود قالب استاندارد اکسل، پر کردن عناوین توسط تیم محتوایی و آپلود یکجای فایل برای ساخت خودکار و انبوه صدها مقاله بدون دخالت انسانی.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">📁</div>
+                <div class="pro-card-title">
+                  <h4>آپلود فایل اکسل</h4>
+                  <span>ورود صدها عنوان یکجا</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> دانلود قالب استاندارد آماده اکسل</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> آپلود فایل‌های XLSX و CSV با حجم بالا</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پردازش خودکار و بدون خطا در پس‌زمینه</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">فایل XLSX</span>
+                <span class="pro-chip">فرمت CSV</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">⏳</div>
-              <h4>صف انتشار زمان‌بندی‌شده</h4>
-              <p>
-                سیستم هوشمند مدیریت صف مقالات (در صف، در حال پردازش، تمام‌شده، ناموفق)، تولید و انتشار را با فواصل زمانی مشخص انجام می‌دهد تا هیچ فشاری به سرور وارد نشود.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">⏳</div>
+                <div class="pro-card-title">
+                  <h4>صف انتشار خودکار</h4>
+                  <span>مدیریت منابع سرور</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> تولید تدریجی و نوبتی مقالات بدون افت سرعت هاست</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> گزارش مقالات در صف، در حال پردازش و تمام‌شده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> حفظ الگوی طبیعی انتشار در چشم گوگل</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">پردازش ایمن</span>
+                <span class="pro-chip">مدیریت صف</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- BLOCK 4: BRAND IDENTITY -->
-        <div class="tour-panel-block reveal-up" id="tour-brand">
+        <!-- TAB 4: BRAND IDENTITY -->
+        <div class="tour-panel-block" id="tour-brand">
           <div class="tour-window-frame">
             <div class="tour-window-header">
               <div class="tour-window-dots">
@@ -351,40 +467,75 @@
                 <span class="tour-window-dot dot-green"></span>
               </div>
               <div class="tour-window-title">
-                <span>🧠 بخش چهارم:</span> هویت برند و کانتکست بازاریابی (Brand Context)
+                wp-admin/admin.php?page=maghalenegar-brand — <span>هویت برند & بازاریابی</span>
               </div>
             </div>
             <div class="tour-window-img-box">
               <img src="images/brand-identity.png" alt="تنظیمات هویت برند در مقاله‌نگار" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> تعریف پرسونای مخاطب (ICP) و نقاط درد خریدار</span>
+              <span class="tour-callout-pill"><span class="dot"></span> پرسونای مخاطب (ICP) و نقاط درد خریدار</span>
               <span class="tour-callout-pill"><span class="dot"></span> لحن صدا و راهنمای نگارش برند (Brand Voice)</span>
-              <span class="tour-callout-pill"><span class="dot"></span> مزیت رقابتی هسته و تحلیل رقبا</span>
+              <span class="tour-callout-pill"><span class="dot"></span> مزیت رقابتی هسته و متمایزکننده‌ها</span>
             </div>
           </div>
 
-          <div class="explain-grid-3">
-            <div class="explain-card">
-              <div class="explain-card-icon">🎯</div>
-              <h4>شناخت پرسونای مخاطب و نقاط درد</h4>
-              <p>
-                تعریف کامل مخاطبان هدف (ICP) و مشکلات اصلی مشتریان (Customer Pain Points) تا عامل‌های هوش مصنوعی متونی کاملاً متقاعدکننده و کاربردی برای حل دغدغه‌های خریداران بنویسند.
-              </p>
+          <div class="pro-explain-grid">
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">🎯</div>
+                <div class="pro-card-title">
+                  <h4>شناخت پرسونای مخاطب</h4>
+                  <span>ICP & Pain Points</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> آموزش هوش مصنوعی برای شناخت دقیق مشتری هدف</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تحلیل دغدغه‌ها و مشکلات اصلی خریداران</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> نگارش متون پاسخگو به سوالات واقعی مشتری</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">پرسونای خریدار</span>
+                <span class="pro-chip">حل دغدغه</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">📢</div>
-              <h4>راهنمای نگارش و لحن صدا (Brand Voice)</h4>
-              <p>
-                ثبت اصول نگارشی و لحن اختصاصی برند (مثلاً حرفه‌ای، علمی اما صمیمی، کوتاه‌نویسی پاراگراف‌ها) تا تمام مطالب تولیدشده دقیقاً شبیه به نویسندگان ارشد تیم شما باشد.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">📢</div>
+                <div class="pro-card-title">
+                  <h4>لحن صدا (Brand Voice)</h4>
+                  <span>یکپارچگی قلم برند</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> تعریف لحن اختصاصی برند (حرفه‌ای، علمی، صمیمی)</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ثبت دستورالعمل‌های نگارشی و کوتاه‌نویسی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> حفظ سبک قلم یکسان در تمام صفحات سایت</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">Brand Voice</span>
+                <span class="pro-chip">یکپارچگی متن</span>
+              </div>
             </div>
-            <div class="explain-card">
-              <div class="explain-card-icon">💡</div>
-              <h4>مزیت رقابتی و متمایزکننده‌ها</h4>
-              <p>
-                درج ارزش پیشنهادی هسته (Value Proposition) و رقبای مستقیم تا هوش مصنوعی در طول مقاله، دلایل برتری و تمایز خدمات یا محصولات شما را پررنگ کند.
-              </p>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">💡</div>
+                <div class="pro-card-title">
+                  <h4>ارزش پیشنهادی و رقبا</h4>
+                  <span>Value Proposition</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> ثبت مزایای اصلی رقابتی محصول یا خدمات شما</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تحلیل و ذکر متمایزکننده‌های شما نسبت به رقبا</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ترغیب مخاطب به خرید و افزایش نرخ تبدیل</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">مزیت رقابتی</span>
+                <span class="pro-chip">افزایش نرخ تبدیل</span>
+              </div>
             </div>
           </div>
         </div>
@@ -511,37 +662,37 @@
             <div class="feature-icon bulk-icon" aria-hidden="true">📦</div>
             <h3>تولید انبوه با اکسل</h3>
             <p>با وارد کردن فایل اکسل یا ورود دستی ردیف‌ها از صدها کلمه کلیدی، افزونه به صورت زمان‌بندی‌شده محتوا می‌سازد.</p>
-            <a href="#tour-bulk" class="feature-link" id="feat-bulk-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-bulk-cta">مشاهده بخش در پنل ←</a>
           </div>
           <div class="feature-card reveal-up delay-2" id="feat-seo">
             <div class="feature-icon seo-icon" aria-hidden="true">🎯</div>
             <h3>هماهنگی با Yoast و Rank Math</h3>
             <p>عنوان سئو، توضیحات متا و کلمه کلیدی کانونی به‌صورت خودکار در افزونه‌های سئوی شما پر می‌شود.</p>
-            <a href="#tour-new-content" class="feature-link" id="feat-seo-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-seo-cta">مشاهده بخش در پنل ←</a>
           </div>
           <div class="feature-card reveal-up delay-3" id="feat-editor">
             <div class="feature-icon editor-icon" aria-hidden="true">👁️</div>
             <h3>پنل گردش‌کار زنده</h3>
             <p>مرحله‌به‌مرحله فکر کردن هر عامل را ببینید و قبل از انتشار متن را در ویرایشگر پیشرفته بازبینی کنید.</p>
-            <a href="#tour-dashboard" class="feature-link" id="feat-editor-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-editor-cta">مشاهده بخش در پنل ←</a>
           </div>
           <div class="feature-card reveal-up delay-4" id="feat-tone">
             <div class="feature-icon tone-icon" aria-hidden="true">🎭</div>
             <h3>شخصی‌سازی لحن و برند</h3>
             <p>لحن‌های مختلف: رسمی، صمیمی، تخصصی و متقاعدکننده بر اساس تعریف هویت برند و پرسونای مخاطبان کسب‌وکار شما.</p>
-            <a href="#tour-brand" class="feature-link" id="feat-tone-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-tone-cta">مشاهده بخش در پنل ←</a>
           </div>
           <div class="feature-card reveal-up delay-5" id="feat-wp">
             <div class="feature-icon wp-icon" aria-hidden="true">⚡</div>
             <h3>مستقیم روی هاست شما</h3>
             <p>بدون نیاز به پلتفرم واسط؛ همه چیز مستقیماً در سرور و پنل مدیریت وردپرس شما پردازش می‌شود.</p>
-            <a href="#tour-dashboard" class="feature-link" id="feat-wp-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-wp-cta">مشاهده بخش در پنل ←</a>
           </div>
           <div class="feature-card reveal-up delay-6" id="feat-human">
             <div class="feature-icon human-icon" aria-hidden="true">🛡️</div>
             <h3>محتوای انسانی‌شده</h3>
             <p>عامل انسانی‌ساز ساختار جملات را بازنویسی می‌کند تا از هر ابزار تشخیص AI مانند GPTZero عبور کند.</p>
-            <a href="#tour-new-content" class="feature-link" id="feat-human-cta">مشاهده بخش در پنل ←</a>
+            <a href="#panel-tour" class="feature-link" id="feat-human-cta">مشاهده بخش در پنل ←</a>
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initCounters();
   initTabs();
+  initPanelTourTabs();
   initFAQ();
   initWorkflowAnimation();
 });
@@ -158,8 +159,33 @@ function toFarsiDigits(str) {
 }
 
 // ================================================================
-// TABS (Use Cases)
+// PANEL TOUR TABS
 // ================================================================
+function initPanelTourTabs() {
+  const tabBtns   = document.querySelectorAll('.tour-tab-btn');
+  const panelBlocks = document.querySelectorAll('.tour-panel-block');
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-target');
+
+      // Update active button
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show target panel with animation
+      panelBlocks.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.classList.add('active-panel');
+        } else {
+          panel.classList.remove('active-panel');
+        }
+      });
+    });
+  });
+}
 function initTabs() {
   const tabBtns    = document.querySelectorAll('.tab-btn');
   const tabPanels  = document.querySelectorAll('.tab-content');
