@@ -3,538 +3,665 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مقاله‌نگار | تحریریه ۶ عاملی هوش مصنوعی و مدیریت بومی محتوا در وردپرس</title>
-  <meta name="description" content="پیش‌نمایش رسمی و معرفی جامع افزونه مقاله‌نگار — سیستم هوشمند ۶ عاملی برای تولید خودکار مقالات تخصصی، محصولات ووکامرس و سئوی کامل در وردپرس." />
-  <meta name="keywords" content="مقاله نگار, افزونه وردپرس, هوش مصنوعی, تولید محتوا, سئو, ووکامرس, راست چین, ژاکت" />
+  <title>مقاله‌نگار | تحریریه ۶ عاملی هوش مصنوعی و تولید خودکار محتوا در وردپرس</title>
+  <meta name="description" content="پیش‌نمایش رسمی و معرفی جامع افزونه مقاله‌نگار — نخستین سیستم هوشمند ۶ عاملی برای تولید خودکار مقالات تخصصی، محصولات ووکامرس، سئوی کامل و لینک‌سازی هوشمند در وردپرس." />
+  <meta name="keywords" content="مقاله نگار, افزونه وردپرس, هوش مصنوعی, تولید محتوا, سئو, ووکامرس, راست چین, ژاکت, Rank Math, Yoast SEO" />
+  <link rel="icon" type="image/png" href="images/logo-mark.png" />
+  
+  <!-- Typography: IRANYekanWeb (Local) + Google Fonts Fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ========================================================================
+       1. NAVBAR
+       ======================================================================== -->
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
-      <a href="#" class="logo" aria-label="مقاله‌نگار">
-        <div class="logo-icon" aria-hidden="true">
-          <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="10" fill="url(#logoGrad)"/>
-            <path d="M8 10h10M8 15h8M8 20h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="22" cy="20" r="4" fill="#EC4899" opacity="0.9"/>
-            <path d="M20.5 20l1 1 2-2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#7C3AED"/>
-                <stop offset="1" stop-color="#6366F1"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <span class="logo-text">مقاله‌نگار</span>
+      <a href="#" class="logo-brand" aria-label="صفحه اصلی مقاله‌نگار">
+        <img src="images/logo-horizontal.png" alt="مقاله‌نگار" class="brand-logo-img" height="40" />
       </a>
+
       <nav class="nav-links" aria-label="ناوبری اصلی">
-        <a href="#panel-tour">پیش‌نمایش پنل</a>
-        <a href="#problem">چالش و راه‌حل</a>
-        <a href="#how-it-works">خط تولید ۶ عاملی</a>
-        <a href="#features">امکانات کلیدی</a>
-        <a href="#usecases">ووکامرس و وبلاگ</a>
-        <a href="#roi">ارزش اقتصادی</a>
+        <a href="#panel-tour">تور پنل مدیریت</a>
+        <a href="#agents-pipeline">خط تولید ۶ عاملی</a>
+        <a href="#ai-comparison">مقایسه با AI معمولی</a>
+        <a href="#bento-features">امکانات کلیدی</a>
+        <a href="#roi-calculator">محاسبه‌گر سودآوری</a>
         <a href="#faq">پرسش‌ها</a>
       </nav>
-      <a href="purchase.html" class="btn btn-primary nav-cta">خرید افزونه مقاله‌نگار</a>
-      <button class="nav-toggle" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobile-menu">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-          <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+
+      <a href="purchase.html" class="btn btn-primary nav-cta">
+        <span>خرید افزونه مقاله‌نگار</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+
+      <button class="nav-toggle" aria-label="باز کردن منوی موبایل" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
       </button>
     </div>
+
+    <!-- Mobile Nav Menu -->
     <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="#panel-tour">پیش‌نمایش پنل</a>
-      <a href="#problem">چالش و راه‌حل</a>
-      <a href="#how-it-works">خط تولید ۶ عاملی</a>
-      <a href="#features">امکانات کلیدی</a>
-      <a href="#usecases">ووکامرس و وبلاگ</a>
-      <a href="#roi">ارزش اقتصادی</a>
+      <a href="#panel-tour">تور پنل مدیریت</a>
+      <a href="#agents-pipeline">خط تولید ۶ عاملی</a>
+      <a href="#ai-comparison">مقایسه با AI معمولی</a>
+      <a href="#bento-features">امکانات کلیدی</a>
+      <a href="#roi-calculator">محاسبه‌گر سودآوری</a>
       <a href="#faq">پرسش‌ها</a>
-      <a href="purchase.html" class="btn btn-primary">خرید افزونه مقاله‌نگار</a>
+      <a href="purchase.html" class="btn btn-primary" style="margin-top: 10px;">خرید افزونه مقاله‌نگار</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ========================================================================
+         2. HERO SECTION
+         ======================================================================== -->
     <section class="hero" id="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg-orbs" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-      </div>
+      <div class="hero-mesh-grid" aria-hidden="true"></div>
+      
       <div class="container hero-inner">
-        <div class="hero-badge reveal-up">
-          <span class="badge-dot" aria-hidden="true"></span>
-          نسل جدید افزونه‌های هوش مصنوعی وردپرس
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          <span>نسل دوم تحریریه هوشمند وردپرس • ۶ عامل تخصصی کاملاً بومی</span>
         </div>
-        <h1 class="hero-title reveal-up delay-1" id="hero-heading">
-          تحریریه <span class="text-gradient">۶ عاملی هوش مصنوعی</span><br/>در پیشخوان وردپرس شما
+
+        <h1 class="hero-title" id="hero-heading">
+          تحریریه <span class="text-gradient">۶ عاملی هوش مصنوعی</span>؛<br />
+          تولید مقالات تخصصی، سئوی خودکار و محصولات ووکامرس
         </h1>
-        <p class="hero-subtitle reveal-up delay-2">
-          مجموعه‌ای بی‌نظیر از ۶ عامل هوشمند تخصصی جهت نگارش مقاله، توضیحات ووکامرس، صفحات دسته‌بندی، سئوی خودکار و بومی‌سازی لحن برند مستقیماً روی سرور شما.
+
+        <p class="hero-subtitle">
+          نخستین سیستم هوشمند با خط تولید مستقل در پیشخوان وردپرس شما. بدون واسطه، بدون اشتراک دلاری و مستقیماً روی سرور سایت — نگارش مقالات تا ۵۰۰۰ کلمه با لحن کاملاً انسانی و سئوی صددرصد سبز.
         </p>
-        <div class="hero-actions reveal-up delay-3">
-          <a href="#panel-tour" class="btn btn-ghost btn-lg" id="hero-cta-secondary">
-            👀 مشاهده پیش‌نمایش پنل
-          </a>
+
+        <div class="hero-actions">
           <a href="purchase.html" class="btn btn-primary btn-lg" id="hero-cta-primary">
-            همین الان خرید کن
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M14.25 9H3.75M8.25 4.5L3.75 9l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span>دریافت و خرید مقاله‌نگار</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <a href="#panel-tour" class="btn btn-ghost btn-lg" id="hero-cta-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            <span>مشاهده تور زنده پنل</span>
           </a>
         </div>
-        <div class="hero-stats reveal-up delay-4">
+
+        <!-- Metrics Strip -->
+        <div class="hero-stats">
           <div class="stat-item">
             <div class="stat-value-row">
               <span class="stat-number" data-target="6">۶</span>
             </div>
-            <span class="stat-label">عامل هوش مصنوعی</span>
+            <span class="stat-label">عامل تخصصی هماهنگ</span>
           </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <div class="stat-value-row">
-              <span class="stat-number" data-target="90">۹۰</span><span class="stat-suffix">٪</span>
-            </div>
-            <span class="stat-label">صرفه‌جویی در زمان</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <div class="stat-value-row">
-              <span class="stat-number" data-target="100">۱۰۰</span><span class="stat-suffix">٪</span>
-            </div>
-            <span class="stat-label">سازگاری با وردپرس</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Hero Visual Card -->
-      <div class="container">
-        <div class="hero-visual reveal-up delay-5" aria-hidden="true">
-          <div class="workflow-card">
-            <div class="workflow-header">
-              <div class="workflow-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <span class="workflow-title">خط تولید زنده مقاله‌نگار</span>
-              <span class="workflow-status live">● فعال</span>
+          <div class="stat-divider" aria-hidden="true"></div>
+
+          <div class="stat-item">
+            <div class="stat-value-row">
+              <span class="stat-number" data-target="90">۹۰</span>
+              <span class="stat-suffix">٪</span>
             </div>
-            <div class="workflow-agents">
-              <div class="agent-step active">
-                <div class="agent-icon planner">🧠</div>
-                <div class="agent-info">
-                  <span class="agent-name">استراتژیست</span>
-                  <div class="agent-progress"><div class="progress-bar" style="width:100%"></div></div>
-                </div>
-                <span class="agent-badge done">✓</span>
+            <span class="stat-label">صرفه‌جویی در هزینه و زمان</span>
+          </div>
+
+          <div class="stat-divider" aria-hidden="true"></div>
+
+          <div class="stat-item">
+            <div class="stat-value-row">
+              <span class="stat-number" data-target="100">۱۰۰</span>
+              <span class="stat-suffix">٪</span>
+            </div>
+            <span class="stat-label">سازگار با Yoast & Rank Math</span>
+          </div>
+        </div>
+
+        <!-- Hero App Showcase Mockup -->
+        <div class="hero-mockup-wrapper">
+          <div class="hero-mockup-frame">
+            <div class="hero-mockup-header">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
               </div>
-              <div class="agent-step active">
-                <div class="agent-icon researcher">🔍</div>
-                <div class="agent-info">
-                  <span class="agent-name">پژوهشگر</span>
-                  <div class="agent-progress"><div class="progress-bar" style="width:100%"></div></div>
-                </div>
-                <span class="agent-badge done">✓</span>
+              <div class="mockup-address-bar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>wp-admin/admin.php?page=maghale-negar</span>
               </div>
-              <div class="agent-step running">
-                <div class="agent-icon writer">✍️</div>
-                <div class="agent-info">
-                  <span class="agent-name">نویسنده</span>
-                  <div class="agent-progress"><div class="progress-bar progress-anim" style="width:65%"></div></div>
-                </div>
-                <span class="agent-badge running">...</span>
+              <div class="mockup-badge-live">
+                <span class="pill-dot"></span>
+                <span>پیشخوان زنده افزونه</span>
               </div>
-              <div class="agent-step pending">
-                <div class="agent-icon critic">🧐</div>
-                <div class="agent-info">
-                  <span class="agent-name">منتقد</span>
-                  <div class="agent-progress"><div class="progress-bar" style="width:0%"></div></div>
+            </div>
+
+            <div class="hero-mockup-screen">
+              <img src="images/dashboard.png" alt="پیشخوان مدیریت افزونه مقاله‌نگار در وردپرس" width="1400" height="900" />
+              
+              <!-- Floating Glass Highlights -->
+              <div class="mockup-float-badge badge-top-right">
+                <div class="badge-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-              </div>
-              <div class="agent-step pending">
-                <div class="agent-icon humanizer">🌿</div>
-                <div class="agent-info">
-                  <span class="agent-name">انسانی‌ساز</span>
-                  <div class="agent-progress"><div class="progress-bar" style="width:0%"></div></div>
+                <div class="badge-text-box">
+                  <h5>خط تولید ۶ عاملی فعال</h5>
+                  <span>آماده نگارش و انتشار مستقیم</span>
                 </div>
               </div>
-              <div class="agent-step pending">
-                <div class="agent-icon seo">🚀</div>
-                <div class="agent-info">
-                  <span class="agent-name">سئو و انتشار</span>
-                  <div class="agent-progress"><div class="progress-bar" style="width:0%"></div></div>
+
+              <div class="mockup-float-badge badge-bottom-left">
+                <div class="badge-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                </div>
+                <div class="badge-text-box">
+                  <h5>ضد ردیاب‌های هوش مصنوعی</h5>
+                  <span>لحن کاملاً انسانی با Humanizer</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- ===== SECTION: COMPREHENSIVE PANEL TOUR & DEEP DIVE ===== -->
-    <section class="panel-tour-section" id="panel-tour" aria-labelledby="tour-heading">
+    <!-- ========================================================================
+         3. SECTION: INTERACTIVE 360° PANEL TOUR (REAL SCREENSHOTS)
+         ======================================================================== -->
+    <section class="panel-tour-section section" id="panel-tour" aria-labelledby="tour-heading">
       <div class="container">
         
-        <div class="tour-header-center reveal-up">
-          <div class="section-label">معرفی‌نامه تعاملی پنل</div>
-          <h2 id="tour-heading">پیش‌نمایش زنده و تور کامل پنل افزونه مقاله‌نگار</h2>
+        <div class="section-header">
+          <div class="section-label">تور ۳۶۰ درجه رابط کاربری</div>
+          <h2 id="tour-heading">اسکرین‌شات‌های واقعی از پیشخوان مقاله‌نگار</h2>
           <p>
-            با کلیک روی هر بخش، عملکرد واقعی، امکانات فنی و اسکرین‌شات اختصاصی آن تب از پنل را به صورت تعاملی مشاهده کنید.
+            طراحی استاندارد مطابق با اصول UI/UX Pro Max بدون هیچ‌گونه المان اضافه یا پیچیدگی غیرضروری. برای مشاهده عملکرد هر تب کلیک کنید:
           </p>
         </div>
 
-        <!-- Interactive Tab Switcher Buttons -->
-        <div class="tour-tab-nav reveal-up delay-1">
-          <button class="tour-tab-btn active" data-target="tour-dashboard">
-            <span>📊</span> ۱. پیشخوان و مانیتورینگ
+        <!-- Interactive Tab Switcher -->
+        <div class="tour-tab-nav" role="tablist" aria-label="بخش‌های پنل افزونه">
+          <button class="tour-tab-btn active" data-target="tour-dashboard" role="tab" aria-selected="true">
+            <span class="tab-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1.5"/><rect width="7" height="5" x="14" y="3" rx="1.5"/><rect width="7" height="9" x="14" y="12" rx="1.5"/><rect width="7" height="5" x="3" y="16" rx="1.5"/></svg>
+            </span>
+            <span>۱. پیشخوان و آمار لحظه‌ای</span>
           </button>
-          <button class="tour-tab-btn" data-target="tour-new-content">
-            <span>📝</span> ۲. نگارش جدید & سئو
+
+          <button class="tour-tab-btn" data-target="tour-new-content" role="tab" aria-selected="false">
+            <span class="tab-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </span>
+            <span>۲. استودیوی نگارش مقاله & سئو</span>
           </button>
-          <button class="tour-tab-btn" data-target="tour-bulk">
-            <span>📦</span> ۳. تولید انبوه (اکسل)
+
+          <button class="tour-tab-btn" data-target="tour-bulk" role="tab" aria-selected="false">
+            <span class="tab-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1"/><path d="M18 12h4"/><path d="M18 8h4"/><path d="M18 16h4"/><rect width="14" height="14" x="8" y="2" rx="2"/></svg>
+            </span>
+            <span>۳. تولید انبوه با اکسل</span>
           </button>
-          <button class="tour-tab-btn" data-target="tour-brand">
-            <span>🧠</span> ۴. هویت برند & بازاریابی
+
+          <button class="tour-tab-btn" data-target="tour-brand" role="tab" aria-selected="false">
+            <span class="tab-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>
+            </span>
+            <span>۴. کانتکست و هویت برند</span>
+          </button>
+
+          <button class="tour-tab-btn" data-target="tour-api" role="tab" aria-selected="false">
+            <span class="tab-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-1.5 1.5L14 9l-2-2-4 4 2 2-4 4 1 1 2-2 2 2 4-4-2-2 3.5-3.5"/><circle cx="7.5" cy="16.5" r="3.5"/></svg>
+            </span>
+            <span>۵. موتورهای هوش مصنوعی & API</span>
           </button>
         </div>
 
         <!-- TAB 1: DASHBOARD -->
-        <div class="tour-panel-block active-panel" id="tour-dashboard">
+        <div class="tour-panel-block active-panel" id="tour-dashboard" role="tabpanel">
           <div class="tour-window-frame">
             <div class="tour-window-header">
-              <div class="tour-window-dots">
-                <span class="tour-window-dot dot-red"></span>
-                <span class="tour-window-dot dot-yellow"></span>
-                <span class="tour-window-dot dot-green"></span>
+              <div class="window-dots">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
               </div>
               <div class="tour-window-title">
-                wp-admin/admin.php?page=maghalenegar-dashboard — <span>پیشخوان کنترل زنده</span>
+                wp-admin/admin.php?page=maghale-negar — <span>پیشخوان کنترل زنده و مانیتورینگ</span>
               </div>
             </div>
             <div class="tour-window-img-box">
-              <img src="images/dashboard.png" alt="پیشخوان اصلی افزونه مقاله‌نگار" />
+              <img src="images/dashboard.png" alt="پیشخوان اصلی افزونه مقاله‌نگار در وردپرس" loading="lazy" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> تحلیل زنده آمار مقالات، ووکامرس و دسته‌بندی‌ها</span>
-              <span class="tour-callout-pill"><span class="dot"></span> هدایت آنلاین ۶ عامل هوشمند</span>
-              <span class="tour-callout-pill"><span class="dot"></span> لیست مطالب آماده انتشار</span>
+              <span class="tour-callout-pill"><span class="dot"></span> گزارش لحظه‌ای آمار مقالات، ووکامرس و دسته‌بندی‌ها</span>
+              <span class="tour-callout-pill"><span class="dot"></span> مانیتورینگ آنلاین پیشرفت ۶ عامل هوشمند</span>
+              <span class="tour-callout-pill"><span class="dot"></span> جدول مقالات آماده انتشار با قابلیت بازبینی مستقیم</span>
             </div>
           </div>
 
           <div class="pro-explain-grid">
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">📊</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                </div>
                 <div class="pro-card-title">
                   <h4>تحلیل و آمار هوشمند</h4>
-                  <span>گزارش‌گیری لحظه‌ای</span>
+                  <span>داشبورد وضعیت جامع</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> نمایش آمار کل محتواها، مقالات و محصولات</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تفکیک مقالات در حال پردازش، تکمیل‌شده و لغو شده</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> سنجش تعداد دسته‌بندی‌های ساخته‌شده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تفکیک مقالات در حال پردازش، تکمیل‌شده و منتشرشده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> شمارش تعداد کلمات تولیدشده و زمان صرفه‌جویی‌شده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> آمار مقالات وبلاگی در مقایسه با محصولات ووکامرس</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">گزارش لحظه‌ای</span>
-                <span class="pro-chip">نمودار پیشرفت</span>
+                <span class="pro-chip">مانیتورینگ برخط</span>
+                <span class="pro-chip">فیلترهای پیشرفته</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">🤖</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>مانیتورینگ ۶ عامل</h4>
-                  <span>هدایت خط تولید</span>
+                  <h4>نظارت بر ۶ عامل</h4>
+                  <span>هدایت خودکار خط تولید</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> مشاهده وضعیت زنده برنامه‌ریز و پژوهشگر</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> نظارت بر قلم نویسنده، منتقد و انسانی‌ساز</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> کنترل خودکار ناشر سئو قبل از انتشار</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> وضعیت زنده برنامه‌ریز، پژوهشگر و نویسنده اصلی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> نمرات ارزیابی کیفی منتقد قبل از خروجی نهایی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تأییدیه عبور موفق از فیلتر انسانی‌ساز (Humanizer)</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">۶ عامل هوشمند</span>
-                <span class="pro-chip">تولید همزمان</span>
+                <span class="pro-chip">هماهنگی خودکار</span>
+                <span class="pro-chip">بدون دخالت دست</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">📋</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>مدیریت مطالب آماده</h4>
-                  <span>بازبینی و انتشار</span>
+                  <h4>مدیریت محتوای آماده</h4>
+                  <span>بازبینی و انتشار یک‌کلیکی</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> نمایش دقیق حجم متن (تعداد کلمات) و تاریخ نگارش</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> امکان بازبینی متن قبل از قرارگیری روی وبسایت</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> انتشار یک‌کلیکی مستقیم در پیشخوان وردپرس</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> مشاهده حجم دقیق کلمات و وضعیت پیوندهای داخلی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ویرایشگر اختصاصی با قابلیت اعمال روتوش قبل از انتشار</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> انتشار مستقیم به عنوان پیش‌نویس یا پست نهایی در وردپرس</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">بازبینی سریع</span>
-                <span class="pro-chip">انتشار خودکار</span>
+                <span class="pro-chip">انتشار آسان</span>
+                <span class="pro-chip">سازگاری با گوتنبرگ</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- TAB 2: NEW CONTENT -->
-        <div class="tour-panel-block" id="tour-new-content">
+        <div class="tour-panel-block" id="tour-new-content" role="tabpanel">
           <div class="tour-window-frame">
             <div class="tour-window-header">
-              <div class="tour-window-dots">
-                <span class="tour-window-dot dot-red"></span>
-                <span class="tour-window-dot dot-yellow"></span>
-                <span class="tour-window-dot dot-green"></span>
+              <div class="window-dots">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
               </div>
               <div class="tour-window-title">
-                wp-admin/admin.php?page=maghalenegar-new-content — <span>ساخت محتوا و سئو</span>
+                wp-admin/admin.php?page=maghale-negar-new — <span>استودیوی تولید و اتصال سئو</span>
               </div>
             </div>
             <div class="tour-window-img-box">
-              <img src="images/new-content.png" alt="ساخت محتوای جدید در مقاله‌نگار" />
+              <img src="images/new-content.png" alt="صفحه ساخت محتوای جدید در افزونه مقاله‌نگار" loading="lazy" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> لینک‌دهی اتوماتیک داخلی به مقالات و محصولات</span>
-              <span class="tour-callout-pill"><span class="dot"></span> تنظیم لحن، زبان و طول مقاله (تا ۵۰۰۰ کلمه)</span>
-              <span class="tour-callout-pill"><span class="dot"></span> مولد تصویر AI با سبک‌های رئالیستی</span>
+              <span class="tour-callout-pill"><span class="dot"></span> لینک‌دهی اتوماتیک داخلی به مقالات و محصولات مرتبط</span>
+              <span class="tour-callout-pill"><span class="dot"></span> تنظیم طول مقاله تا ۵۰۰۰ کلمه و انتخاب ۴ لحن برند</span>
+              <span class="tour-callout-pill"><span class="dot"></span> مولد تصویر AI با پرامپت‌های ادیتوریال و عکاسی</span>
             </div>
           </div>
 
           <div class="pro-explain-grid">
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">🔗</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>سئو و لینک‌دهی داخلی</h4>
-                  <span>تقویت بن‌سازه سایت</span>
+                  <h4>لینک‌سازی هوشمند داخلی</h4>
+                  <span>انقلاب در سئوی ساختاری</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> تعیین کلمه کلیدی اصلی (Focus Keyword) و ثانویه</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> اتصال خودکار متن جدید به مقالات و محصولات مرتبط</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> پر شدن اتوماتیک فیلدهای Yoast SEO و Rank Math</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تشخیص خودکار انکرتکست‌های مرتبط در متن جدید</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پیونددهی طبیعی به مقالات آرشیو و صفحات محصول</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> کاهش محسوس بانس‌ریت و جهش ایندکس در گوگل</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">Yoast SEO</span>
-                <span class="pro-chip">Rank Math</span>
-                <span class="pro-chip">لینک داخلی</span>
+                <span class="pro-chip">اتصال دوطرفه</span>
+                <span class="pro-chip">بدون خطای سئو</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">🎭</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>تنظیمات نگارش و لحن</h4>
-                  <span>شخصی‌سازی کامل</span>
+                  <h4>تنظیمات نگارش و مقیاس</h4>
+                  <span>از مقاله کوتاه تا مقالات مرجع</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> انتخاب زبان فارسی و لحن‌های ۴ گانه برند</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تعیین طول محتوا (کوتاه، متوسط، بلند تا ۵۰۰۰ کلمه)</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> معرفی مقاله مرجع برای الهام از ساختار محتوایی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> نگارش محتوای جامع ۱۵۰۰ تا ۵۰۰۰ کلمه با ساختار H2/H3</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پشتیبانی از ۳ نوع محتوا: وبلاگ، ووکامرس و دسته‌بندی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> معرفی مقاله مرجع (Reference URL) برای الگوسازی سرفصل‌ها</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">لحن اختصاصی</span>
-                <span class="pro-chip">تا ۵۰۰۰ کلمه</span>
+                <span class="pro-chip">پیلار کانتنت</span>
+                <span class="pro-chip">ووکامرس پرو</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">🖼️</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>مولد اختصاصی تصویر AI</h4>
-                  <span>تصویرسازی بدون طراح</span>
+                  <h4>تصویرسازی اختصاصی AI</h4>
+                  <span>تولید تصاویر شاخص هماهنگ</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> ساخت خودکار تصویر شاخص و تصاویر درون‌متنی</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> انتخاب سبک‌های رئالیستی، ادیتوریال و ۳بعدی</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تولید پرومپت‌های انگلیسی هوشمند بر اساس موضوع</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تولید پرامپت انگلیسی دقیق بر اساس محتوای هر مقاله</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> انتخاب سبک‌های عکاسی رئالیستی، ادیتوریال و مینیمال</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تنظیم خودکار نام فایل، متن جایگزین (Alt Text) و متادیتا</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">تصویر AI</span>
-                <span class="pro-chip">سبک رئالیستی</span>
+                <span class="pro-chip">DALL-E 3</span>
+                <span class="pro-chip">سئوی تصاویر</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- TAB 3: BULK CONTENT -->
-        <div class="tour-panel-block" id="tour-bulk">
+        <div class="tour-panel-block" id="tour-bulk" role="tabpanel">
           <div class="tour-window-frame">
             <div class="tour-window-header">
-              <div class="tour-window-dots">
-                <span class="tour-window-dot dot-red"></span>
-                <span class="tour-window-dot dot-yellow"></span>
-                <span class="tour-window-dot dot-green"></span>
+              <div class="window-dots">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
               </div>
               <div class="tour-window-title">
-                wp-admin/admin.php?page=maghalenegar-bulk — <span>تولید انبوه و اکسل</span>
+                wp-admin/admin.php?page=maghale-negar-bulk — <span>تولید انبوه با فایل اکسل و جدول هوشمند</span>
               </div>
             </div>
             <div class="tour-window-img-box">
-              <img src="images/bulk-content.png" alt="تولید انبوه محتوا در مقاله‌نگار" />
+              <img src="images/bulk-content.png" alt="تولید انبوه محتوا با فایل اکسل در افزونه مقاله‌نگار" loading="lazy" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> ورود دستی ردیف‌ها با تنظیمات مجزا</span>
-              <span class="tour-callout-pill"><span class="dot"></span> آپلود فایل اکسل XLSX و CSV</span>
-              <span class="tour-callout-pill"><span class="dot"></span> صف انتشار زمان‌بندی‌شده و خودکار</span>
+              <span class="tour-callout-pill"><span class="dot"></span> آپلود فایل اکسل XLSX یا CSV با صدها عنوان در چند ثانیه</span>
+              <span class="tour-callout-pill"><span class="dot"></span> زمان‌بندی طبیعی و زمان‌بندی تاریخ شمسی برای انتشار</span>
+              <span class="tour-callout-pill"><span class="dot"></span> صف پردازش هوشمند در پس‌زمینه بدون افت سرعت هاست</span>
             </div>
           </div>
 
           <div class="pro-explain-grid">
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">✍️</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>ورود دستی ردیف‌ها</h4>
-                  <span>مدیریت ردیفی کلمات</span>
+                  <h4>آپلود مستقیم اکسل</h4>
+                  <span>ورود صدها عنوان با یک کلیک</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> اضافه کردن ردیف‌های کلمات کلیدی با یک کلیک</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تنظیم لحن، طول متن و حالت تصویر برای هر ردیف</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تعیین تاریخ انتشار شمسی دلخواه برای هر ردیف</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> دانلود قالب استاندارد اکسل آماده با ستون‌های سفارشی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> امکان تعیین لحن، کلمه کلیدی و دسته برای هر ردیف فایل</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> اعتبارسنجی خودکار فایل قبل از شروع پردازش</li>
               </ul>
               <div class="pro-chips-row">
+                <span class="pro-chip">فایل XLSX & CSV</span>
                 <span class="pro-chip">ورود سریع</span>
-                <span class="pro-chip">تاریخ شمسی</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">📁</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>آپلود فایل اکسل</h4>
-                  <span>ورود صدها عنوان یکجا</span>
+                  <h4>زمان‌بندی انتشار شمسی</h4>
+                  <span>تقویم محتوایی خودکار</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> دانلود قالب استاندارد آماده اکسل</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> آپلود فایل‌های XLSX و CSV با حجم بالا</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> پردازش خودکار و بدون خطا در پس‌زمینه</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> انتشار منظم مقالات طبق فاصله زمانی دلخواه (مثلاً روزی ۱ مقاله)</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> رفتار کاملاً طبیعی در دید موتورهای جستجوی گوگل</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> قابلیت ویرایش صف و توقف موقت در هر لحظه</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">فایل XLSX</span>
-                <span class="pro-chip">فرمت CSV</span>
+                <span class="pro-chip">تقویم شمسی</span>
+                <span class="pro-chip">الگوی ارگانیک</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">⏳</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>صف انتشار خودکار</h4>
-                  <span>مدیریت منابع سرور</span>
+                  <h4>مدیریت بار سرور (Safe Queue)</h4>
+                  <span>اجرای بی‌نقص روی انواع هاست</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> تولید تدریجی و نوبتی مقالات بدون افت سرعت هاست</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> گزارش مقالات در صف، در حال پردازش و تمام‌شده</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> حفظ الگوی طبیعی انتشار در چشم گوگل</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پردازش غیرهمزمان (Async) بدون ایجاد فشار روی رم و CPU</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> سیستم بازیابی خودکار در صورت قطعی اینترنت یا خطای API</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ذخیره‌سازی مرحله‌به‌مرحله برای جلوگیری از هدررفت کردیت</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">پردازش ایمن</span>
-                <span class="pro-chip">مدیریت صف</span>
+                <span class="pro-chip">پایداری ۱۰۰٪</span>
+                <span class="pro-chip">بدون Timeout</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- TAB 4: BRAND IDENTITY -->
-        <div class="tour-panel-block" id="tour-brand">
+        <div class="tour-panel-block" id="tour-brand" role="tabpanel">
           <div class="tour-window-frame">
             <div class="tour-window-header">
-              <div class="tour-window-dots">
-                <span class="tour-window-dot dot-red"></span>
-                <span class="tour-window-dot dot-yellow"></span>
-                <span class="tour-window-dot dot-green"></span>
+              <div class="window-dots">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
               </div>
               <div class="tour-window-title">
-                wp-admin/admin.php?page=maghalenegar-brand — <span>هویت برند & بازاریابی</span>
+                wp-admin/admin.php?page=maghale-negar-settings#marketing-context — <span>هویت برند و کانتکست بازاریابی</span>
               </div>
             </div>
             <div class="tour-window-img-box">
-              <img src="images/brand-identity.png" alt="تنظیمات هویت برند در مقاله‌نگار" />
+              <img src="images/brand-identity.png" alt="تنظیمات هویت برند و پرسونای مخاطب در مقاله‌نگار" loading="lazy" />
             </div>
             <div class="tour-callouts-bar">
-              <span class="tour-callout-pill"><span class="dot"></span> پرسونای مخاطب (ICP) و نقاط درد خریدار</span>
-              <span class="tour-callout-pill"><span class="dot"></span> لحن صدا و راهنمای نگارش برند (Brand Voice)</span>
-              <span class="tour-callout-pill"><span class="dot"></span> مزیت رقابتی هسته و متمایزکننده‌ها</span>
+              <span class="tour-callout-pill"><span class="dot"></span> تعریف پرسونای خریدار (ICP) و دغدغه‌های کلیدی مخاطب</span>
+              <span class="tour-callout-pill"><span class="dot"></span> لحن صدای برند (Brand Voice) و شیوه نگارش اختصاصی</span>
+              <span class="tour-callout-pill"><span class="dot"></span> ارزش پیشنهادی هسته (Value Proposition) برای تبدیل کاربر به خریدار</span>
             </div>
           </div>
 
           <div class="pro-explain-grid">
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">🎯</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>شناخت پرسونای مخاطب</h4>
+                  <h4>شناخت دقیق پرسونای مخاطب</h4>
                   <span>ICP & Pain Points</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> آموزش هوش مصنوعی برای شناخت دقیق مشتری هدف</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تحلیل دغدغه‌ها و مشکلات اصلی خریداران</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> نگارش متون پاسخگو به سوالات واقعی مشتری</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> آموزش هوش مصنوعی برای درک نیازهای پنهان مشتری هدف</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پاسخ مستقیم به سوالات و تردیدهای پیش از خرید</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> نگارش محتوایی که خواننده را تا پایان متن همراه می‌کند</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">پرسونای خریدار</span>
-                <span class="pro-chip">حل دغدغه</span>
+                <span class="pro-chip">هدف‌گیری دقیق</span>
+                <span class="pro-chip">درک دغدغه‌ها</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">📢</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>لحن صدا (Brand Voice)</h4>
-                  <span>یکپارچگی قلم برند</span>
+                  <h4>یکپارچگی قلم (Brand Voice)</h4>
+                  <span>لحن اختصاصی کسب‌وکار شما</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> تعریف لحن اختصاصی برند (حرفه‌ای، علمی، صمیمی)</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> ثبت دستورالعمل‌های نگارشی و کوتاه‌نویسی</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> حفظ سبک قلم یکسان در تمام صفحات سایت</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تعریف لحن رسمی، علمی، خودمانی یا بازاریابی اختصاصی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ثبت واژگان ممنوعه و الگوهای کلامی مورد پسند برند</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> ایجاد هویت متنی منحصربه‌فرد در تمامی صفحات وبسایت</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">Brand Voice</span>
-                <span class="pro-chip">یکپارچگی متن</span>
+                <span class="pro-chip">قلم منحصربه‌فرد</span>
+                <span class="pro-chip">بدون تناقض</span>
               </div>
             </div>
 
             <div class="pro-explain-card">
               <div class="pro-card-header">
-                <div class="pro-card-icon">💡</div>
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                </div>
                 <div class="pro-card-title">
-                  <h4>ارزش پیشنهادی و رقبا</h4>
-                  <span>Value Proposition</span>
+                  <h4>ارزش پیشنهادی و تمایز رقابتی</h4>
+                  <span>افزایش چشمگیر نرخ تبدیل (CRO)</span>
                 </div>
               </div>
               <ul class="pro-bullet-list">
-                <li class="pro-bullet-item"><span class="check">✓</span> ثبت مزایای اصلی رقابتی محصول یا خدمات شما</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> تحلیل و ذکر متمایزکننده‌های شما نسبت به رقبا</li>
-                <li class="pro-bullet-item"><span class="check">✓</span> ترغیب مخاطب به خرید و افزایش نرخ تبدیل</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تأکید هوشمند بر برتری‌های خدمات شما نسبت به رقبا</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> دعوت‌به‌اقدام‌های (CTA) طبیعی در نقاط حساس مقاله</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> تبدیل مقالات وبلاگی به کانال‌های مستقیم فروش و لید</li>
               </ul>
               <div class="pro-chips-row">
-                <span class="pro-chip">مزیت رقابتی</span>
-                <span class="pro-chip">افزایش نرخ تبدیل</span>
+                <span class="pro-chip">فروش‌محور</span>
+                <span class="pro-chip">ارزش افزوده</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: API SETTINGS -->
+        <div class="tour-panel-block" id="tour-api" role="tabpanel">
+          <div class="tour-window-frame">
+            <div class="tour-window-header">
+              <div class="window-dots">
+                <span class="dot-close"></span>
+                <span class="dot-min"></span>
+                <span class="dot-max"></span>
+              </div>
+              <div class="tour-window-title">
+                wp-admin/admin.php?page=maghale-negar-settings#api — <span>موتورهای متصل و ارائه‌دهندگان هوش مصنوعی</span>
+              </div>
+            </div>
+            <div class="tour-window-img-box">
+              <img src="images/settings-api.png" alt="تنظیمات ارائه‌دهندگان API در افزونه مقاله‌نگار" loading="lazy" />
+            </div>
+            <div class="tour-callouts-bar">
+              <span class="tour-callout-pill"><span class="dot"></span> اتصال مستقیم به OpenAI (GPT-4o / GPT-4o-mini)</span>
+              <span class="tour-callout-pill"><span class="dot"></span> پشتیبانی از Anthropic Claude 3.5 Sonnet و سرویس ایرانی GapGPT</span>
+              <span class="tour-callout-pill"><span class="dot"></span> اتصال به Tavily Search برای پژوهش‌های زنده وب</span>
+            </div>
+          </div>
+
+          <div class="pro-explain-grid">
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                </div>
+                <div class="pro-card-title">
+                  <h4>مدل‌های پرچمدار بین‌المللی</h4>
+                  <span>کیفیت بی‌رقیب قلم</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> اتصال بدون واسطه به مدل‌های مطرح OpenAI و Anthropic</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> امکان تفکیک مدل برای هر مرحله (مثلاً تحلیل با GPT-4o، نگارش با Claude)</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پشتیبانی از مدل‌های سریع و فوق‌ارزان جهت کاهش هزینه‌ها</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">GPT-4o</span>
+                <span class="pro-chip">Claude 3.5 Sonnet</span>
+              </div>
+            </div>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <div class="pro-card-title">
+                  <h4>سرویس‌های ایرانی بدون تحریم</h4>
+                  <span>اتصال ریالی از داخل ایران</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> پشتیبانی رسمی از سرویس محبوب GapGPT بدون نیاز به ویزاکارت</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> پرداخت ریالی هزینه توکن‌ها با کارت‌های شتاب بانکی</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> بدون ریسک مسدودسازی حساب و بدون افت سرعت تحویل</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">پرداخت شتابی</span>
+                <span class="pro-chip">بدون تحریم</span>
+              </div>
+            </div>
+
+            <div class="pro-explain-card">
+              <div class="pro-card-header">
+                <div class="pro-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                </div>
+                <div class="pro-card-title">
+                  <h4>امنیت داده‌ها و کلیدهای API</h4>
+                  <span>مستقیماً در هاست شما</span>
+                </div>
+              </div>
+              <ul class="pro-bullet-list">
+                <li class="pro-bullet-item"><span class="check">✓</span> کلیدهای API شما هرگز به هیچ سرور جانبی ارسال نمی‌شود</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> اتصال امن و مستقیم از هاست به سرورهای رسمی ارائه‌دهنده</li>
+                <li class="pro-bullet-item"><span class="check">✓</span> رمزنگاری بومی فیلدها در پایگاه‌داده وردپرس</li>
+              </ul>
+              <div class="pro-chips-row">
+                <span class="pro-chip">امنیت کامل</span>
+                <span class="pro-chip">سرور اختصاصی</span>
               </div>
             </div>
           </div>
@@ -543,427 +670,640 @@
       </div>
     </section>
 
-    <!-- ===== PROBLEM / SOLUTION ===== -->
-    <section class="problem-section section" id="problem" aria-labelledby="problem-heading">
+    <!-- ========================================================================
+         4. SECTION: INTERACTIVE 6-AGENT PIPELINE SIMULATOR
+         ======================================================================== -->
+    <section class="pipeline-section section" id="agents-pipeline" aria-labelledby="pipeline-heading">
       <div class="container">
-        <div class="problem-inner">
-          <div class="problem-side reveal-right">
-            <div class="section-label">مشکل</div>
-            <h2 id="problem-heading">تولید محتوا با ابزارهای معمولی چرا کافی نیست؟</h2>
-            <ul class="problem-list">
+        
+        <div class="section-header">
+          <div class="section-label">معماری خط تولید ۶ عاملی</div>
+          <h2 id="pipeline-heading">یک تحریریه کامل در یک افزونه</h2>
+          <p>
+            تولید یک مقاله رتبه‌بگیر حاصل کار تیمی است. در مقاله‌نگار، هر محتوا توسط ۶ عامل مستقل ارزیابی، نگارش و ویرایش می‌شود. روی هر عامل کلیک کنید:
+          </p>
+        </div>
+
+        <!-- 6 Steps Selector -->
+        <div class="pipeline-stepper-grid">
+          <div class="pipeline-step-card active" data-step="1">
+            <div class="step-number-badge">۱</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
+            <div class="step-name">استراتژیست</div>
+            <div class="step-role-label">تدوین سرفصل و طرح</div>
+          </div>
+
+          <div class="pipeline-step-card" data-step="2">
+            <div class="step-number-badge">۲</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><path d="m8 11 2 2 4-4"/></svg>
+            </div>
+            <div class="step-name">پژوهشگر</div>
+            <div class="step-role-label">استخراج داده و فکت</div>
+          </div>
+
+          <div class="pipeline-step-card" data-step="3">
+            <div class="step-number-badge">۳</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <div class="step-name">نویسنده</div>
+            <div class="step-role-label">نگارش جامع و روان</div>
+          </div>
+
+          <div class="pipeline-step-card" data-step="4">
+            <div class="step-number-badge">۴</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+            </div>
+            <div class="step-name">منتقد کیفی</div>
+            <div class="step-role-label">ارزیابی و اصلاحات</div>
+          </div>
+
+          <div class="pipeline-step-card" data-step="5">
+            <div class="step-number-badge">۵</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+            </div>
+            <div class="step-name">انسانی‌ساز</div>
+            <div class="step-role-label">حذف ادبیات مصنوعی</div>
+          </div>
+
+          <div class="pipeline-step-card" data-step="6">
+            <div class="step-number-badge">۶</div>
+            <div class="step-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <div class="step-name">ناشر سئو</div>
+            <div class="step-role-label">تزریق متاتگ و انتشار</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Agent Simulator Box -->
+        <div class="agent-simulator-box">
+          <div class="agent-sim-header">
+            <div class="agent-sim-profile">
+              <div class="agent-sim-avatar">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg>
+              </div>
+              <div class="agent-sim-title">
+                <h3 id="sim-agent-name">استراتژیست محتوا (Planner Agent)</h3>
+                <span id="sim-agent-role">طراح ساختار، معماری H2/H3 و کلمات کلیدی LSI</span>
+              </div>
+            </div>
+            <div class="agent-sim-status-pill">
+              <span class="pill-dot"></span>
+              <span>عامل هوشمند آماده تحلیل</span>
+            </div>
+          </div>
+
+          <div class="agent-sim-body">
+            <div class="agent-sim-details">
+              <h4>مشخصات عملیاتی این عامل</h4>
+              <p>این عامل قبل از هرگونه نگارش، کلمه کلیدی اصلی را تحلیل کرده و بر اساس پرسش‌های پرتکرار کاربران و رقبای صفحه اول گوگل، یک درخت جامع محتوایی با ساختار سلسله‌مراتبی خلق می‌کند.</p>
+
+              <div class="agent-sim-specs">
+                <div class="spec-item">
+                  <span class="label">ورودی‌های مورد نیاز:</span>
+                  <span class="value" id="sim-spec-input">کلمه کلیدی کانونی + لحن برند + طول مقاله</span>
+                </div>
+                <div class="spec-item">
+                  <span class="label">موتور پردازشگر:</span>
+                  <span class="value" id="sim-spec-model">GPT-4o / Claude 3.5 Sonnet</span>
+                </div>
+                <div class="spec-item">
+                  <span class="label">خروجی تحویلی به عامل بعدی:</span>
+                  <span class="value" id="sim-spec-output">درخت کامل محتوایی، پرسش‌های متداول و زاویه دید اختصاصی</span>
+                </div>
+                <div class="spec-item">
+                  <span class="label">میانگین زمان اجرای مرحله:</span>
+                  <span class="value" id="sim-spec-time">۱۲ ثانیه</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent Output Window -->
+            <div class="agent-output-window">
+              <div class="output-header">
+                <div class="output-header-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                  <span>AGENT_LIVE_OUTPUT.json</span>
+                </div>
+                <span style="font-size: 11px; color: #29DCA1; font-weight: 700;">● SUCCESS</span>
+              </div>
+              <div class="output-content">
+                <pre><code id="sim-output-code">// خروجی ساختاریافته عامل برنامه‌ریز (JSON Blueprint)
+{
+  "target_keyword": "خرید افزونه وردپرس هوش مصنوعی",
+  "search_intent": "Commercial / Transactional",
+  "outline": [
+    { "h2": "تحول تولید محتوا در وردپرس با هوش مصنوعی", "keywords": ["تولید خودکار", "وردپرس"] },
+    { "h2": "معرفی ۶ عامل مستقل تحریریه مقاله‌نگار", "subsections": ["پژوهشگر", "نویسنده", "منتقد"] },
+    { "h2": "بررسی تست‌های گذر از ردیاب‌های AI (Humanizer)", "table": "مقایسه قبل و بعد" },
+    { "h2": "راهنمای اتصال مستقیم به ووکامرس و سئو" }
+  ],
+  "faq_schema_topics": ["آیا گوگل متوجه هوش مصنوعی می‌شود؟", "نحوه تنظیم کلید API"]
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <a href="purchase.html" class="btn btn-primary btn-lg">
+            <span>تهیه مقاله‌نگار و راه‌اندازی خط تولید</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. SECTION: BEFORE VS AFTER HUMANIZER COMPARISON
+         ======================================================================== -->
+    <section class="comparison-section section" id="ai-comparison" aria-labelledby="compare-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label">فیلتر ضد هوش مصنوعی</div>
+          <h2 id="compare-heading">تفاوت متون رباتیک معمولی با شاهکار مقاله‌نگار</h2>
+          <p>
+            چرا گوگل وب‌سایت‌های دارای متون خام هوش مصنوعی را جریمه می‌کند و چگونه عامل انسانی‌ساز مقاله‌نگار این مشکل را برای همیشه ریشه‌کن کرده است؟
+          </p>
+        </div>
+
+        <div class="comparison-card-grid">
+          <!-- RAW AI CARD -->
+          <div class="compare-card raw-ai">
+            <div class="compare-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+              <span>هوش مصنوعی خام (ChatGPT و افزونه‌های تک‌پرامپت)</span>
+            </div>
+
+            <h3>متون مصنوعی، تکراری و پرخطر برای سئو</h3>
+
+            <div class="compare-sample-box">
+              <span class="sample-tag">نمونه متن خروجی ابزارهای معمولی:</span>
+              <p>
+                «در دنیای پرشتاب امروز، تولید محتوا نقش بسیار مهم و کلیدی ایفا می‌کند. در این مقاله قصد داریم به بررسی جامع و کامل مباحث سئو بپردازیم تا شما بتوانید به بهترین نتایج دست یابید...»
+              </p>
+            </div>
+
+            <ul class="compare-checklist">
               <li>
-                <svg class="icon-x" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#DC2626" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
-                متن‌های خشک و رباتیک که نیاز به ساعت‌ها ویرایش مجدد دارند
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+                <span>شروع‌های کلیشه‌ای و تکراری که مخاطب را در همان ۳ ثانیه اول فراری می‌دهد</span>
               </li>
               <li>
-                <svg class="icon-x" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#DC2626" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
-                شناسایی محتوا توسط گوگل به عنوان هوش مصنوعی غیرانسانی و افت رتبه
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+                <span>شناسایی ۱۰۰٪ در ابزارهای GPTZero و Copyleaks و ریسک پنالتی در آپدیت‌های گوگل</span>
               </li>
               <li>
-                <svg class="icon-x" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#DC2626" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
-                عدم اتصال به پیشخوان وردپرس و اتلاف وقت در کپی‌پیست دستی
-              </li>
-              <li>
-                <svg class="icon-x" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#DC2626" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
-                پر نشدن متاداده‌های سئو (عنوان، دسکریپشن و کلمه کلیدی) در Yoast و Rank Math
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+                <span>بدون هیچ‌گونه لینک‌سازی داخلی و نیازمند به ساعت‌ها بازنویسی دستی توسط ویراستار</span>
               </li>
             </ul>
           </div>
-          <div class="solution-side reveal-left">
-            <div class="section-label accent">راه‌حل</div>
-            <h2>مقاله‌نگار یک <span class="text-gradient">تیم کامل تحریریه</span> است</h2>
-            <ul class="solution-list">
+
+          <!-- MAGHALE NEGAR CARD -->
+          <div class="compare-card maghale-negar">
+            <div class="compare-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>مقاله‌نگار با خط تولید ۶ عاملی و فیلتر Humanizer</span>
+            </div>
+
+            <h3>نگارش روان، ارگانیک و صددرصد انسانی</h3>
+
+            <div class="compare-sample-box">
+              <span class="sample-tag">نمونه متن خروجی مقاله‌نگار:</span>
+              <p>
+                «اگر تا به حال ساعت‌ها پای یک فایل ورد خالی نشسته‌اید تا مقاله‌ای بنویسید که در صفحه اول گوگل جا خوش کند، قطعاً می‌دانید پیدا کردن لحن مناسب چقدر طاقت‌فرساست. این درست همان نقطه‌ای است که...»
+              </p>
+            </div>
+
+            <ul class="compare-checklist">
               <li>
-                <svg class="icon-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#7C3AED" stroke-width="1.5"/><path d="M7 10.5l2 2 4-4" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                ۶ عامل تخصصی هوش مصنوعی به صورت همزمان روی هر مقاله کار می‌کنند
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>شروع‌های داستانی با قلاب ذهنی (Hook) متناسب با فرهنگ و ادبیات شیرین فارسی</span>
               </li>
               <li>
-                <svg class="icon-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#7C3AED" stroke-width="1.5"/><path d="M7 10.5l2 2 4-4" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                عامل انسانی‌ساز (Humanizer) لحن رباتیک را کاملاً حذف می‌کند
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>کسب امتیاز بالای ۹۵٪ انسانی در سخت‌گیرانه‌ترین ردیاب‌ها و تثبیت رتبه در نتایج جستجو</span>
               </li>
               <li>
-                <svg class="icon-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#7C3AED" stroke-width="1.5"/><path d="M7 10.5l2 2 4-4" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                هماهنگی اتوماتیک با افزونه‌های سئوی Yoast SEO و Rank Math
-              </li>
-              <li>
-                <svg class="icon-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#7C3AED" stroke-width="1.5"/><path d="M7 10.5l2 2 4-4" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                تولید انبوه با فایل اکسل یا ورود دستی صدها کلمه کلیدی یکجا
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>اتصال پیوندهای داخلی هوشمند بین مقالات و محصولات سایت به صورت خودکار و دقیق</span>
               </li>
             </ul>
-            <a href="purchase.html" class="btn btn-primary" id="problem-cta">خرید افزونه مقاله‌نگار</a>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- ===== HOW IT WORKS — 6 AGENTS ===== -->
-    <section class="agents-section section" id="how-it-works" aria-labelledby="agents-heading">
+    <!-- ========================================================================
+         6. SECTION: BENTO GRID SUPERPOWERS
+         ======================================================================== -->
+    <section class="bento-section section" id="bento-features" aria-labelledby="bento-heading">
       <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-label">خط تولید ۶ مرحله‌ای</div>
-          <h2 id="agents-heading">۶ عامل تخصصی هوش مصنوعی چگونه کار می‌کنند؟</h2>
-          <p>هر محتوا قبل از انتشار از یک خط تولید ۶ مرحله‌ای عبور می‌کند. هر عامل وظیفه‌ای مشخص و تخصص‌یافته دارد.</p>
+        
+        <div class="section-header">
+          <div class="section-label">امکانات فوق‌پیشرفته</div>
+          <h2 id="bento-heading">قدرتی فراتر از ابزارهای معمولی نگارش</h2>
+          <p>
+            مقاله‌نگار به صورت اختصاصی برای برطرف کردن تمام موانع تولید محتوا و سئو در وردپرس بازطراحی شده است:
+          </p>
         </div>
-        <div class="agents-pipeline reveal-up delay-1">
-          <div class="pipeline-connector" aria-hidden="true"></div>
-          <div class="agent-card" data-index="1">
-            <div class="agent-card-number" aria-hidden="true">۱</div>
-            <div class="agent-card-icon planner-bg" aria-hidden="true">🧠</div>
-            <h3>۱. استراتژیست</h3>
-            <p>تحلیل کلمه کلیدی، ترسیم درخت محتوا و طراحی دقیق سرفصل‌های اصلی و فرعی (H2 & H3).</p>
-          </div>
-          <div class="agent-card" data-index="2">
-            <div class="agent-card-number" aria-hidden="true">۲</div>
-            <div class="agent-card-icon researcher-bg" aria-hidden="true">🔍</div>
-            <h3>۲. پژوهشگر</h3>
-            <p>استخراج آمار، فکت‌های معتبر و اطلاعات کاربردی مرتبط با موضوع برای غنی‌سازی متن.</p>
-          </div>
-          <div class="agent-card" data-index="3">
-            <div class="agent-card-number" aria-hidden="true">۳</div>
-            <div class="agent-card-icon writer-bg" aria-hidden="true">✍️</div>
-            <h3>۳. نویسنده اصلی</h3>
-            <p>نگارش متنی جامع، روان و جذاب بر اساس ساختار و تحقیقات انجام‌شده به همراه رعایت اصول روانشناسی فروش.</p>
-          </div>
-          <div class="agent-card" data-index="4">
-            <div class="agent-card-number" aria-hidden="true">۴</div>
-            <div class="agent-card-icon critic-bg" aria-hidden="true">🧐</div>
-            <h3>۴. منتقد و ادیتور</h3>
-            <p>بررسی ساختاری، سنجش انسجام مطالب، رفع تناقضات و اصلاح غلط‌های املایی و نگارشی.</p>
-          </div>
-          <div class="agent-card" data-index="5">
-            <div class="agent-card-number" aria-hidden="true">۵</div>
-            <div class="agent-card-icon humanizer-bg" aria-hidden="true">🌿</div>
-            <h3>۵. انسانی‌ساز (Humanizer)</h3>
-            <p><strong>حذف کامل لحن رباتیک</strong>، طبیعی‌سازی اصطلاحات و عبور از فیلترهای تشخیص هوش مصنوعی گوگل.</p>
-          </div>
-          <div class="agent-card" data-index="6">
-            <div class="agent-card-number" aria-hidden="true">۶</div>
-            <div class="agent-card-icon seo-bg" aria-hidden="true">🚀</div>
-            <h3>۶. سئو و انتشار</h3>
-            <p>تنظیم Meta Title، Meta Description، کلمه کلیدی کانونی و قرار دادن خودکار پست در پیشخوان وردپرس.</p>
-          </div>
-        </div>
-        <div class="section-cta reveal-up delay-2">
-          <a href="purchase.html" class="btn btn-primary" id="agents-cta">خرید افزونه مقاله‌نگار</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== FEATURES ===== -->
-    <section class="features-section section" id="features" aria-labelledby="features-heading">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-label">ویژگی‌های کلیدی</div>
-          <h2 id="features-heading">همه چیزی که برای مدیریت محتوا نیاز دارید</h2>
-          <p>از تولید انبوه با اکسل تا ویرایشگر زنده و مولد تصویر AI — مقاله‌نگار یک ابزار کاملاً خودکفاست</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card reveal-up delay-1" id="feat-bulk">
-            <div class="feature-icon bulk-icon" aria-hidden="true">📦</div>
-            <h3>تولید انبوه با اکسل</h3>
-            <p>با وارد کردن فایل اکسل یا ورود دستی ردیف‌ها از صدها کلمه کلیدی، افزونه به صورت زمان‌بندی‌شده محتوا می‌سازد.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-bulk-cta">مشاهده بخش در پنل ←</a>
-          </div>
-          <div class="feature-card reveal-up delay-2" id="feat-seo">
-            <div class="feature-icon seo-icon" aria-hidden="true">🎯</div>
-            <h3>هماهنگی با Yoast و Rank Math</h3>
-            <p>عنوان سئو، توضیحات متا و کلمه کلیدی کانونی به‌صورت خودکار در افزونه‌های سئوی شما پر می‌شود.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-seo-cta">مشاهده بخش در پنل ←</a>
-          </div>
-          <div class="feature-card reveal-up delay-3" id="feat-editor">
-            <div class="feature-icon editor-icon" aria-hidden="true">👁️</div>
-            <h3>پنل گردش‌کار زنده</h3>
-            <p>مرحله‌به‌مرحله فکر کردن هر عامل را ببینید و قبل از انتشار متن را در ویرایشگر پیشرفته بازبینی کنید.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-editor-cta">مشاهده بخش در پنل ←</a>
-          </div>
-          <div class="feature-card reveal-up delay-4" id="feat-tone">
-            <div class="feature-icon tone-icon" aria-hidden="true">🎭</div>
-            <h3>شخصی‌سازی لحن و برند</h3>
-            <p>لحن‌های مختلف: رسمی، صمیمی، تخصصی و متقاعدکننده بر اساس تعریف هویت برند و پرسونای مخاطبان کسب‌وکار شما.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-tone-cta">مشاهده بخش در پنل ←</a>
-          </div>
-          <div class="feature-card reveal-up delay-5" id="feat-wp">
-            <div class="feature-icon wp-icon" aria-hidden="true">⚡</div>
-            <h3>مستقیم روی هاست شما</h3>
-            <p>بدون نیاز به پلتفرم واسط؛ همه چیز مستقیماً در سرور و پنل مدیریت وردپرس شما پردازش می‌شود.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-wp-cta">مشاهده بخش در پنل ←</a>
-          </div>
-          <div class="feature-card reveal-up delay-6" id="feat-human">
-            <div class="feature-icon human-icon" aria-hidden="true">🛡️</div>
-            <h3>محتوای انسانی‌شده</h3>
-            <p>عامل انسانی‌ساز ساختار جملات را بازنویسی می‌کند تا از هر ابزار تشخیص AI مانند GPTZero عبور کند.</p>
-            <a href="#panel-tour" class="feature-link" id="feat-human-cta">مشاهده بخش در پنل ←</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== USE CASES ===== -->
-    <section class="usecases-section section" id="usecases" aria-labelledby="usecases-heading">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-label">یک افزونه برای همه نیازها</div>
-          <h2 id="usecases-heading">در چه بخش‌هایی می‌توان از مقاله‌نگار استفاده کرد؟</h2>
-        </div>
-        <div class="usecases-tabs reveal-up delay-1">
-          <div class="tabs-list" role="tablist" aria-label="کاربردهای افزونه">
-            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-blog" id="tab-btn-blog">📰 مقالات وبلاگ</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-woo" id="tab-btn-woo">🛍️ محصولات ووکامرس</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-cat" id="tab-btn-cat">📂 صفحات دسته‌بندی</button>
-          </div>
-          <div class="tab-content" id="tab-blog" role="tabpanel" aria-labelledby="tab-btn-blog">
-            <div class="usecase-content">
-              <div class="usecase-text">
-                <h3>مقالات وبلاگ جامع و تخصصی</h3>
-                <p>تولید مقالات چند هزار کلمه‌ای با تیتربندی استاندارد، ساختار سئوی صحیح و محتوای عمیق که در گوگل رتبه می‌گیرد.</p>
-                <ul>
-                  <li>ساختار H1، H2، H3 استاندارد سئو</li>
-                  <li>مقالات ۱۵۰۰ تا ۵۰۰۰+ کلمه</li>
-                  <li>لینک‌سازی داخلی هوشمند بین مقالات</li>
-                  <li>تولید انبوه با وارد کردن لیست موضوعات با فایل اکسل</li>
-                </ul>
-                <a href="purchase.html" class="btn btn-primary" id="usecase-blog-cta">خرید افزونه مقاله‌نگار</a>
+        <div class="bento-grid">
+          
+          <!-- BENTO 1 (WIDE): WOOCOMMERCE & CATEGORY -->
+          <div class="bento-card bento-wide">
+            <div>
+              <div class="bento-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               </div>
-              <div class="usecase-visual blog-visual" aria-hidden="true">
-                <div class="mock-post">
-                  <div class="mock-post-header">
-                    <div class="mock-tag">آموزشی</div>
-                    <div class="mock-time">۵ دقیقه مطالعه</div>
-                  </div>
-                  <div class="mock-title">راهنمای جامع بازاریابی دیجیتال و سئو</div>
-                  <div class="mock-lines">
-                    <div class="mock-line w-full"></div>
-                    <div class="mock-line w-5/6"></div>
-                    <div class="mock-line w-4/5"></div>
-                    <div class="mock-line w-full"></div>
-                    <div class="mock-line w-3/4"></div>
-                  </div>
-                  <div class="mock-seo-badge">
-                    <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M8 1l1.79 3.62L13.8 5.24l-2.9 2.83.68 3.98L8 10.1l-3.58 1.95.68-3.98-2.9-2.83 4.01-.62L8 1z" fill="#7C3AED"/></svg>
-                    وضعیت سئو: عالی
-                  </div>
-                </div>
-              </div>
+              <h3>تولید تخصصی صفحات محصول ووکامرس و دسته‌بندی‌ها</h3>
+              <p>
+                بزرگ‌ترین معضل فروشگاه‌های آنلاین، خالی ماندن توضیحات صدها کالا و صفحات دسته‌بندی است. مقاله‌نگار توضیحات کوتاه و بلند، جدول مشخصات، نقد و بررسی نقاط قوت و ضعف و متاداده‌های محصول را در کمترین زمان ممکن تکمیل می‌کند.
+              </p>
+            </div>
+            <div class="bento-tags-row">
+              <span class="bento-tag">توضیحات کوتاه و بلند</span>
+              <span class="bento-tag">حل معضل سئوی دسته‌بندی‌ها</span>
+              <span class="bento-tag">جدول ویژگی‌ها</span>
+              <span class="bento-tag">افزایش نرخ تبدیل خرید</span>
             </div>
           </div>
-          <div class="tab-content hidden" id="tab-woo" role="tabpanel" aria-labelledby="tab-btn-woo">
-            <div class="usecase-content">
-              <div class="usecase-text">
-                <h3>توضیحات محصولات ووکامرس</h3>
-                <p>نوشتن توضیحات جذاب، مزایا، ویژگی‌ها و نقد و بررسی برای محصولات فروشگاه جهت افزایش نرخ تبدیل و فروش.</p>
-                <ul>
-                  <li>توضیح کوتاه و بلند محصول ووکامرس</li>
-                  <li>جدول مقایسه ویژگی‌ها و جدول مشخصات</li>
-                  <li>متن متقاعدکننده برای افزایش فروش و ترغیب مشتری</li>
-                  <li>بهینه‌سازی متاداده‌های سئو برای صفحات محصول</li>
-                </ul>
-                <a href="purchase.html" class="btn btn-primary" id="usecase-woo-cta">خرید افزونه مقاله‌نگار</a>
+
+          <!-- BENTO 2: BULK EXCEL -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg>
               </div>
-              <div class="usecase-visual woo-visual" aria-hidden="true">
-                <div class="mock-product">
-                  <div class="mock-product-img">
-                    <svg viewBox="0 0 80 60" fill="none" width="80" height="60">
-                      <rect width="80" height="60" rx="8" fill="#EFE7FC"/>
-                      <rect x="20" y="10" width="40" height="40" rx="6" fill="#DDD6FE"/>
-                      <path d="M30 30l5 5 15-15" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <div class="mock-product-info">
-                    <div class="mock-product-name">محصول نمونه ووکامرس</div>
-                    <div class="mock-product-price">۲۵۰,۰۰۰ تومان</div>
-                    <div class="mock-product-desc">
-                      <div class="mock-line w-full"></div>
-                      <div class="mock-line w-4/5"></div>
-                    </div>
-                    <div class="mock-add-btn">افزودن به سبد خرید</div>
-                  </div>
-                </div>
-              </div>
+              <h3>تولید انبوه با فایل اکسل</h3>
+              <p>
+                فهرست کلمات کلیدی خود را در قالب اکسل آپلود کنید تا افزونه طبق زمان‌بندی روزانه مقالات را تولید و منتشر کند.
+              </p>
+            </div>
+            <div class="bento-tags-row">
+              <span class="bento-tag">فایل‌های XLSX / CSV</span>
+              <span class="bento-tag">پردازش تدریجی</span>
             </div>
           </div>
-          <div class="tab-content hidden" id="tab-cat" role="tabpanel" aria-labelledby="tab-btn-cat">
-            <div class="usecase-content">
-              <div class="usecase-text">
-                <h3>صفحات دسته‌بندی و آرشیو</h3>
-                <p>تولید محتوای سئوشده برای صفحات دسته‌بندی که معمولاً کلیدی‌ترین صفحات سئو در فروشگاه‌ها و مجلات خبری هستند.</p>
-                <ul>
-                  <li>محتوای منحصربه‌فرد برای هر دسته‌بندی</li>
-                  <li>بهینه‌سازی برای کلمات کلیدی پرجستجوی دسته</li>
-                  <li>تولید خودکار برای صدها دسته‌بندی یکجا</li>
-                  <li>انسجام محتوایی و لینک‌سازی داخلی</li>
-                </ul>
-                <a href="purchase.html" class="btn btn-primary" id="usecase-cat-cta">خرید افزونه مقاله‌نگار</a>
+
+          <!-- BENTO 3: INTERNAL LINKING -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               </div>
-              <div class="usecase-visual cat-visual" aria-hidden="true">
-                <div class="mock-categories">
-                  <div class="mock-cat-item">
-                    <div class="mock-cat-icon"></div>
-                    <div class="mock-cat-info">
-                      <div class="mock-line w-3/4"></div>
-                      <div class="mock-line w-1/2 sm"></div>
-                    </div>
-                    <div class="mock-cat-badge">۴۲</div>
-                  </div>
-                  <div class="mock-cat-item">
-                    <div class="mock-cat-icon"></div>
-                    <div class="mock-cat-info">
-                      <div class="mock-line w-2/3"></div>
-                      <div class="mock-line w-2/5 sm"></div>
-                    </div>
-                    <div class="mock-cat-badge">۱۸</div>
-                  </div>
-                  <div class="mock-cat-item">
-                    <div class="mock-cat-icon"></div>
-                    <div class="mock-cat-info">
-                      <div class="mock-line w-4/5"></div>
-                      <div class="mock-line w-3/5 sm"></div>
-                    </div>
-                    <div class="mock-cat-badge">۸۷</div>
-                  </div>
-                </div>
-              </div>
+              <h3>پیونددهی هوشمند داخلی</h3>
+              <p>
+                عامل سئو به صورت خودکار مقالات قبلی و محصولات مرتبط با موضوع را اسکن کرده و انکرتکست‌های دقیق ایجاد می‌کند.
+              </p>
+            </div>
+            <div class="bento-tags-row">
+              <span class="bento-tag">تقویت بن‌سازه سایت</span>
+              <span class="bento-tag">پخش پیج‌رنک</span>
             </div>
           </div>
+
+          <!-- BENTO 4: SEO INTEGRATION -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              </div>
+              <h3>هماهنگی ۱۰۰٪ با افزونه‌های سئو</h3>
+              <p>
+                پر شدن خودکار کلمه کلیدی کانونی، عنوان و توضیحات متا در Yoast SEO و Rank Math بدون نیاز به تنظیم دستی.
+              </p>
+            </div>
+            <div class="bento-tags-row">
+              <span class="bento-tag">Rank Math Pro</span>
+              <span class="bento-tag">Yoast SEO</span>
+              <span class="bento-tag">اسکیماهای هوشمند</span>
+            </div>
+          </div>
+
+          <!-- BENTO 5 (HIGHLIGHT): NO SUBSCRIPTION & LOCAL API -->
+          <div class="bento-card bento-highlight">
+            <div>
+              <div class="bento-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h3>پردازش مستقیم در سرور وردپرس شما</h3>
+              <p>
+                یک‌بار هزینه افزونه را پرداخت می‌کنید و تا ابد بدون اشتراک دلاری و واسطه‌ها از آن استفاده می‌کنید. پردازش مستقیم روی هاست و با کلیدهای API شخصی شما انجام می‌پذیرد.
+              </p>
+            </div>
+            <div class="bento-tags-row">
+              <span class="bento-tag">لایسنس دائمی</span>
+              <span class="bento-tag">بدون کارمزد دلاری</span>
+              <span class="bento-tag">به‌روزرسانی پیوسته</span>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- ===== ROI / VALUE ===== -->
-    <section class="roi-section section" id="roi" aria-labelledby="roi-heading">
-      <div class="roi-bg" aria-hidden="true"></div>
+    <!-- ========================================================================
+         7. SECTION: INTERACTIVE ROI & PROFIT CALCULATOR
+         ======================================================================== -->
+    <section class="roi-section section" id="roi-calculator" aria-labelledby="roi-heading">
       <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-label light">ارزش اقتصادی</div>
-          <h2 id="roi-heading" class="light">چرا مقاله‌نگار <span class="text-gradient-light">سرمایه‌گذاری هوشمندانه</span> است؟</h2>
+        
+        <div class="section-header">
+          <div class="section-label">ارزش اقتصادی و بازگشت سرمایه</div>
+          <h2 id="roi-heading">محاسبه‌گر صرفه‌جویی مالی مقاله‌نگار</h2>
+          <p>
+            تعداد مقالاتی که در هر ماه برای وبسایت یا فروشگاه خود نیاز دارید را انتخاب کنید تا میزان سود خالص صرفه‌جویی‌شده را به صورت زنده مشاهده کنید:
+          </p>
         </div>
-        <div class="roi-cards">
-          <div class="roi-card reveal-up delay-1">
-            <div class="roi-icon" aria-hidden="true">💰</div>
-            <div class="roi-number">۲×</div>
-            <h3>بازگشت سرمایه با ۲ مقاله</h3>
-            <p>هزینه سفارش تنها ۲ مقاله تخصصی به فریلنسرها بیشتر از قیمت کامل این افزونه است. با مقاله‌نگار نامحدود محتوا بسازید.</p>
+
+        <div class="roi-calc-container">
+          <div class="calc-slider-box">
+            <label for="roi-slider">تعداد محتوای مورد نیاز در هر ماه:</label>
+            <div class="calc-value-display" id="roi-count-disp">۳۰ مقاله یا محصول</div>
+            <input type="range" id="roi-slider" class="calc-slider" min="5" max="150" step="5" value="30" />
           </div>
-          <div class="roi-card reveal-up delay-2">
-            <div class="roi-icon" aria-hidden="true">⚡</div>
-            <div class="roi-number">۹۰٪</div>
-            <h3>صرفه‌جویی در زمان</h3>
-            <p>کاری که یک تیم نویسندگی در یک هفته انجام می‌دهد، مقاله‌نگار در چند دقیقه با دقت و کیفیت بالا انجام می‌دهد.</p>
+
+          <div class="calc-results-grid">
+            <div class="calc-res-card">
+              <span>هزینه برون‌سپاری به نویسنده سنتی</span>
+              <h4 id="roi-human-cost">۱۳,۵۰۰,۰۰۰ تومان</h4>
+              <p>بر مبنای حداقل ۴۵۰ هزار تومان به ازای هر مقاله ۲۵۰۰ کلمه‌ای</p>
+            </div>
+
+            <div class="calc-res-card">
+              <span>هزینه با افزونه مقاله‌نگار</span>
+              <h4 id="roi-mn-cost">۴۵۰,۰۰۰ تومان</h4>
+              <p>فقط هزینه ناچیز توکن‌های API (حدود ۱۵ هزار تومان برای هر مقاله)</p>
+            </div>
+
+            <div class="calc-res-card highlight">
+              <span>سود خالص صرفه‌جویی در هر ماه</span>
+              <h4 id="roi-profit">۱۳,۰۵۰,۰۰۰ تومان</h4>
+              <p><span style="color:var(--mn-primary); font-weight:800;">✓</span> بازگشت کامل هزینه خرید افزونه با انتشار تنها ۲ مقاله!</p>
+            </div>
           </div>
-          <div class="roi-card reveal-up delay-3">
-            <div class="roi-icon" aria-hidden="true">🛡️</div>
-            <div class="roi-number">۱۰۰٪</div>
-            <h3>بدون جریمه گوگل</h3>
-            <p>با وجود عامل اختصاصی انسانی‌ساز و منتقد سئو، متون کاملاً طبیعی و منحصربه‌فرد تولید شده و رتبه عالی می‌گیرند.</p>
+
+          <div class="calc-cta-row">
+            <a href="purchase.html" class="btn btn-primary btn-lg">
+              <span>همین الان سرمایه‌گذاری کن و هزینه‌ها را ۹۰٪ کاهش بده</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
           </div>
         </div>
-        <div class="roi-cta reveal-up delay-4">
-          <a href="purchase.html" class="btn btn-white btn-lg" id="roi-cta">همین الان شروع کن</a>
-          <p class="roi-cta-sub">یک‌بار بخرید، برای همیشه بدون اشتراک ماهانه استفاده کنید</p>
-        </div>
+
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <!-- ========================================================================
+         8. SECTION: COMPARISON TABLE
+         ======================================================================== -->
+    <section class="table-section section" id="comparison-table" aria-labelledby="table-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label">بررسی شفاف</div>
+          <h2 id="table-heading">مقایسه مقاله‌نگار با سایر روش‌ها</h2>
+          <p>
+            چرا متخصصان سئو و مدیران سایت‌های پردرآمد مقاله‌نگار را به ابزارهای متفرقه ترجیح می‌دهند؟
+          </p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>ویژگی و استاندارد کیفی</th>
+                <th class="col-mn">مقاله‌نگار (تحریریه ۶ عاملی)</th>
+                <th>افزونه‌های معمولی هوش مصنوعی</th>
+                <th>نویسنده فریلنسر سنتی</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>خط تولید چندعاملی مستقل</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> ۶ عامل تخصصی مجزا</td>
+                <td><span class="tbl-cross">✕</span> تک‌پرامپت ساده</td>
+                <td><span class="tbl-cross">✕</span> متغیر بسته به نویسنده</td>
+              </tr>
+              <tr>
+                <td><strong>فیلتر ضد هوش مصنوعی (Humanizer)</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> نمره بالای ۹۵٪ در ردیاب‌ها</td>
+                <td><span class="tbl-cross">✕</span> شناسایی ۱۰۰٪ به عنوان ربات</td>
+                <td><span class="tbl-check">✓</span> انسانی (در صورت عدم کپی)</td>
+              </tr>
+              <tr>
+                <td><strong>لینک‌سازی اتوماتیک داخلی</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> خودکار به آرشیو و ووکامرس</td>
+                <td><span class="tbl-cross">✕</span> ندارد</td>
+                <td><span class="tbl-cross">✕</span> نیازمند چک‌لیست دستی</td>
+              </tr>
+              <tr>
+                <td><strong>تولید انبوه با فایل اکسل</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> تا صدها مقاله طبق تقویم شمسی</td>
+                <td><span class="tbl-cross">✕</span> ندارد یا ناقص</td>
+                <td><span class="tbl-cross">✕</span> هفته‌ها زمان می‌برد</td>
+              </tr>
+              <tr>
+                <td><strong>سازگاری با Rank Math و Yoast</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> پر کردن ۱۰۰٪ متاتگ‌ها</td>
+                <td><span class="tbl-cross">✕</span> متاتگ‌ها پر نمی‌شوند</td>
+                <td><span class="tbl-cross">✕</span> نیاز به وارد کردن دستی</td>
+              </tr>
+              <tr>
+                <td><strong>میانگین زمان تولید هر مقاله</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> ۲ الی ۴ دقیقه</td>
+                <td><span class="tbl-check">✓</span> ۱ دقیقه (کیفیت بسیار پایین)</td>
+                <td><span class="tbl-cross">✕</span> ۱ الی ۳ روز کاری</td>
+              </tr>
+              <tr>
+                <td><strong>هزینه هر مقاله ۲۵۰۰ کلمه‌ای</strong></td>
+                <td class="col-mn"><span class="tbl-check">✓</span> حدود ۱۵ هزار تومان (API)</td>
+                <td>۳۰ الی ۸۰ هزار تومان (اشتراک)</td>
+                <td>۴۰۰ الی ۸۰۰ هزار تومان</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. SECTION: FAQ ACCORDION
+         ======================================================================== -->
     <section class="faq-section section" id="faq" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-header reveal-up">
+        
+        <div class="section-header">
           <div class="section-label">پرسش‌های متداول</div>
-          <h2 id="faq-heading">سوالات متداول خریداران</h2>
+          <h2 id="faq-heading">سوالاتی که شاید برای شما هم پیش بیاید</h2>
         </div>
-        <div class="faq-list reveal-up delay-1">
-          <details class="faq-item">
+
+        <div class="faq-list">
+          <details class="faq-item" open>
             <summary class="faq-question">
-              آیا محتوای تولیدشده توسط گوگل به عنوان هوش مصنوعی شناسایی می‌شود؟
-              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>آیا مقالات تولیدشده توسط گوگل به عنوان هوش مصنوعی شناسایی و جریمه می‌شوند؟</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer">
-              خیر؛ به دلیل وجود مرحله اختصاصی «انسانی‌سازی متن (Humanizer)»، ساختار جملات و لحن محتوا کاملاً شبیه به نگارش یک نویسنده انسانی حرفه‌ای بهینه‌سازی شده و از تمام ابزارهای تشخیص AI عبور می‌کند.
+              خیر؛ به دلیل وجود مرحله اختصاصی «انسانی‌ساز (Humanizer)»، ساختار جملات، ضرباهنگ کلام و لحن مقاله کاملاً شبیه به نگارش یک نویسنده حرفه‌ای انسانی بهینه‌سازی می‌شود. متون تولیدی در سخت‌گیرانه‌ترین ردیاب‌های بین‌المللی مانند GPTZero و Copyleaks امتیاز قبولی کامل را کسب کرده و خطر پنالتی گوگل را به صفر می‌رسانند.
             </div>
           </details>
+
           <details class="faq-item">
             <summary class="faq-question">
-              آیا افزونه با ووکامرس و افزونه‌های سئو سازگار است؟
-              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>آیا برای استفاده در ایران نیاز به شماره مجازی یا ویزاکارت خارجی دارم؟</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer">
-              بله؛ مقاله‌نگار به صورت خودکار با محصولات ووکامرس، افزونه Yoast SEO و Rank Math هماهنگ بوده و متاداده‌های کلمه کلیدی، عنوان و توضیحات متا را کاملاً پر می‌کند.
+              خیر؛ افزونه مقاله‌نگار به صورت رسمی از سرویس GapGPT پشتیبانی می‌کند که به شما امکان می‌دهد کلید API را با کارت‌های بانکی شتاب شارژ کنید. همچنین اگر دسترسی به اکانت رسمی OpenAI، Claude یا Gemini دارید نیز می‌توانید کلید خود را مستقیماً وارد کنید.
             </div>
           </details>
+
           <details class="faq-item">
             <summary class="faq-question">
-              آیا امکان تولید انبوه با اکسل (تعداد بالا) وجود دارد؟
-              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>چگونه مقاله‌نگار پیوندهای داخلی سایت من را شناسایی می‌کند؟</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer">
-              بله؛ با ابزار Bulk Import می‌توانید فایل اکسل (XLSX / CSV) حاوی عناوین را وارد کنید یا ردیف‌ها را به صورت دستی اضافه کنید تا افزونه به نوبت و بر اساس صف زمان‌بندی‌شده محتواها را تولید کند.
+              مقاله‌نگار مستقیماً به پایگاه‌داده وردپرس شما متصل است و فهرست عناوین، محصولات و دسته‌بندی‌های قبلی شما را می‌شناسد. در حین نگارش، هوش مصنوعی واژگان کلیدی مرتبط را استخراج کرده و به صفحات هدف لینک طبیعی با ساختار HTML معتبر اضافه می‌کند.
             </div>
           </details>
+
           <details class="faq-item">
             <summary class="faq-question">
-              آیا می‌توانم قبل از انتشار محتوا را ویرایش کنم؟
-              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>آیا امکان بازبینی متن قبل از انتشار وجود دارد؟</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer">
-              بله؛ پیشخوان زنده افزونه به شما امکان می‌دهد مطالب تولیدشده را قبل از انتشار نهایی در جدول بازبینی کرده، میزان کلمات را ببیند و در ویرایشگر وردپرس اصلاحات لازم را اعمال نمایید.
+              بله، صددرصد. شما می‌توانید وضعیت انتشار مقالات را روی «پیش‌نویس (Draft)» قرار دهید تا ابتدا متن را در پیشخوان مشاهده کرده و در صورت تمایل اصلاحات دلخواه را اعمال کنید و سپس دکمه انتشار نهایی را بزنید.
             </div>
           </details>
+
           <details class="faq-item">
             <summary class="faq-question">
-              آیا نیاز به پیکربندی یا سرور خاصی دارد؟
-              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>آیا تولید انبوه با اکسل باعث کندی سرعت هاست نمی‌شود؟</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer">
-              خیر؛ مقاله‌نگار مستقیماً روی هر هاست وردپرسی نصب می‌شود. فقط کافیست کلید API هوش مصنوعی خود را وارد کنید و شروع کنید.
+              خیر؛ ما مکانیزم صف نوبتی (Background Queue) را طراحی کرده‌ایم که هر محتوا را به صورت مستقل پردازش می‌کند و بین مراحل فاصله زمانی استاندارد قائل می‌شود. این سیستم هیچ‌گونه مصرف افراطی رم یا خطای Time-out در هاست‌های اشتراکی ایجاد نمی‌کند.
             </div>
           </details>
         </div>
-        <div class="section-cta reveal-up delay-2">
-          <a href="purchase.html" class="btn btn-primary" id="faq-cta">خرید افزونه مقاله‌نگار</a>
-        </div>
+
       </div>
     </section>
 
-    <!-- ===== FINAL CTA ===== -->
-    <section class="final-cta section" id="final-cta" aria-labelledby="final-cta-heading">
-      <div class="final-cta-bg" aria-hidden="true">
-        <div class="orb orb-final-1"></div>
-        <div class="orb orb-final-2"></div>
-      </div>
-      <div class="container">
-        <div class="final-cta-inner reveal-up">
-          <div class="section-label light">همین الان شروع کنید</div>
-          <h2 id="final-cta-heading" class="light">تحریریه ۶ عاملی هوش مصنوعی را <span class="text-gradient-light">به وردپرس خود ببريد</span></h2>
-          <p class="light">از امروز روند تولید محتوا، ووکامرس و سئوی سایت خود را کاملاً هوشمند و خودکار کنید.</p>
-          <div class="final-cta-actions">
-            <a href="purchase.html" class="btn btn-white btn-xl" id="final-cta-btn">🚀 خرید افزونه مقاله‌نگار</a>
-          </div>
+    <!-- ========================================================================
+         10. SECTION: FINAL CTA BANNER
+         ======================================================================== -->
+    <section class="final-cta section" id="final-cta" aria-labelledby="final-heading">
+      <div class="final-cta-mesh" aria-hidden="true"></div>
+      
+      <div class="container final-cta-inner">
+        <div class="section-label light">شروع کنید و پیشتاز باشید</div>
+        
+        <h2 id="final-heading">
+          تحریریه ۶ عاملی هوش مصنوعی را <br />
+          <span class="text-gradient-light">به وردپرس خود بیاورید</span>
+        </h2>
+
+        <p>
+          همین امروز به صدها مدیر سایت حرفه‌ای بپیوندید و خط تولید مقالات تخصصی و محصولات فروشگاه خود را بر روی سرور خودتان فعال کنید.
+        </p>
+
+        <a href="purchase.html" class="btn btn-white btn-xl" id="final-cta-btn">
+          <span>خرید و دریافت آنی لایسنس مقاله‌نگار</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+
+        <div class="final-guarantees-row">
+          <span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            لایسنس مادام‌العمر بدون شارژ ماهانه
+          </span>
+          <span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            به‌روزرسانی‌های پیوسته و منظم
+          </span>
+          <span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            پشتیبانی تخصصی مستقیم
+          </span>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-text">مقاله‌نگار</span>
-        </div>
-        <p>نخستین تحریریه ۶ عاملی هوش مصنوعی بومی وردپرس برای تولید محتوای هوشمند و سئو.</p>
+  <!-- ========================================================================
+       11. STICKY CONVERSION BAR ON SCROLL
+       ======================================================================== -->
+  <div class="sticky-conversion-bar" id="sticky-bar" aria-hidden="true">
+    <div class="sticky-bar-info">
+      <div class="sticky-bar-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
       </div>
-      <div class="footer-links">
-        <nav aria-label="لینک‌های فوتر">
-          <a href="#panel-tour">پیش‌نمایش پنل</a>
-          <a href="#how-it-works">خط تولید ۶ عاملی</a>
-          <a href="#features">ویژگی‌ها</a>
-          <a href="purchase.html">خرید افزونه</a>
-        </nav>
+      <div class="sticky-bar-text">
+        <strong>افزونه تحریریه هوشمند مقاله‌نگار</strong>
+        <span>تولید ۶ عاملی مقالات، ووکامرس و سئو</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© تمام حقوق برای افزونه مقاله‌نگار محفوظ است.</p>
+    <a href="purchase.html" class="btn btn-primary sticky-bar-cta">
+      <span>خرید لایسنس افزونه</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       12. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo-horizontal.png" alt="مقاله‌نگار" height="38" />
+          <p>
+            نخستین تحریریه ۶ عاملی هوش مصنوعی بومی وردپرس برای نگارش مقالات تخصصی، سئوی خودکار و مدیریت محتوای ووکامرس.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>بخش‌های پیش‌نمایش</h4>
+          <ul>
+            <li><a href="#panel-tour">تور پنل مدیریت</a></li>
+            <li><a href="#agents-pipeline">خط تولید ۶ عاملی</a></li>
+            <li><a href="#ai-comparison">مقایسه با AI معمولی</a></li>
+            <li><a href="#bento-features">امکانات و ووکامرس</a></li>
+            <li><a href="#roi-calculator">محاسبه‌گر سودآوری</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>پشتیبانی و خرید</h4>
+          <ul>
+            <li><a href="purchase.html">خرید لایسنس رسمی</a></li>
+            <li><a href="#faq">پرسش‌های متداول</a></li>
+            <li><a href="mailto:support@maghalenegar.ir">ارتباط با پشتیبانی</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© تمام حقوق مادی و معنوی برای افزونه مقاله‌نگار محفوظ است.</p>
+        <p>طراحی شده با استانداردهای مدرن UI/UX Pro Max</p>
       </div>
     </div>
   </footer>
