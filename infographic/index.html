@@ -77,8 +77,8 @@
       --g-text-light: #E2E8F0;
       --g-text-muted: #94A3B8;
       --g-text-dim: #64748B;
-      --g-glass: rgba(11, 25, 44, 0.65);
-      --g-border: rgba(41, 220, 161, 0.2);
+      --g-glass: rgba(11, 25, 44, 0.7);
+      --g-border: rgba(41, 220, 161, 0.22);
     }
 
     html, body {
@@ -94,24 +94,24 @@
     }
 
     /* ==========================================================================
-       SINGLE UNIFIED POSTER CANVAS (No section boxes, no page layers)
+       SINGLE UNIFIED POSTER CANVAS
        ========================================================================== */
     .infographic-canvas {
-      width: 1000px;
+      width: 1020px;
       max-width: 100%;
-      background: radial-gradient(circle at 50% 0%, #0D223A 0%, #061120 40%, #040C17 100%);
+      background: radial-gradient(circle at 50% 0%, #0D233C 0%, #061120 40%, #040C17 100%);
       border-radius: 28px;
       position: relative;
       overflow: hidden;
       box-shadow: 0 0 120px rgba(0, 0, 0, 0.95), 0 0 40px rgba(41, 220, 161, 0.08);
-      border: 1px solid rgba(41, 220, 161, 0.2);
-      padding: 56px 48px;
+      border: 1px solid rgba(41, 220, 161, 0.22);
+      padding: 52px 44px;
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 44px;
     }
 
-    /* Subtle background grid & ambient light */
+    /* Ambient background grid & glow */
     .canvas-grid {
       position: absolute;
       inset: 0;
@@ -156,11 +156,11 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 44px;
+      gap: 40px;
     }
 
     /* ==========================================================================
-       1. HERO & IDENTITY LOCKUP (Minimal, Editorial, Impactful)
+       1. HERO & IDENTITY (Clean White Logotype + Mascot Speech)
        ========================================================================== */
     .hero-lockup {
       text-align: center;
@@ -170,25 +170,28 @@
       gap: 14px;
     }
     .hero-brand-logo {
-      height: 48px;
+      height: 52px;
       width: auto;
       object-fit: contain;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
     }
+    
     .hero-pill-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(14, 171, 142, 0.1);
-      border: 1px solid rgba(41, 220, 161, 0.3);
-      padding: 4px 16px;
+      background: rgba(14, 171, 142, 0.12);
+      border: 1px solid rgba(41, 220, 161, 0.35);
+      padding: 4px 18px;
       border-radius: 100px;
       font-size: 12px;
       font-weight: 700;
       color: var(--g-mint);
     }
+
     .hero-title {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 900;
       color: var(--g-text-white);
       line-height: 1.25;
@@ -202,26 +205,66 @@
       background-clip: text;
     }
     .hero-sub {
-      font-size: 15.5px;
+      font-size: 15px;
       color: #CBD5E1;
       max-width: 740px;
       line-height: 1.7;
     }
 
-    /* 3 Floating Outcome Chips */
+    /* Mascot Speech Capsule */
+    .hero-mascot-speech {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(11, 25, 44, 0.85);
+      border: 1px solid rgba(41, 220, 161, 0.35);
+      border-radius: 50px;
+      padding: 6px 20px 6px 10px;
+      margin-top: 2px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    }
+    .mascot-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(41, 220, 161, 0.15);
+      border: 1.5px solid var(--g-mint);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mascot-thumb img {
+      width: 120%;
+      height: auto;
+      margin-top: 4px;
+    }
+    .speech-text {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--g-text-white);
+      text-align: right;
+      line-height: 1.45;
+    }
+    .speech-text strong {
+      color: var(--g-mint);
+    }
+
+    /* 3 Outcome Chips */
     .hero-proof-strip {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 8px;
+      margin-top: 4px;
       width: 100%;
     }
     .proof-chip {
       background: rgba(13, 28, 48, 0.7);
       border: 1px solid var(--g-border);
       border-radius: 14px;
-      padding: 10px 22px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -238,7 +281,7 @@
     }
     .proof-chip-text strong {
       display: block;
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--g-text-white);
       font-weight: 800;
     }
@@ -248,17 +291,17 @@
     }
 
     /* ==========================================================================
-       2. THE 6-AGENT PIPELINE (Seamless Connected Ribbon)
+       2. THE 6-AGENT PIPELINE (Connected Streamlined Ribbon)
        ========================================================================== */
     .pipeline-flow-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .flow-caption {
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 12.5px;
+      font-weight: 800;
       color: var(--g-mint);
       display: flex;
       align-items: center;
@@ -266,7 +309,7 @@
     }
     .flow-caption::before, .flow-caption::after {
       content: '';
-      width: 40px;
+      width: 36px;
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(41, 220, 161, 0.5), transparent);
     }
@@ -281,13 +324,12 @@
       background: rgba(11, 23, 40, 0.75);
       border: 1px solid rgba(41, 220, 161, 0.18);
       border-radius: 14px;
-      padding: 12px 8px;
+      padding: 12px 6px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      position: relative;
     }
     .pipe-node-step {
       font-size: 10px;
@@ -314,48 +356,107 @@
     }
 
     /* ==========================================================================
-       3. CENTRAL PRODUCT EXHIBIT (Dashboard + Floating Annotations)
+       3. CENTRAL PRODUCT EXHIBIT (Dashboard with Mascot & Overlapping Pins)
        ========================================================================== */
     .central-exhibit {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
     }
+    
     .central-image-wrapper {
       position: relative;
       width: 100%;
       border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(41, 220, 161, 0.15);
-      border: 1.5px solid rgba(41, 220, 161, 0.35);
+      overflow: visible;
       background: #060F1A;
     }
     .central-image {
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(41, 220, 161, 0.15);
+      border: 1.5px solid rgba(41, 220, 161, 0.35);
       object-fit: cover;
     }
 
-    /* Floating Graphic Callout Pins positioned around the central image */
+    /* Peeking Mascot on Central Dashboard */
+    .peeking-mascot-wrap {
+      position: absolute;
+      top: -55px;
+      left: 28px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .peeking-mascot-img {
+      width: 115px;
+      height: auto;
+      filter: drop-shadow(0 14px 25px rgba(0, 0, 0, 0.85));
+    }
+
+    /* Contextual Floating Pins (Overlapping) */
+    .context-pin {
+      position: absolute;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(7, 18, 33, 0.94);
+      border: 1px solid rgba(41, 220, 161, 0.45);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 0 15px rgba(41, 220, 161, 0.2);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      backdrop-filter: blur(10px);
+      pointer-events: none;
+    }
+    .pin-dash-queue {
+      top: 14px;
+      right: 16px;
+    }
+    .pin-dash-seo {
+      bottom: 14px;
+      left: 16px;
+    }
+    .pin-dash-time {
+      bottom: 14px;
+      right: 16px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #29DCA1;
+      box-shadow: 0 0 8px #29DCA1;
+      flex-shrink: 0;
+    }
+    .pin-check {
+      color: #10B981;
+      font-weight: 900;
+    }
+
+    /* 3 Floating Callouts under central image */
     .floating-callouts-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 12px;
       width: 100%;
-      margin-top: -6px;
     }
     .graphic-callout {
-      background: rgba(12, 26, 45, 0.9);
+      background: rgba(12, 26, 45, 0.85);
       border: 1px solid var(--g-border);
       border-radius: 14px;
       padding: 12px 14px;
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
     .graphic-callout-ico {
       width: 32px;
@@ -382,12 +483,12 @@
     }
 
     /* ==========================================================================
-       4. TWO SIDE-BY-SIDE EXHIBITS (New Content & Bulk Excel)
+       4. TWO SIDE-BY-SIDE EXHIBITS (With Contextual Overlapping Pins)
        ========================================================================== */
     .side-by-side-exhibits {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
     }
     .exhibit-column {
       background: rgba(10, 22, 38, 0.7);
@@ -404,6 +505,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       background: #050E18;
+      position: relative;
     }
     .exhibit-img {
       width: 100%;
@@ -411,6 +513,16 @@
       display: block;
       object-fit: cover;
     }
+
+    .pin-exhibit-top {
+      top: 10px;
+      right: 10px;
+    }
+    .pin-exhibit-bottom {
+      bottom: 10px;
+      left: 10px;
+    }
+
     .exhibit-meta {
       display: flex;
       flex-direction: column;
@@ -426,7 +538,7 @@
       border-radius: 20px;
     }
     .exhibit-title {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 800;
       color: var(--g-text-white);
       line-height: 1.35;
@@ -442,24 +554,24 @@
       gap: 8px;
       background: rgba(14, 171, 142, 0.12);
       border: 1px solid rgba(41, 220, 161, 0.3);
-      padding: 7px 12px;
+      padding: 6px 12px;
       border-radius: 10px;
       font-size: 11px;
       color: var(--g-mint);
       font-weight: 700;
-      margin-top: 4px;
+      margin-top: 2px;
     }
 
     /* ==========================================================================
-       5. MINIMALIST COMPARISON & VALUE MATRIX (Typography & Contrast, NO Boxes)
+       5. MINIMALIST COMPARISON MATRIX
        ========================================================================== */
     .compare-graphic-matrix {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 16px;
       background: rgba(7, 16, 28, 0.6);
       border-radius: 20px;
-      padding: 20px;
+      padding: 18px;
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
     .matrix-col {
@@ -477,7 +589,7 @@
     .matrix-header {
       font-size: 13.5px;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       padding-bottom: 8px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
@@ -491,7 +603,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
     .matrix-item {
       display: flex;
@@ -504,22 +616,31 @@
     .matrix-col.pass .matrix-item { color: #E2E8F0; }
 
     /* ==========================================================================
-       6. ECONOMIC PAYOFF & CLOSING SEAL (Graphic Infographic Anchor)
+       6. ECONOMIC PAYOFF & CLOSING SEAL (With Standing Mascot)
        ========================================================================== */
     .graphic-anchor-block {
       background: linear-gradient(135deg, rgba(0, 48, 66, 0.85) 0%, rgba(9, 23, 40, 0.95) 100%);
       border: 1.5px solid var(--g-mint);
       border-radius: 22px;
-      padding: 28px 24px;
-      text-align: center;
+      padding: 26px 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .anchor-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 20px;
+      align-items: center;
+      text-align: right;
+    }
+    .anchor-text-col {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      gap: 12px;
     }
     .anchor-headline {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       color: var(--g-text-white);
       line-height: 1.35;
@@ -528,48 +649,46 @@
       color: var(--g-mint);
     }
     .anchor-sub {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #CBD5E1;
-      max-width: 620px;
       line-height: 1.6;
     }
 
     .ecosystem-strip {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
+      gap: 6px;
     }
     .eco-tag {
       background: rgba(5, 14, 25, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 100px;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       color: #CBD5E1;
     }
 
     .anchor-cta-button {
+      align-self: flex-start;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: linear-gradient(135deg, #29DCA1 0%, #0EAB8E 100%);
       color: #030F1C;
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 900;
-      padding: 12px 36px;
+      padding: 11px 30px;
       border-radius: 100px;
       text-decoration: none;
-      box-shadow: 0 8px 25px rgba(41, 220, 161, 0.4);
+      box-shadow: 0 6px 22px rgba(41, 220, 161, 0.35);
     }
 
     .guarantee-row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      font-size: 11.5px;
+      gap: 14px;
+      font-size: 11px;
       color: var(--g-text-muted);
       font-weight: 600;
     }
@@ -577,26 +696,45 @@
       color: var(--g-mint);
     }
 
+    /* Mascot standing column */
+    .anchor-mascot-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .anchor-mascot-img {
+      width: 175px;
+      height: auto;
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.75));
+    }
+
     /* Small credit line */
     .infographic-seal {
       text-align: center;
       font-size: 11px;
       color: var(--g-text-dim);
-      margin-top: -12px;
+      margin-top: -16px;
     }
 
     /* ==========================================================================
        RESPONSIVE ADJUSTMENTS
        ========================================================================== */
     @media (max-width: 860px) {
-      .infographic-canvas { padding: 32px 18px; gap: 32px; }
-      .hero-title { font-size: 28px; }
+      .infographic-canvas { padding: 28px 16px; gap: 30px; }
+      .hero-title { font-size: 26px; }
       .hero-proof-strip { flex-direction: column; }
       .pipeline-ribbon { grid-template-columns: repeat(3, 1fr); }
       .floating-callouts-grid { grid-template-columns: 1fr; }
       .side-by-side-exhibits { grid-template-columns: 1fr; }
       .compare-graphic-matrix { grid-template-columns: 1fr; }
-      .anchor-headline { font-size: 20px; }
+      .anchor-grid-layout { grid-template-columns: 1fr; text-align: center; }
+      .anchor-cta-button { align-self: center; }
+      .ecosystem-strip { justify-content: center; }
+      .guarantee-row { justify-content: center; }
+      .anchor-mascot-img { width: 130px; }
+      .peeking-mascot-img { width: 85px; top: -38px; left: 14px; }
+      .pin-dash-time { display: none; }
     }
   </style>
 </head>
@@ -611,10 +749,11 @@
   <div class="canvas-inner">
 
     <!-- ======================================================================
-         1. HERO & IDENTITY (Graphic Lockup)
+         1. HERO & IDENTITY (Clean White Logotype + Mascot Speech)
          ====================================================================== -->
     <header class="hero-lockup">
-      <img src="images/logo-horizontal.png" alt="مقاله‌نگار" class="hero-brand-logo" />
+      <!-- Official White-Text Logo for Dark Background -->
+      <img src="images/logo-horizontal-white.png" alt="مقاله‌نگار" class="hero-brand-logo" />
       
       <div class="hero-pill-badge">
         <span>⚡ نسل دوم تحریریه هوشمند وردپرس • ۶ عامل تخصصی کاملاً بومی</span>
@@ -627,6 +766,16 @@
       <p class="hero-sub">
         نخستین سیستم هوشمند با خط تولید مستقل در پیشخوان وردپرس؛ نگارش مقالات تا ۵۰۰۰ کلمه با لحن کاملاً انسانی، تصویرسازی اختصاصی AI و سئوی صددرصد سبز.
       </p>
+
+      <!-- Mascot Greeting Capsule -->
+      <div class="hero-mascot-speech">
+        <div class="mascot-thumb">
+          <img src="images/mascot-bust.png" alt="مسکات هوشمند مقاله‌نگار" />
+        </div>
+        <div class="speech-text">
+          <span>سلام! من <strong>دستیار مقاله‌نگارم</strong> 👋 محتوای سایتت رو خودکار، انسانی و سئو شده می‌نویسم!</span>
+        </div>
+      </div>
 
       <div class="hero-proof-strip">
         <div class="proof-chip">
@@ -699,11 +848,32 @@
     </div>
 
     <!-- ======================================================================
-         3. CENTRAL PRODUCT EXHIBIT (Dashboard with Floating Annotation Cards)
+         3. CENTRAL PRODUCT EXHIBIT (Dashboard with Peeking Mascot & Overlapping Pins)
          ====================================================================== -->
     <div class="central-exhibit">
       <div class="central-image-wrapper">
+        <!-- Peeking Mascot over Dashboard corner -->
+        <div class="peeking-mascot-wrap">
+          <img src="images/mascot-bust.png" alt="دستیار مقاله‌نگار" class="peeking-mascot-img" />
+        </div>
+
         <img src="images/dashboard.png" alt="پیشخوان مدیریت افزونه مقاله‌نگار" class="central-image" loading="eager" />
+
+        <!-- Fixed Overlapping Contextual Pins -->
+        <div class="context-pin pin-dash-queue">
+          <span class="live-dot"></span>
+          <span>صف پردازش فعال: ۴ مقاله آماده انتشار خودکار</span>
+        </div>
+
+        <div class="context-pin pin-dash-seo">
+          <span class="pin-check">✓</span>
+          <span>امتیاز سئو Rank Math: ۱۰۰ / ۱۰۰</span>
+        </div>
+
+        <div class="context-pin pin-dash-time">
+          <span>⏱️</span>
+          <span>میانگین نگارش مقاله: زیر ۳ دقیقه</span>
+        </div>
       </div>
 
       <!-- 3 Integrated Feature Annotations -->
@@ -720,7 +890,7 @@
           <div class="graphic-callout-ico">🧠</div>
           <div class="graphic-callout-body">
             <h5>آموزش هویت برند و ICP</h5>
-            <p>تنظیم لحن صدا (Brand Voice) و پاسخ به دردهای مخاطب جهت افزایش قطعی فروش و نرخ تبدیل.</p>
+            <p>تنظیم لحن صدا (Brand Voice) و پاسخ به دردهای مخاطب جهت افزایش قطعی فروش و تبدیل.</p>
           </div>
         </div>
 
@@ -728,20 +898,29 @@
           <div class="graphic-callout-ico">🌐</div>
           <div class="graphic-callout-body">
             <h5>اتصال مستقیم به API روز دنیا</h5>
-            <p>پشتیبانی از OpenAI ،Claude و واسط ایرانی GapGPT بدون نیاز به VPN یا هزینه ماهانه دلاری.</p>
+            <p>پشتیبانی از OpenAI ،Claude و واسط ایرانی GapGPT بدون نیاز به VPN یا هزینه ماهانه.</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- ======================================================================
-         4. TWO SIDE-BY-SIDE VISUAL EXHIBITS (Content & Bulk)
+         4. TWO SIDE-BY-SIDE EXHIBITS (With Overlapping Contextual Pins)
          ====================================================================== -->
     <div class="side-by-side-exhibits">
       <!-- Exhibit Left: New Content -->
       <div class="exhibit-column">
         <div class="exhibit-img-box">
           <img src="images/new-content.png" alt="بخش نگارش محتوای جدید" class="exhibit-img" loading="eager" />
+          <!-- Overlapping Context Pins -->
+          <div class="context-pin pin-exhibit-top">
+            <span>✍️</span>
+            <span>طول مقاله: ۳,۴۵۰ کلمه کاملاً انسانی</span>
+          </div>
+          <div class="context-pin pin-exhibit-bottom">
+            <span>🖼️</span>
+            <span>تصویر DALL-E 3 تولید شد</span>
+          </div>
         </div>
         <div class="exhibit-meta">
           <span class="exhibit-badge">نگارش هوشمند</span>
@@ -757,6 +936,15 @@
       <div class="exhibit-column">
         <div class="exhibit-img-box">
           <img src="images/bulk-content.png" alt="تولید انبوه با فایل اکسل" class="exhibit-img" loading="eager" />
+          <!-- Overlapping Context Pins -->
+          <div class="context-pin pin-exhibit-top">
+            <span>📁</span>
+            <span>۱۲۰ مقاله بارگذاری شد از excel.xlsx</span>
+          </div>
+          <div class="context-pin pin-exhibit-bottom">
+            <span>⏰</span>
+            <span>انتشار خودکار: روزانه ۲ پست</span>
+          </div>
         </div>
         <div class="exhibit-meta">
           <span class="exhibit-badge">تولید انبوه</span>
@@ -793,34 +981,44 @@
     </div>
 
     <!-- ======================================================================
-         6. ECONOMIC PAYOFF & CLOSING SEAL
+         6. ECONOMIC PAYOFF & CLOSING SEAL (With Mascot Character)
          ====================================================================== -->
     <div class="graphic-anchor-block">
-      <h3 class="anchor-headline">
-        تنها با نگارش <span>۲ مقاله</span>، کل هزینه خرید افزونه جبران می‌شود!
-      </h3>
-      <p class="anchor-sub">
-        تحریریه ۶ عاملی هوش مصنوعی را به پیشخوان وردپرس خود اضافه کنید. بدون حق اشتراک ماهانه، با لایسنس دائمی و ۶ ماه پشتیبانی تخصصی.
-      </p>
+      <div class="anchor-grid-layout">
+        <!-- Text & Action column -->
+        <div class="anchor-text-col">
+          <h3 class="anchor-headline">
+            تنها با نگارش <span>۲ مقاله</span>، کل هزینه خرید افزونه جبران می‌شود!
+          </h3>
+          <p class="anchor-sub">
+            تحریریه ۶ عاملی هوش مصنوعی را به پیشخوان وردپرس خود اضافه کنید. بدون حق اشتراک ماهانه، با لایسنس دائمی و ۶ ماه پشتیبانی تخصصی.
+          </p>
 
-      <div class="ecosystem-strip">
-        <span class="eco-tag">🟦 WordPress 6.0+</span>
-        <span class="eco-tag">🛒 WooCommerce</span>
-        <span class="eco-tag">🟢 Yoast SEO</span>
-        <span class="eco-tag">🔴 Rank Math</span>
-        <span class="eco-tag">🎨 Elementor</span>
-        <span class="eco-tag">🧩 Gutenberg</span>
-      </div>
+          <div class="ecosystem-strip">
+            <span class="eco-tag">🟦 WordPress 6.0+</span>
+            <span class="eco-tag">🛒 WooCommerce</span>
+            <span class="eco-tag">🟢 Yoast SEO</span>
+            <span class="eco-tag">🔴 Rank Math</span>
+            <span class="eco-tag">🎨 Elementor</span>
+            <span class="eco-tag">🧩 Gutenberg</span>
+          </div>
 
-      <a href="../purchase.html" class="anchor-cta-button">
-        <span>🚀 خرید و دانلود آنی لایسنس مقاله‌نگار</span>
-      </a>
+          <a href="../purchase.html" class="anchor-cta-button">
+            <span>🚀 خرید و دانلود آنی لایسنس مقاله‌نگار</span>
+          </a>
 
-      <div class="guarantee-row">
-        <div><span>✓</span> تحویل آنی پس از پرداخت</div>
-        <div><span>✓</span> لایسنس مادام‌العمر بدون تمدید</div>
-        <div><span>✓</span> فایل راهنمای گام‌به‌گام</div>
-        <div><span>✓</span> پشتیبانی فنی تخصصی</div>
+          <div class="guarantee-row">
+            <div><span>✓</span> تحویل آنی پس از پرداخت</div>
+            <div><span>✓</span> لایسنس مادام‌العمر بدون تمدید</div>
+            <div><span>✓</span> فایل راهنمای گام‌به‌گام</div>
+            <div><span>✓</span> پشتیبانی فنی تخصصی</div>
+          </div>
+        </div>
+
+        <!-- Mascot Character Column -->
+        <div class="anchor-mascot-col">
+          <img src="images/mascot-flipped.png" alt="مسکات مقاله‌نگار" class="anchor-mascot-img" />
+        </div>
       </div>
     </div>
 
