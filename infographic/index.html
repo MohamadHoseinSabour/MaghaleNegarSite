@@ -236,9 +236,9 @@
       flex-shrink: 0;
     }
     .mascot-thumb img {
-      width: 120%;
+      width: 140%;
       height: auto;
-      margin-top: 4px;
+      margin-top: 14px;
     }
     .speech-text {
       font-size: 12.5px;
@@ -378,6 +378,7 @@
       flex-direction: column;
       align-items: center;
       gap: 16px;
+      margin-top: 50px;
     }
     
     .central-image-wrapper {
@@ -397,18 +398,18 @@
       object-fit: cover;
     }
 
-    /* Peeking Mascot on Central Dashboard */
-    .peeking-mascot-wrap {
+    /* Complete Full-Body Quality Assistant Mascot on Central Dashboard */
+    .dashboard-mascot-wrap {
       position: absolute;
-      top: -55px;
-      left: 28px;
-      z-index: 5;
+      top: -125px;
+      left: 20px;
+      z-index: 10;
       pointer-events: none;
     }
-    .peeking-mascot-img {
-      width: 115px;
+    .dashboard-mascot-img {
+      width: 105px;
       height: auto;
-      filter: drop-shadow(0 14px 25px rgba(0, 0, 0, 0.85));
+      filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.9));
     }
 
     /* Contextual Floating Pins (Overlapping) */
@@ -736,9 +737,9 @@
       position: relative;
     }
     .anchor-mascot-img {
-      width: 175px;
+      width: 185px;
       height: auto;
-      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.75));
+      filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.85));
     }
 
     /* Small credit line */
@@ -757,6 +758,7 @@
       .hero-title { font-size: 26px; }
       .hero-proof-strip { flex-direction: column; }
       .pipeline-ribbon { grid-template-columns: repeat(3, 1fr); }
+      .central-exhibit { margin-top: 35px; }
       .floating-callouts-grid { grid-template-columns: 1fr; }
       .side-by-side-exhibits { grid-template-columns: 1fr; }
       .compare-graphic-matrix { grid-template-columns: 1fr; }
@@ -764,8 +766,9 @@
       .anchor-cta-button { align-self: center; }
       .ecosystem-strip { justify-content: center; }
       .guarantee-row { justify-content: center; }
-      .anchor-mascot-img { width: 130px; }
-      .peeking-mascot-img { width: 85px; top: -38px; left: 14px; }
+      .anchor-mascot-img { width: 145px; }
+      .dashboard-mascot-wrap { top: -90px; left: 12px; }
+      .dashboard-mascot-img { width: 75px; }
       .pin-dash-time { display: none; }
     }
   </style>
@@ -803,7 +806,7 @@
       <!-- Mascot Greeting Capsule -->
       <div class="hero-mascot-speech">
         <div class="mascot-thumb">
-          <img src="images/mascot-bust.png" alt="مسکات هوشمند مقاله‌نگار" />
+          <img src="images/mascot.png" alt="مسکات هوشمند مقاله‌نگار" />
         </div>
         <div class="speech-text">
           <span>سلام! من <strong>دستیار هوشمند مقاله‌نگارم</strong>؛ محتوای سایتت رو خودکار، انسانی و سئو شده می‌نویسم!</span>
@@ -908,9 +911,9 @@
          ====================================================================== -->
     <div class="central-exhibit">
       <div class="central-image-wrapper">
-        <!-- Peeking Mascot over Dashboard corner -->
-        <div class="peeking-mascot-wrap">
-          <img src="images/mascot-bust.png" alt="دستیار مقاله‌نگار" class="peeking-mascot-img" />
+        <!-- Complete Full-Body Quality Assistant Mascot -->
+        <div class="dashboard-mascot-wrap">
+          <img src="images/mascot-dashboard.png" alt="مسکات هوشمند ناظر کیفیت و سئو" class="dashboard-mascot-img" />
         </div>
 
         <img src="images/dashboard.png" alt="پیشخوان مدیریت افزونه مقاله‌نگار" class="central-image" loading="eager" />
@@ -1122,9 +1125,9 @@
           </div>
         </div>
 
-        <!-- Mascot Character Column -->
+        <!-- Mascot Character Column: Celebratory Rocket Pose -->
         <div class="anchor-mascot-col">
-          <img src="images/mascot-flipped.png" alt="مسکات مقاله‌نگار" class="anchor-mascot-img" />
+          <img src="images/mascot-cta.png" alt="مسکات مقاله‌نگار - جشن تحویل لایسنس و پرتاب موشک" class="anchor-mascot-img" />
         </div>
       </div>
     </div>
