@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>اینفوگرافیک رسمی مقاله‌نگار | تحریریه ۶ عاملی هوش مصنوعی وردپرس</title>
-  <meta name="description" content="پوستر اینفوگرافیک جامع معرفی افزونه مقاله‌نگار — تولید خودکار مقالات تخصصی، محصولات ووکامرس، سئوی صددرصد سبز و درک هویت برند" />
+  <meta name="description" content="اینفوگرافیک جامع و یکپارچه معرفی افزونه مقاله‌نگار — تولید خودکار مقالات تخصصی، محصولات ووکامرس، سئوی سبز و درک هویت برند" />
   <link rel="icon" type="image/png" href="images/logo-mark.png" />
 
-  <!-- Typography: Local IRANYekanWeb with Google Fonts Fallback -->
+  <!-- Typography: Local IRANYekanWeb + Fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -58,7 +58,7 @@
     }
 
     /* ==========================================================================
-       RESET & BASE (Strictly static, zero hover, zero animation)
+       RESET & ZERO-ANIMATION (100% Static Graphic Poster)
        ========================================================================== */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -69,499 +69,412 @@
     }
 
     :root {
-      --mn-bg: #071322;
-      --mn-card-bg: rgba(13, 27, 48, 0.88);
-      --mn-card-solid: #0D1C32;
-      --mn-marine: #00364A;
-      --mn-teal: #0EAB8E;
-      --mn-mint: #29DCA1;
-      --mn-border: rgba(41, 220, 161, 0.22);
-      --mn-border-subtle: rgba(255, 255, 255, 0.08);
-      --mn-text-white: #FFFFFF;
-      --mn-text-light: #F1F5F9;
-      --mn-text-muted: #94A3B8;
-      --mn-text-dim: #64748B;
-      --mn-accent-gold: #F59E0B;
-      --mn-accent-green: #10B981;
+      --g-bg: #050E1A;
+      --g-mint: #29DCA1;
+      --g-teal: #0EAB8E;
+      --g-marine: #00364C;
+      --g-text-white: #FFFFFF;
+      --g-text-light: #E2E8F0;
+      --g-text-muted: #94A3B8;
+      --g-text-dim: #64748B;
+      --g-glass: rgba(11, 25, 44, 0.65);
+      --g-border: rgba(41, 220, 161, 0.2);
     }
 
     html, body {
       font-family: 'IRANYekan', 'Plus Jakarta Sans', 'Vazirmatn', -apple-system, sans-serif;
       direction: rtl;
-      background-color: #040A12;
-      color: var(--mn-text-light);
+      background-color: #030810;
+      color: var(--g-text-light);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px;
     }
 
     /* ==========================================================================
-       UNIFIED POSTER WRAPPER (Single continuous canvas, NO webpage borders)
+       SINGLE UNIFIED POSTER CANVAS (No section boxes, no page layers)
        ========================================================================== */
-    .infographic-poster {
-      max-width: 1040px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, #071322 0%, #08172B 30%, #061220 70%, #071424 100%);
+    .infographic-canvas {
+      width: 1000px;
+      max-width: 100%;
+      background: radial-gradient(circle at 50% 0%, #0D223A 0%, #061120 40%, #040C17 100%);
+      border-radius: 28px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
-      border: 1px solid rgba(41, 220, 161, 0.15);
-      padding: 44px 36px 36px;
+      box-shadow: 0 0 120px rgba(0, 0, 0, 0.95), 0 0 40px rgba(41, 220, 161, 0.08);
+      border: 1px solid rgba(41, 220, 161, 0.2);
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
     }
 
-    /* Subtle background grid pattern */
-    .poster-grid {
+    /* Subtle background grid & ambient light */
+    .canvas-grid {
       position: absolute;
       inset: 0;
       background-image: 
-        linear-gradient(rgba(41, 220, 161, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(41, 220, 161, 0.025) 1px, transparent 1px);
-      background-size: 40px 40px;
+        linear-gradient(rgba(41, 220, 161, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(41, 220, 161, 0.02) 1px, transparent 1px);
+      background-size: 36px 36px;
       pointer-events: none;
       z-index: 0;
     }
-
-    /* Connecting gradient glows */
-    .glow-blob {
+    .canvas-glow {
       position: absolute;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(140px);
       pointer-events: none;
       z-index: 0;
-      opacity: 0.4;
     }
-    .glow-1 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(41, 220, 161, 0.22) 0%, rgba(0, 54, 74, 0.15) 70%, transparent 100%);
-      top: -100px;
-      right: -80px;
+    .glow-top {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(41, 220, 161, 0.18) 0%, rgba(0, 54, 76, 0.1) 70%, transparent 100%);
+      top: -200px;
+      right: 20%;
     }
-    .glow-2 {
-      width: 550px;
-      height: 550px;
-      background: radial-gradient(circle, rgba(14, 171, 142, 0.18) 0%, rgba(0, 35, 50, 0.1) 70%, transparent 100%);
-      top: 800px;
-      left: -120px;
+    .glow-middle {
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(14, 171, 142, 0.14) 0%, transparent 70%);
+      top: 900px;
+      left: -150px;
     }
-    .glow-3 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(41, 220, 161, 0.18) 0%, rgba(0, 54, 74, 0.2) 70%, transparent 100%);
-      bottom: 100px;
-      right: 10%;
+    .glow-bottom {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(41, 220, 161, 0.15) 0%, rgba(0, 54, 76, 0.2) 70%, transparent 100%);
+      bottom: -150px;
+      right: 20%;
     }
 
-    /* Content wrapper to float above glow/grid */
-    .poster-content {
+    .canvas-inner {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 44px;
     }
 
     /* ==========================================================================
-       CONTINUOUS VISUAL CONNECTOR (Ribbon & Floating Pins)
+       1. HERO & IDENTITY LOCKUP (Minimal, Editorial, Impactful)
        ========================================================================== */
-    .flow-connector {
+    .hero-lockup {
+      text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin: -10px 0;
+      gap: 14px;
     }
-    .flow-line {
-      height: 1px;
-      flex: 1;
-      background: linear-gradient(90deg, transparent, rgba(41, 220, 161, 0.3), transparent);
+    .hero-brand-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 6px;
     }
-    .flow-node {
+    .hero-pill-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(13, 27, 48, 0.95);
-      border: 1px solid var(--mn-border);
+      background: rgba(14, 171, 142, 0.1);
+      border: 1px solid rgba(41, 220, 161, 0.3);
       padding: 4px 16px;
       border-radius: 100px;
       font-size: 12px;
-      font-weight: 800;
-      color: var(--mn-mint);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      font-weight: 700;
+      color: var(--g-mint);
     }
-    .flow-node-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--mn-mint);
+    .hero-title {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--g-text-white);
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      max-width: 860px;
     }
-
-    /* Common Typography Utility */
-    .text-mint { color: var(--mn-mint); }
-    .text-gradient {
+    .hero-title span {
       background: linear-gradient(135deg, #29DCA1 0%, #0EAB8E 50%, #38BDF8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .hero-sub {
+      font-size: 15.5px;
+      color: #CBD5E1;
+      max-width: 740px;
+      line-height: 1.7;
+    }
+
+    /* 3 Floating Outcome Chips */
+    .hero-proof-strip {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .proof-chip {
+      background: rgba(13, 28, 48, 0.7);
+      border: 1px solid var(--g-border);
+      border-radius: 14px;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .proof-chip-val {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--g-mint);
+      line-height: 1;
+    }
+    .proof-chip-text {
+      text-align: right;
+    }
+    .proof-chip-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--g-text-white);
+      font-weight: 800;
+    }
+    .proof-chip-text span {
+      font-size: 11px;
+      color: var(--g-text-muted);
+    }
 
     /* ==========================================================================
-       1. HERO HEADER BLOCK (Compact, Poster-Style)
+       2. THE 6-AGENT PIPELINE (Seamless Connected Ribbon)
        ========================================================================== */
-    .poster-header {
-      text-align: center;
+    .pipeline-flow-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-    }
-
-    .brand-top-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 14px;
-      margin-bottom: 16px;
     }
-    .brand-logo-img {
-      height: 44px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .poster-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(14, 171, 142, 0.12);
-      border: 1px solid var(--mn-border);
-      border-radius: 100px;
-      padding: 4px 14px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--mn-mint);
-      margin-bottom: 12px;
-    }
-
-    .poster-main-title {
-      font-size: 36px;
-      font-weight: 900;
-      line-height: 1.3;
-      margin-bottom: 12px;
-      color: var(--mn-text-white);
-      max-width: 840px;
-    }
-
-    .poster-sub-title {
-      font-size: 15px;
-      color: #CBD5E1;
-      max-width: 720px;
-      margin-bottom: 22px;
-      line-height: 1.65;
-    }
-
-    /* 3 Outcome Metrics in a neat bar */
-    .hero-stat-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      width: 100%;
-      max-width: 880px;
-    }
-    .stat-bar-box {
-      background: var(--mn-card-bg);
-      border: 1px solid var(--mn-border);
-      border-radius: 14px;
-      padding: 14px 16px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    }
-    .stat-bar-val {
-      font-size: 28px;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 4px;
-      color: var(--mn-mint);
-    }
-    .stat-bar-title {
+    .flow-caption {
       font-size: 13px;
-      font-weight: 800;
-      color: var(--mn-text-white);
-      margin-bottom: 2px;
-    }
-    .stat-bar-desc {
-      font-size: 11px;
-      color: var(--mn-text-muted);
-    }
-
-    /* ==========================================================================
-       2. THE 6-AGENT PIPELINE (Connected Streamlined Flow)
-       ========================================================================== */
-    .pipeline-section {
-      background: var(--mn-card-bg);
-      border: 1px solid var(--mn-border);
-      border-radius: 20px;
-      padding: 22px 24px;
-      position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-    .pipeline-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pipeline-header h3 {
-      font-size: 18px;
-      font-weight: 900;
-      color: var(--mn-text-white);
+      font-weight: 700;
+      color: var(--g-mint);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .pipeline-header p {
-      font-size: 12.5px;
-      color: var(--mn-text-muted);
+    .flow-caption::before, .flow-caption::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(41, 220, 161, 0.5), transparent);
     }
 
-    .pipeline-chips-grid {
+    .pipeline-ribbon {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
+      gap: 8px;
+      width: 100%;
     }
-    .agent-mini-card {
-      background: #091526;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 12px 10px;
+    .pipe-node {
+      background: rgba(11, 23, 40, 0.75);
+      border: 1px solid rgba(41, 220, 161, 0.18);
+      border-radius: 14px;
+      padding: 12px 8px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
+      position: relative;
     }
-    .agent-mini-icon {
-      font-size: 20px;
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(14, 171, 142, 0.15);
-      border: 1px solid rgba(41, 220, 161, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .agent-mini-num {
+    .pipe-node-step {
       font-size: 10px;
       font-weight: 800;
-      color: var(--mn-mint);
+      color: var(--g-mint);
+      background: rgba(41, 220, 161, 0.12);
+      padding: 1px 8px;
+      border-radius: 20px;
     }
-    .agent-mini-title {
-      font-size: 12.5px;
+    .pipe-node-icon {
+      font-size: 20px;
+      margin: 2px 0;
+    }
+    .pipe-node-title {
+      font-size: 12px;
       font-weight: 800;
-      color: var(--mn-text-white);
+      color: var(--g-text-white);
       line-height: 1.3;
     }
-    .agent-mini-role {
-      font-size: 10.5px;
-      color: var(--mn-text-muted);
+    .pipe-node-desc {
+      font-size: 10px;
+      color: var(--g-text-muted);
       line-height: 1.4;
     }
 
     /* ==========================================================================
-       3. 50/50 SPLIT PRODUCT SHOWCASES (Half Width Screenshots + Text Beside)
+       3. CENTRAL PRODUCT EXHIBIT (Dashboard + Floating Annotations)
        ========================================================================== */
-    .showcase-split-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: center;
-      background: var(--mn-card-bg);
-      border: 1px solid var(--mn-border);
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    .central-exhibit {
       position: relative;
-    }
-
-    /* Mockup window box (Half Width) */
-    .mockup-half-box {
-      background: #071220;
-      border: 1px solid rgba(41, 220, 161, 0.25);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    }
-    .mockup-bar {
-      background: #0E1D31;
-      padding: 8px 14px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 18px;
     }
-    .mockup-dots {
-      display: flex;
-      gap: 5px;
+    .central-image-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(41, 220, 161, 0.15);
+      border: 1.5px solid rgba(41, 220, 161, 0.35);
+      background: #060F1A;
     }
-    .m-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    .m-dot.red { background: #EF4444; }
-    .m-dot.yellow { background: #F59E0B; }
-    .m-dot.green { background: #10B981; }
-
-    .mockup-tag {
-      font-size: 11px;
-      font-weight: 700;
-      color: #94A3B8;
-    }
-    .mockup-tag strong {
-      color: var(--mn-mint);
-    }
-
-    .mockup-img {
+    .central-image {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
     }
 
-    /* Content side (Half Width) */
-    .showcase-text-col {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    /* Floating Graphic Callout Pins positioned around the central image */
+    .floating-callouts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      width: 100%;
+      margin-top: -6px;
     }
-    .showcase-tag-pill {
-      align-self: flex-start;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(14, 171, 142, 0.12);
-      border: 1px solid var(--mn-border);
-      padding: 3px 12px;
-      border-radius: 100px;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--mn-mint);
-    }
-    .showcase-h4 {
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--mn-text-white);
-      line-height: 1.35;
-    }
-    .showcase-p {
-      font-size: 13px;
-      color: #CBD5E1;
-      line-height: 1.65;
-    }
-
-    .showcase-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .showcase-bullet-item {
+    .graphic-callout {
+      background: rgba(12, 26, 45, 0.9);
+      border: 1px solid var(--g-border);
+      border-radius: 14px;
+      padding: 12px 14px;
       display: flex;
       align-items: flex-start;
-      gap: 8px;
-      font-size: 12.5px;
-      color: #E2E8F0;
-      line-height: 1.5;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
-    .bullet-icon {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: rgba(41, 220, 161, 0.18);
-      color: var(--mn-mint);
+    .graphic-callout-ico {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: rgba(41, 220, 161, 0.15);
+      color: var(--g-mint);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      font-weight: 900;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* Embedded Highlight Badges for Mentioned Features (Brand Identity & APIs) */
-    .integrated-callout-badge {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(90deg, rgba(14, 171, 142, 0.15), rgba(0, 54, 74, 0.25));
-      border: 1px solid rgba(41, 220, 161, 0.35);
-      border-radius: 12px;
-      padding: 10px 14px;
-      margin-top: 6px;
-    }
-    .callout-ico {
-      font-size: 20px;
+      font-size: 16px;
       flex-shrink: 0;
     }
-    .callout-text h5 {
+    .graphic-callout-body h5 {
       font-size: 12.5px;
       font-weight: 800;
-      color: var(--mn-mint);
+      color: var(--g-text-white);
       margin-bottom: 2px;
     }
-    .callout-text p {
-      font-size: 11.5px;
-      color: #94A3B8;
+    .graphic-callout-body p {
+      font-size: 11px;
+      color: var(--g-text-muted);
       line-height: 1.45;
     }
 
     /* ==========================================================================
-       4. COMPARISON & ECONOMIC VALUE (Compact Combined Box)
+       4. TWO SIDE-BY-SIDE EXHIBITS (New Content & Bulk Excel)
        ========================================================================== */
-    .matrix-combined-card {
-      background: var(--mn-card-bg);
-      border: 1px solid var(--mn-border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-    .matrix-title-row {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .matrix-title-row h3 {
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--mn-text-white);
-      margin-bottom: 4px;
-    }
-    .matrix-title-row p {
-      font-size: 12.5px;
-      color: var(--mn-text-muted);
-    }
-
-    .compare-side-by-side {
+    .side-by-side-exhibits {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 20px;
     }
-    .c-column {
-      border-radius: 14px;
+    .exhibit-column {
+      background: rgba(10, 22, 38, 0.7);
+      border: 1px solid rgba(41, 220, 161, 0.2);
+      border-radius: 18px;
       padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    .c-column.bad {
-      background: rgba(239, 68, 68, 0.06);
-      border: 1px solid rgba(239, 68, 68, 0.25);
+    .exhibit-img-box {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      background: #050E18;
     }
-    .c-column.good {
+    .exhibit-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .exhibit-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .exhibit-badge {
+      align-self: flex-start;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--g-mint);
+      background: rgba(41, 220, 161, 0.1);
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+    .exhibit-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--g-text-white);
+      line-height: 1.35;
+    }
+    .exhibit-desc {
+      font-size: 12px;
+      color: #CBD5E1;
+      line-height: 1.55;
+    }
+    .exhibit-highlight-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 171, 142, 0.12);
+      border: 1px solid rgba(41, 220, 161, 0.3);
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-size: 11px;
+      color: var(--g-mint);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       5. MINIMALIST COMPARISON & VALUE MATRIX (Typography & Contrast, NO Boxes)
+       ========================================================================== */
+    .compare-graphic-matrix {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      background: rgba(7, 16, 28, 0.6);
+      border-radius: 20px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .matrix-col {
+      padding: 14px;
+      border-radius: 14px;
+    }
+    .matrix-col.fail {
+      background: rgba(239, 68, 68, 0.05);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+    .matrix-col.pass {
       background: rgba(41, 220, 161, 0.08);
-      border: 1px solid rgba(41, 220, 161, 0.35);
+      border: 1px solid rgba(41, 220, 161, 0.3);
     }
-    .c-col-header {
+    .matrix-header {
       font-size: 13.5px;
       font-weight: 800;
       margin-bottom: 12px;
@@ -571,499 +484,348 @@
       align-items: center;
       gap: 6px;
     }
-    .c-column.bad .c-col-header { color: #FCA5A5; }
-    .c-column.good .c-col-header { color: var(--mn-mint); }
+    .matrix-col.fail .matrix-header { color: #FCA5A5; }
+    .matrix-col.pass .matrix-header { color: var(--g-mint); }
 
-    .c-list {
+    .matrix-items {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
-    .c-item {
+    .matrix-item {
       display: flex;
       align-items: flex-start;
       gap: 8px;
       font-size: 12px;
       line-height: 1.5;
     }
-    .c-column.bad .c-item { color: #F87171; }
-    .c-column.good .c-item { color: #E2E8F0; }
+    .matrix-col.fail .matrix-item { color: #F87171; }
+    .matrix-col.pass .matrix-item { color: #E2E8F0; }
 
-    /* ROI Strip below comparison */
-    .roi-strip-banner {
-      background: linear-gradient(135deg, rgba(0, 54, 74, 0.8) 0%, rgba(13, 27, 48, 0.95) 100%);
-      border: 1px solid rgba(41, 220, 161, 0.3);
-      border-radius: 14px;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 16px;
+    /* ==========================================================================
+       6. ECONOMIC PAYOFF & CLOSING SEAL (Graphic Infographic Anchor)
+       ========================================================================== */
+    .graphic-anchor-block {
+      background: linear-gradient(135deg, rgba(0, 48, 66, 0.85) 0%, rgba(9, 23, 40, 0.95) 100%);
+      border: 1.5px solid var(--g-mint);
+      border-radius: 22px;
+      padding: 28px 24px;
       text-align: center;
-    }
-    .roi-badge-item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 16px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
     }
-    .roi-badge-val {
-      font-size: 22px;
+    .anchor-headline {
+      font-size: 24px;
       font-weight: 900;
-      color: var(--mn-mint);
-      line-height: 1;
-      margin-bottom: 2px;
-    }
-    .roi-badge-lbl {
-      font-size: 11.5px;
-      color: #CBD5E1;
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       5. COMPATIBILITY & CLOSING CTA BANNER
-       ========================================================================== */
-    .poster-cta-box {
-      background: linear-gradient(135deg, #002D3E 0%, #08172B 100%);
-      border: 1px solid var(--mn-border);
-      border-radius: 20px;
-      padding: 32px 28px;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
-    }
-    .cta-heading-main {
-      font-size: 26px;
-      font-weight: 900;
-      color: var(--mn-text-white);
-      margin-bottom: 8px;
+      color: var(--g-text-white);
       line-height: 1.35;
     }
-    .cta-desc-sub {
-      font-size: 13.5px;
+    .anchor-headline span {
+      color: var(--g-mint);
+    }
+    .anchor-sub {
+      font-size: 13px;
       color: #CBD5E1;
       max-width: 620px;
-      margin: 0 auto 20px;
       line-height: 1.6;
     }
 
-    .compat-pills-row {
+    .ecosystem-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
       justify-content: center;
-      margin-bottom: 22px;
+      gap: 8px;
     }
-    .c-pill {
-      background: rgba(13, 27, 48, 0.9);
-      border: 1px solid var(--mn-border-subtle);
+    .eco-tag {
+      background: rgba(5, 14, 25, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
       border-radius: 100px;
-      padding: 4px 14px;
       font-size: 11px;
       font-weight: 700;
       color: #CBD5E1;
     }
 
-    .cta-action-btn {
+    .anchor-cta-button {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
       background: linear-gradient(135deg, #29DCA1 0%, #0EAB8E 100%);
-      color: #04121F;
+      color: #030F1C;
       font-size: 15px;
       font-weight: 900;
-      padding: 13px 34px;
+      padding: 12px 36px;
       border-radius: 100px;
       text-decoration: none;
-      box-shadow: 0 6px 20px rgba(41, 220, 161, 0.35);
-      border: none;
-      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(41, 220, 161, 0.4);
     }
 
-    .cta-guarantee-chips {
+    .guarantee-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px;
-      margin-top: 18px;
       font-size: 11.5px;
+      color: var(--g-text-muted);
       font-weight: 600;
-      color: var(--mn-text-muted);
     }
-    .cta-g-item span {
-      color: var(--mn-mint);
+    .guarantee-row span {
+      color: var(--g-mint);
     }
 
     /* Small credit line */
-    .poster-footer-strip {
+    .infographic-seal {
       text-align: center;
       font-size: 11px;
-      color: var(--mn-text-dim);
-      padding-top: 10px;
+      color: var(--g-text-dim);
+      margin-top: -12px;
     }
 
     /* ==========================================================================
        RESPONSIVE ADJUSTMENTS
        ========================================================================== */
     @media (max-width: 860px) {
-      .infographic-poster { padding: 28px 18px; }
-      .poster-main-title { font-size: 26px; }
-      .hero-stat-bar { grid-template-columns: 1fr; }
-      .pipeline-chips-grid { grid-template-columns: repeat(3, 1fr); }
-      .showcase-split-row { grid-template-columns: 1fr; gap: 16px; }
-      .compare-side-by-side { grid-template-columns: 1fr; }
-      .roi-strip-banner { flex-direction: column; gap: 10px; }
-      .cta-heading-main { font-size: 22px; }
+      .infographic-canvas { padding: 32px 18px; gap: 32px; }
+      .hero-title { font-size: 28px; }
+      .hero-proof-strip { flex-direction: column; }
+      .pipeline-ribbon { grid-template-columns: repeat(3, 1fr); }
+      .floating-callouts-grid { grid-template-columns: 1fr; }
+      .side-by-side-exhibits { grid-template-columns: 1fr; }
+      .compare-graphic-matrix { grid-template-columns: 1fr; }
+      .anchor-headline { font-size: 20px; }
     }
   </style>
 </head>
 <body>
 
-<div class="infographic-poster">
-  <!-- Subtle Background Grid & Ambient Glows -->
-  <div class="poster-grid"></div>
-  <div class="glow-blob glow-1"></div>
-  <div class="glow-blob glow-2"></div>
-  <div class="glow-blob glow-3"></div>
+<div class="infographic-canvas">
+  <div class="canvas-grid"></div>
+  <div class="canvas-glow glow-top"></div>
+  <div class="canvas-glow glow-middle"></div>
+  <div class="canvas-glow glow-bottom"></div>
 
-  <div class="poster-content">
+  <div class="canvas-inner">
 
     <!-- ======================================================================
-         1. HERO HEADER (Poster Banner Style)
+         1. HERO & IDENTITY (Graphic Lockup)
          ====================================================================== -->
-    <header class="poster-header">
-      <div class="brand-top-row">
-        <img src="images/logo-horizontal.png" alt="افزونه مقاله‌نگار" class="brand-logo-img" />
+    <header class="hero-lockup">
+      <img src="images/logo-horizontal.png" alt="مقاله‌نگار" class="hero-brand-logo" />
+      
+      <div class="hero-pill-badge">
+        <span>⚡ نسل دوم تحریریه هوشمند وردپرس • ۶ عامل تخصصی کاملاً بومی</span>
       </div>
 
-      <div class="poster-badge">
-        <span>⚡ نسل دوم تحریریه هوشمند وردپرس • کاملاً بومی</span>
-      </div>
-
-      <h1 class="poster-main-title">
-        تحریریه <span class="text-gradient">۶ عاملی هوش مصنوعی</span>؛ تولید خودکار مقالات تخصصی، محصولات ووکامرس و سئو
+      <h1 class="hero-title">
+        تولید خودکار <span>مقالات تخصصی و محصولات</span> بدون واسطه و اشتراک دلاری
       </h1>
 
-      <p class="poster-sub-title">
-        نخستین سیستم هوشمند با خط تولید مستقل در پیشخوان وردپرس؛ نگارش مقالات تا ۵۰۰۰ کلمه با لحن کاملاً انسانی، تصویرسازی اختصاصی AI و سئوی صددرصد سبز بدون اشتراک دلاری و واسطه.
+      <p class="hero-sub">
+        نخستین سیستم هوشمند با خط تولید مستقل در پیشخوان وردپرس؛ نگارش مقالات تا ۵۰۰۰ کلمه با لحن کاملاً انسانی، تصویرسازی اختصاصی AI و سئوی صددرصد سبز.
       </p>
 
-      <div class="hero-stat-bar">
-        <div class="stat-bar-box">
-          <div class="stat-bar-val">۶ عامل</div>
-          <div class="stat-bar-title">خط تولید هماهنگ</div>
-          <div class="stat-bar-desc">همکاری همزمان از تحقیق تا انتشار</div>
+      <div class="hero-proof-strip">
+        <div class="proof-chip">
+          <div class="proof-chip-val">۶ عامل</div>
+          <div class="proof-chip-text">
+            <strong>خط تولید هماهنگ</strong>
+            <span>از پژوهش و نگارش تا سئو</span>
+          </div>
         </div>
-        <div class="stat-bar-box">
-          <div class="stat-bar-val">۹۰٪</div>
-          <div class="stat-bar-title">کاهش هزینه و زمان</div>
-          <div class="stat-bar-desc">بازگشت کامل هزینه با ۲ مقاله</div>
+        <div class="proof-chip">
+          <div class="proof-chip-val">۹۰٪</div>
+          <div class="proof-chip-text">
+            <strong>صرفه‌جویی در هزینه</strong>
+            <span>بازگشت کامل سرمایه با ۲ مقاله</span>
+          </div>
         </div>
-        <div class="stat-bar-box">
-          <div class="stat-bar-val">۱۰۰٪</div>
-          <div class="stat-bar-title">سئوی سبز و انسانی</div>
-          <div class="stat-bar-desc">هماهنگ با Rank Math و Yoast</div>
+        <div class="proof-chip">
+          <div class="proof-chip-val">۱۰۰٪</div>
+          <div class="proof-chip-text">
+            <strong>سئوی سبز و انسانی</strong>
+            <span>هماهنگ با Rank Math و Yoast</span>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- Visual Connecting Ribbon -->
-    <div class="flow-connector">
-      <div class="flow-line"></div>
-      <div class="flow-node"><span class="flow-node-dot"></span>مکانیزم خط تولید ۶ عاملی</div>
-      <div class="flow-line"></div>
-    </div>
-
     <!-- ======================================================================
-         2. THE 6-AGENT PIPELINE (Streamlined Connected Grid)
+         2. THE 6-AGENT PIPELINE (Seamless Horizontal Ribbon)
          ====================================================================== -->
-    <div class="pipeline-section">
-      <div class="pipeline-header">
-        <h3><span>🤖</span> زنجیره تخصصی ۶ عامل هوش مصنوعی در هر مقاله</h3>
-        <p>به‌جای یک پرامپت ساده، هر محتوا از زیر نظر ۶ متخصص هوشمند عبور می‌کند:</p>
-      </div>
-
-      <div class="pipeline-chips-grid">
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">🧠</div>
-          <span class="agent-mini-num">گام اول</span>
-          <div class="agent-mini-title">استراتژیست</div>
-          <div class="agent-mini-role">تحلیل کلمات کلیدی و چیدمان H2/H3</div>
+    <div class="pipeline-flow-wrap">
+      <div class="flow-caption">زنجیره تخصصی ۶ عامل هوش مصنوعی در نگارش هر محتوا</div>
+      <div class="pipeline-ribbon">
+        <div class="pipe-node">
+          <span class="pipe-node-step">۱</span>
+          <span class="pipe-node-icon">🧠</span>
+          <span class="pipe-node-title">استراتژیست</span>
+          <span class="pipe-node-desc">تحلیل کلمه و چیدمان H2/H3</span>
         </div>
-
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">🔍</div>
-          <span class="agent-mini-num">گام دوم</span>
-          <div class="agent-mini-title">پژوهشگر</div>
-          <div class="agent-mini-role">استخراج آمار و فکت‌های معتبر</div>
+        <div class="pipe-node">
+          <span class="pipe-node-step">۲</span>
+          <span class="pipe-node-icon">🔍</span>
+          <span class="pipe-node-title">پژوهشگر</span>
+          <span class="pipe-node-desc">استخراج آمار و فکت‌های معتبر</span>
         </div>
-
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">✍️</div>
-          <span class="agent-mini-num">گام سوم</span>
-          <div class="agent-mini-title">نویسنده</div>
-          <div class="agent-mini-role">نگارش روان تا ۵۰۰۰ کلمه</div>
+        <div class="pipe-node">
+          <span class="pipe-node-step">۳</span>
+          <span class="pipe-node-icon">✍️</span>
+          <span class="pipe-node-title">نویسنده</span>
+          <span class="pipe-node-desc">نگارش روان تا ۵۰۰۰ کلمه</span>
         </div>
-
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">🧐</div>
-          <span class="agent-mini-num">گام چهارم</span>
-          <div class="agent-mini-title">منتقد و ادیتور</div>
-          <div class="agent-mini-role">اصلاح تناقضات و ساختار متن</div>
+        <div class="pipe-node">
+          <span class="pipe-node-step">۴</span>
+          <span class="pipe-node-icon">🧐</span>
+          <span class="pipe-node-title">منتقد و ادیتور</span>
+          <span class="pipe-node-desc">رفع تناقضات و اصلاح ساختار</span>
         </div>
-
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">🌿</div>
-          <span class="agent-mini-num">گام پنجم</span>
-          <div class="agent-mini-title">انسانی‌ساز</div>
-          <div class="agent-mini-role">ضد پنالتی الگوریتم‌های گوگل</div>
+        <div class="pipe-node">
+          <span class="pipe-node-step">۵</span>
+          <span class="pipe-node-icon">🌿</span>
+          <span class="pipe-node-title">انسانی‌ساز</span>
+          <span class="pipe-node-desc">ضد پنالتی الگوریتم گوگل</span>
         </div>
-
-        <div class="agent-mini-card">
-          <div class="agent-mini-icon">🚀</div>
-          <span class="agent-mini-num">گام ششم</span>
-          <div class="agent-mini-title">سئو و انتشار</div>
-          <div class="agent-mini-role">متاداده‌ها و انتشار در وردپرس</div>
+        <div class="pipe-node">
+          <span class="pipe-node-step">۶</span>
+          <span class="pipe-node-icon">🚀</span>
+          <span class="pipe-node-title">سئو و انتشار</span>
+          <span class="pipe-node-desc">متاداده‌ها و انتشار خودکار</span>
         </div>
       </div>
     </div>
 
-    <!-- Visual Connecting Ribbon -->
-    <div class="flow-connector">
-      <div class="flow-line"></div>
-      <div class="flow-node"><span class="flow-node-dot"></span>تور امکانات در محیط واقعی افزونه</div>
-      <div class="flow-line"></div>
+    <!-- ======================================================================
+         3. CENTRAL PRODUCT EXHIBIT (Dashboard with Floating Annotation Cards)
+         ====================================================================== -->
+    <div class="central-exhibit">
+      <div class="central-image-wrapper">
+        <img src="images/dashboard.png" alt="پیشخوان مدیریت افزونه مقاله‌نگار" class="central-image" loading="eager" />
+      </div>
+
+      <!-- 3 Integrated Feature Annotations -->
+      <div class="floating-callouts-grid">
+        <div class="graphic-callout">
+          <div class="graphic-callout-ico">🖥️</div>
+          <div class="graphic-callout-body">
+            <h5>پیشخوان زنده در وردپرس</h5>
+            <p>نظارت لحظه‌ای بر صف تولید مقالات و عملکرد همزمان ۶ عامل بدون خروج از پیشخوان.</p>
+          </div>
+        </div>
+
+        <div class="graphic-callout">
+          <div class="graphic-callout-ico">🧠</div>
+          <div class="graphic-callout-body">
+            <h5>آموزش هویت برند و ICP</h5>
+            <p>تنظیم لحن صدا (Brand Voice) و پاسخ به دردهای مخاطب جهت افزایش قطعی فروش و نرخ تبدیل.</p>
+          </div>
+        </div>
+
+        <div class="graphic-callout">
+          <div class="graphic-callout-ico">🌐</div>
+          <div class="graphic-callout-body">
+            <h5>اتصال مستقیم به API روز دنیا</h5>
+            <p>پشتیبانی از OpenAI ،Claude و واسط ایرانی GapGPT بدون نیاز به VPN یا هزینه ماهانه دلاری.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ======================================================================
-         3. 50/50 SPLIT SHOWCASE 1: DASHBOARD
+         4. TWO SIDE-BY-SIDE VISUAL EXHIBITS (Content & Bulk)
          ====================================================================== -->
-    <div class="showcase-split-row">
-      <!-- 50% Text Side -->
-      <div class="showcase-text-col">
-        <div class="showcase-tag-pill">🖥️ کنترل مرکزی در پیشخوان وردپرس</div>
-        <h4 class="showcase-h4">پیشخوان اختصاصی و مانیتورینگ زنده تولید محتوا</h4>
-        <p class="showcase-p">
-          مدیریت تمام مقالات، محصولات ووکامرس و دسته‌بندی‌ها در یک نمای متمرکز بدون خروج از پیشخوان وردپرس.
-        </p>
+    <div class="side-by-side-exhibits">
+      <!-- Exhibit Left: New Content -->
+      <div class="exhibit-column">
+        <div class="exhibit-img-box">
+          <img src="images/new-content.png" alt="بخش نگارش محتوای جدید" class="exhibit-img" loading="eager" />
+        </div>
+        <div class="exhibit-meta">
+          <span class="exhibit-badge">نگارش هوشمند</span>
+          <h4 class="exhibit-title">نگارش عمیق تا ۵۰۰۰ کلمه با تصویرسازی AI</h4>
+          <p class="exhibit-desc">چیدمان هدینگ‌های استاندارد، سرفصل‌های جامع و تولید هوشمند تصاویر شاخص بر اساس موضوع هر بخش.</p>
+          <div class="exhibit-highlight-pill">
+            <span>🔗</span> لینک‌سازی هوشمند داخلی به مقالات و محصولات سایت
+          </div>
+        </div>
+      </div>
 
-        <ul class="showcase-bullets">
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>نظارت لحظه‌ای:</strong> مشاهده وضعیت صف انتشار و عملکرد همزمان ۶ عامل هوشمند</span>
-          </li>
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>بدون کندی هاست:</strong> اجرای پس‌زمینه با سیستم هوشمند Cron بدون قطعی و تایم‌اوت</span>
-          </li>
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>آمار دقیق و مستمر:</strong> دسترسی به جدول مقالات آماده انتشار و بایگانی کامل متون</span>
-          </li>
+      <!-- Exhibit Right: Bulk Excel -->
+      <div class="exhibit-column">
+        <div class="exhibit-img-box">
+          <img src="images/bulk-content.png" alt="تولید انبوه با فایل اکسل" class="exhibit-img" loading="eager" />
+        </div>
+        <div class="exhibit-meta">
+          <span class="exhibit-badge">تولید انبوه</span>
+          <h4 class="exhibit-title">تولید صدها مقاله با یک فایل اکسل (XLSX)</h4>
+          <p class="exhibit-desc">آپلود آسان کلمات کلیدی، تولید گروهی بدون فشار بر هاست و صف انتشار منظم با الگوی طبیعی گوگل.</p>
+          <div class="exhibit-highlight-pill">
+            <span>⏳</span> انتشار زمان‌بندی‌شده خودکار بدون افت سرعت سایت
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         5. GRAPHIC COMPARISON (Minimalist Contrast)
+         ====================================================================== -->
+    <div class="compare-graphic-matrix">
+      <div class="matrix-col fail">
+        <div class="matrix-header">✕ ابزارهای عمومی و چت‌بات‌های ساده</div>
+        <ul class="matrix-items">
+          <li class="matrix-item"><span>✕</span> متن‌های تکراری و سرد با خطر قطعی افت رتبه در گوگل</li>
+          <li class="matrix-item"><span>✕</span> اتلاف وقت در کپی‌پیست دستی و هدینگ‌گذاری در وردپرس</li>
+          <li class="matrix-item"><span>✕</span> هزینه‌های ماهانه دلاری سنگین با لایسنس‌های اجاره‌ای</li>
         </ul>
       </div>
 
-      <!-- 50% Screenshot Side -->
-      <div class="mockup-half-box">
-        <div class="mockup-bar">
-          <div class="mockup-dots">
-            <span class="m-dot red"></span>
-            <span class="m-dot yellow"></span>
-            <span class="m-dot green"></span>
-          </div>
-          <div class="mockup-tag">پیشخوان اصلی <strong>مقاله‌نگار</strong></div>
-        </div>
-        <img src="images/dashboard.png" alt="پیشخوان مدیریت افزونه مقاله‌نگار" class="mockup-img" loading="eager" />
-      </div>
-    </div>
-
-    <!-- ======================================================================
-         3. 50/50 SPLIT SHOWCASE 2: NEW CONTENT & BRAND IDENTITY MENTION
-         ====================================================================== -->
-    <div class="showcase-split-row">
-      <!-- 50% Screenshot Side -->
-      <div class="mockup-half-box">
-        <div class="mockup-bar">
-          <div class="mockup-dots">
-            <span class="m-dot red"></span>
-            <span class="m-dot yellow"></span>
-            <span class="m-dot green"></span>
-          </div>
-          <div class="mockup-tag">نگارش هوشمند <strong>و مولد تصویر AI</strong></div>
-        </div>
-        <img src="images/new-content.png" alt="بخش نگارش محتوای جدید در افزونه مقاله‌نگار" class="mockup-img" loading="eager" />
-      </div>
-
-      <!-- 50% Text Side -->
-      <div class="showcase-text-col">
-        <div class="showcase-tag-pill">📝 نگارش مقالات عمیق و سئو شده</div>
-        <h4 class="showcase-h4">نگارش هوشمند، لینک‌دهی خودکار و تولید تصویر AI</h4>
-        <p class="showcase-p">
-          تولید مقالات ساختاریافته از ۱۰۰۰ تا ۵۰۰۰ کلمه با هدینگ‌های استاندارد، تصاویر اختصاصی و لینک‌سازی داخلی به سایر صفحات سایت.
-        </p>
-
-        <ul class="showcase-bullets">
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>لینک‌سازی هوشمند داخلی:</strong> ارتقای سئو با اتصال خودکار به مقالات و محصولات مرتبط</span>
-          </li>
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>تولید تصاویر اختصاصی AI:</strong> ساخت تصاویر شاخص در سبک‌های رئال، مینیمال و ادیتوریال</span>
-          </li>
+      <div class="matrix-col pass">
+        <div class="matrix-header">✓ تحریریه هوشمند مقاله‌نگار</div>
+        <ul class="matrix-items">
+          <li class="matrix-item"><span>✓</span> لحن ۱۰۰٪ انسانی فارسی با بازبینی عامل Humanizer</li>
+          <li class="matrix-item"><span>✓</span> تولید، تصویرسازی و انتشار صفر تا صد مستقیم در وردپرس</li>
+          <li class="matrix-item"><span>✓</span> یک‌بار خرید لایسنس دائمی با کمترین هزینه API اختصاصی</li>
         </ul>
-
-        <!-- INTEGRATED MENTION: BRAND IDENTITY -->
-        <div class="integrated-callout-badge">
-          <div class="callout-ico">🧠</div>
-          <div class="callout-text">
-            <h5>آموزش هویت برند و پرسونای خریدار (ICP)</h5>
-            <p>امکان تعریف لحن اختصاصی برند (صمیمی، رسمی یا تخصصی) و تمرکز بر نقاط درد مشتریان برای افزایش قطعی فروش.</p>
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- ======================================================================
-         3. 50/50 SPLIT SHOWCASE 3: BULK GENERATION & API PROVIDERS MENTION
+         6. ECONOMIC PAYOFF & CLOSING SEAL
          ====================================================================== -->
-    <div class="showcase-split-row">
-      <!-- 50% Text Side -->
-      <div class="showcase-text-col">
-        <div class="showcase-tag-pill">📦 تولید گروهی صدها مقاله</div>
-        <h4 class="showcase-h4">تولید انبوه با فایل اکسل (XLSX) و زمان‌بندی صف</h4>
-        <p class="showcase-p">
-          صدها کلمه کلیدی را در قالب یک فایل اکسل آپلود کنید تا مقاله‌نگار با فواصل زمانی منظم تقویم محتوایی ماه‌ها را در وردپرس بسازد.
-        </p>
-
-        <ul class="showcase-bullets">
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>آپلود آسان اکسل یا ورود دستی:</strong> تولید بدون محدودیت با قالب استاندارد و آماده</span>
-          </li>
-          <li class="showcase-bullet-item">
-            <span class="bullet-icon">✓</span>
-            <span><strong>انتشار با ریتم طبیعی گوگل:</strong> صف انتشار زمان‌بندی‌شده جهت ارتقای رتبه و اعتبار دائمی سایت</span>
-          </li>
-        </ul>
-
-        <!-- INTEGRATED MENTION: API PROVIDERS -->
-        <div class="integrated-callout-badge">
-          <div class="callout-ico">🌐</div>
-          <div class="callout-text">
-            <h5>اتصال مستقیم به OpenAI, Claude و واسط ایرانی GapGPT</h5>
-            <p>بدون نیاز به تحریم‌شکن یا اشتراک دلاری؛ هزینه هر مقاله زیر ۱۰ سنت و اتصال زنده به وب با Tavily و Serper.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 50% Screenshot Side -->
-      <div class="mockup-half-box">
-        <div class="mockup-bar">
-          <div class="mockup-dots">
-            <span class="m-dot red"></span>
-            <span class="m-dot yellow"></span>
-            <span class="m-dot green"></span>
-          </div>
-          <div class="mockup-tag">تولید انبوه <strong>با اکسل و صف هوشمند</strong></div>
-        </div>
-        <img src="images/bulk-content.png" alt="بخش تولید انبوه و اکسل افزونه مقاله‌نگار" class="mockup-img" loading="eager" />
-      </div>
-    </div>
-
-    <!-- Visual Connecting Ribbon -->
-    <div class="flow-connector">
-      <div class="flow-line"></div>
-      <div class="flow-node"><span class="flow-node-dot"></span>مقایسه شفاف و ارزش اقتصادی</div>
-      <div class="flow-line"></div>
-    </div>
-
-    <!-- ======================================================================
-         4. COMPARISON & ECONOMIC VALUE (Combined Unified Card)
-         ====================================================================== -->
-    <div class="matrix-combined-card">
-      <div class="matrix-title-row">
-        <h3>چرا مقاله‌نگار در برابر ابزارهای معمولی AI بی‌رقیب است؟</h3>
-        <p>تولید محتوای بی‌هدف با چت‌بات‌ها شکست می‌خورد؛ مقاله‌نگار یک تیم مهندسی‌شده برای فروش است.</p>
-      </div>
-
-      <div class="compare-side-by-side">
-        <!-- Bad Side -->
-        <div class="c-column bad">
-          <div class="c-col-header"><span>✕</span> چت‌بات‌های ساده و ابزارهای عمومی</div>
-          <ul class="c-list">
-            <li class="c-item"><span>✕</span> متن‌های تکراری و سرد با خطر قطعی پنالتی گوگل</li>
-            <li class="c-item"><span>✕</span> ساعت‌ها اتلاف وقت برای کپی‌پیست دستی در وردپرس</li>
-            <li class="c-item"><span>✕</span> خالی ماندن فیلدهای Yoast و ناتوانی در لینک‌سازی داخلی</li>
-            <li class="c-item"><span>✕</span> هزینه‌های سنگین ماهانه دلاری با محدودیت‌های شدید</li>
-          </ul>
-        </div>
-
-        <!-- Good Side -->
-        <div class="c-column good">
-          <div class="c-col-header"><span>✓</span> تحریریه هوشمند مقاله‌نگار</div>
-          <ul class="c-list">
-            <li class="c-item"><span>✓</span> لحن ۱۰۰٪ انسانی و روان با عامل اختصاصی Humanizer</li>
-            <li class="c-item"><span>✓</span> تولید، تصویرسازی و انتشار صفر تا صد مستقیم در وردپرس</li>
-            <li class="c-item"><span>✓</span> تنظیم خودکار متاداده‌های Rank Math و لینک‌های داخلی</li>
-            <li class="c-item"><span>✓</span> یک‌بار خرید لایسنس مادام‌العمر بدون شارژ ماهانه</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- ROI Strip -->
-      <div class="roi-strip-banner">
-        <div class="roi-badge-item">
-          <div class="roi-badge-val">۲ مقاله</div>
-          <div class="roi-badge-lbl">بازگشت کامل هزینه خرید افزونه</div>
-        </div>
-        <div class="roi-badge-item">
-          <div class="roi-badge-val">۹۰٪</div>
-          <div class="roi-badge-lbl">صرفه‌جویی در زمان و دستمزد تولید محتوا</div>
-        </div>
-        <div class="roi-badge-item">
-          <div class="roi-badge-val">نامحدود</div>
-          <div class="roi-badge-lbl">تولید مقالات و محصولات بدون شارژ ماهیانه</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================================================================
-         5. CLOSING CTA BANNER (Poster Finale)
-         ====================================================================== -->
-    <div class="poster-cta-box">
-      <h3 class="cta-heading-main">
-        تحریریه ۶ عاملی هوش مصنوعی را به <span class="text-gradient">پیشخوان وردپرس</span> خود بیاورید
+    <div class="graphic-anchor-block">
+      <h3 class="anchor-headline">
+        تنها با نگارش <span>۲ مقاله</span>، کل هزینه خرید افزونه جبران می‌شود!
       </h3>
-      <p class="cta-desc-sub">
-        همین امروز فرآیند تولید محتوا و سئوی سایت خود را خودکار کنید. یک‌بار خرید با لایسنس دائمی، آپدیت‌های پیوسته و ۶ ماه پشتیبانی تخصصی.
+      <p class="anchor-sub">
+        تحریریه ۶ عاملی هوش مصنوعی را به پیشخوان وردپرس خود اضافه کنید. بدون حق اشتراک ماهانه، با لایسنس دائمی و ۶ ماه پشتیبانی تخصصی.
       </p>
 
-      <div class="compat-pills-row">
-        <span class="c-pill">🟦 وردپرس نسخه ۶ به بالا</span>
-        <span class="c-pill">🛒 ووکامرس (WooCommerce)</span>
-        <span class="c-pill">🟢 افزونه Yoast SEO</span>
-        <span class="c-pill">🔴 افزونه Rank Math</span>
-        <span class="c-pill">🎨 صفحه‌ساز المنتور</span>
-        <span class="c-pill">🧩 ویرایشگر گوتنبرگ</span>
+      <div class="ecosystem-strip">
+        <span class="eco-tag">🟦 WordPress 6.0+</span>
+        <span class="eco-tag">🛒 WooCommerce</span>
+        <span class="eco-tag">🟢 Yoast SEO</span>
+        <span class="eco-tag">🔴 Rank Math</span>
+        <span class="eco-tag">🎨 Elementor</span>
+        <span class="eco-tag">🧩 Gutenberg</span>
       </div>
 
-      <a href="../purchase.html" class="cta-action-btn">
-        <span>🚀 همین حالا افزونه مقاله‌نگار را تهیه کنید</span>
+      <a href="../purchase.html" class="anchor-cta-button">
+        <span>🚀 خرید و دانلود آنی لایسنس مقاله‌نگار</span>
       </a>
 
-      <div class="cta-guarantee-chips">
-        <div class="cta-g-item"><span>✓</span> دانلود و تحویل آنی پس از پرداخت</div>
-        <div class="cta-g-item"><span>✓</span> لایسنس مادام‌العمر بدون هزینه تمدید</div>
-        <div class="cta-g-item"><span>✓</span> فایل PDF راهنمای نصب و راه‌اندازی</div>
-        <div class="cta-g-item"><span>✓</span> پشتیبانی فنی تخصصی</div>
+      <div class="guarantee-row">
+        <div><span>✓</span> تحویل آنی پس از پرداخت</div>
+        <div><span>✓</span> لایسنس مادام‌العمر بدون تمدید</div>
+        <div><span>✓</span> فایل راهنمای گام‌به‌گام</div>
+        <div><span>✓</span> پشتیبانی فنی تخصصی</div>
       </div>
     </div>
 
-    <div class="poster-footer-strip">
-      مقاله‌نگار — نخستین سیستم بومی ۶ عاملی هوش مصنوعی در وردپرس | طراحی شده ویژه درج در توضیحات محصول
+    <div class="infographic-seal">
+      مقاله‌نگار — نخستین سیستم بومی ۶ عاملی هوش مصنوعی در وردپرس | طراحی ویژه استفاده در توضیحات محصول
     </div>
 
   </div>
