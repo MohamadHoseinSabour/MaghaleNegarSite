@@ -148,6 +148,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 body {
@@ -158,7 +160,10 @@ body {
   background-color: var(--mn-canvas);
   direction: rtl;
   text-align: right;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -267,10 +272,12 @@ button {
   padding: 12px 24px;
   border-radius: var(--radius-md);
   transition: all var(--transition-normal);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 .btn-primary {
@@ -409,6 +416,23 @@ button {
 
 .nav-links a:hover::after {
   transform: scaleX(1);
+}
+
+.nav-badge-link {
+  background: var(--mn-primary-surface);
+  color: var(--mn-primary-hover) !important;
+  border: 1px solid var(--mn-primary-border);
+  padding: 4px 12px !important;
+  border-radius: 100px;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+.nav-badge-link::after {
+  display: none !important;
+}
+.nav-badge-link:hover {
+  background: var(--mn-primary-light);
+  border-color: var(--mn-primary);
 }
 
 .nav-cta {
@@ -1781,80 +1805,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   18. Footer
-   -------------------------------------------------------------------------- */
-.footer {
-  background: #081527;
-  color: #94A3B8;
-  padding-top: 72px;
-  padding-bottom: 36px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-inner {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 56px;
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.footer-brand img {
-  height: 38px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-
-.footer-brand p {
-  font-size: 14.5px;
-  line-height: 1.8;
-  color: #94A3B8;
-  max-width: 380px;
-}
-
-.footer-col h4 {
-  font-size: 16px;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 18px;
-}
-
-.footer-col ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-col a {
-  font-size: 14px;
-  color: #94A3B8;
-  transition: color var(--transition-fast);
-}
-
-.footer-col a:hover {
-  color: #29DCA1;
-}
-
-.footer-bottom {
-  padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #64748B;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-/* --------------------------------------------------------------------------
-   19. Responsive Media Queries
+   18. Responsive Media Queries & Mobile Optimization System
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .pipeline-stepper-grid {
@@ -1869,50 +1820,413 @@ button {
   .bento-card.bento-wide {
     grid-column: span 2;
   }
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  /* Base & Containers */
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section {
+    padding-block: 56px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+    padding-inline: 8px;
+    text-align: center;
+  }
+
+  .section-label {
+    margin-inline: auto;
+    margin-bottom: 12px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(22px, 6vw, 30px);
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .section-header p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* Navbar */
   .nav-links, .nav-cta {
+    display: none !important;
+  }
+
+  .navbar-inner {
+    padding-inline: 4px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand-logo-img {
+    height: 32px;
+    width: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    background: var(--mn-canvas);
+    border: 1px solid var(--mn-border);
+    color: var(--mn-text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-toggle:active {
+    background: var(--mn-primary-surface);
+    color: var(--mn-primary);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 56px;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .hero-pill {
+    align-self: center;
+    margin-inline: auto;
+    font-size: 12px;
+    padding: 6px 14px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(23px, 6.4vw, 34px);
+    line-height: 1.35;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    text-align: center;
+    width: 100%;
+    padding-inline: 4px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 14.5px;
+    box-sizing: border-box;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    margin-inline: auto;
+    padding: 16px 20px;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .stat-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stat-divider {
+    width: 44px;
+    height: 1px;
+    background: var(--mn-border);
+    margin: 2px auto;
+  }
+
+  .mockup-float-badge {
+    display: none !important;
+  }
+
+  .mockup-address-bar {
+    display: none !important;
+  }
+
+  /* Interactive Tour Tabs */
+  .tour-tab-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 12px;
+    gap: 8px;
+    width: 100%;
+    scrollbar-width: none;
+  }
+
+  .tour-tab-nav::-webkit-scrollbar {
     display: none;
   }
-  .nav-toggle {
-    display: block;
+
+  .tour-tab-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 13px;
   }
-  .hero-stats {
+
+  .tour-callouts-bar {
     flex-direction: column;
-    gap: 18px;
-    padding: 20px;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px 14px;
   }
-  .stat-divider {
-    width: 60px;
-    height: 1px;
+
+  .tour-callout-pill {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    font-size: 12px;
+    padding: 6px 12px;
   }
+
+  .pro-explain-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pro-explain-card {
+    padding: 20px 16px;
+  }
+
+  /* 6-Agent Pipeline */
   .pipeline-stepper-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
+
+  .pipeline-step-card {
+    padding: 14px 10px;
+  }
+
+  .pipeline-step-card h4 {
+    font-size: 13px;
+  }
+
+  .pipeline-step-card span {
+    font-size: 11px;
+  }
+
+  .pipeline-step-card.active::after {
+    display: none;
+  }
+
+  .agent-sim-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .agent-sim-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px;
+  }
+
+  /* Humanizer Comparison */
   .comparison-card-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
+
+  .comp-col-card {
+    padding: 20px 16px;
+  }
+
+  .comparison-banner-inner {
+    padding: 22px 16px;
+  }
+
+  /* Bento Grid */
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
+  .bento-card {
+    padding: 22px 16px;
+  }
+
   .bento-card.bento-wide {
     grid-column: span 1;
   }
+
+  /* ROI Calculator */
+  .roi-calc-container {
+    padding: 22px 16px;
+    border-radius: var(--radius-md);
+  }
+
   .calc-results-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
-  .footer-inner {
-    grid-template-columns: 1fr;
+
+  .calc-res-card {
+    padding: 16px 14px;
+    text-align: center;
   }
-  .mockup-float-badge {
-    display: none;
+
+  .calc-cta-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
+
+  .calc-cta-row .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  /* Comparison Table */
+  .table-section .container {
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .compare-table {
+    min-width: 580px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  /* FAQ Accordion */
+  .faq-question {
+    padding: 16px 14px;
+    font-size: 14.5px;
+  }
+
+  .faq-answer {
+    padding: 0 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    padding-block: 56px;
+  }
+
+  .final-cta-inner {
+    padding-inline: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(22px, 6vw, 32px);
+    line-height: 1.35;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .final-cta p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+
+  #final-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    padding: 13px 18px;
+    font-size: 14.5px;
+  }
+
+  .final-guarantees-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  .final-guarantees-row span {
+    justify-content: center;
+    font-size: 12.5px;
+  }
+
+  /* Hide Sticky Floating Bar completely on Mobile to avoid screen clutter and layout shift */
   .sticky-conversion-bar {
-    width: 90%;
-    justify-content: space-between;
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pipeline-stepper-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
